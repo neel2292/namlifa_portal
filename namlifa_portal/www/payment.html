@@ -1,0 +1,106 @@
+{% extends "www/main.html" %}
+
+{% block title %}Payment{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block nav %}
+{% include "www/nav.html" %}
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col s1">
+    </div>
+    <div class="col s10">
+        <br>
+        <div class="card navbar-dark gradient-45deg-indigo-blue">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s1 hide-on-med-and-down">
+                        <span><img src="/images/logo.svg" width="100" style="padding-top:15px;"></span>
+                    </div>
+                    <div class="col s11" style="vertical-align:middle; padding-left:30px;">
+                        <h3 class="white-text">PAYMENT FORM</h3>
+                        <p class="white-text">Please fill in the form and submit it upon completion.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content grey lighten-4">
+                <form>
+                    <div id="paymentDetails">
+                        <div class="row"><p>Card Type</p></div>
+                        <div class="row">
+                            <div class="col s6">
+                                <p>
+                                    <label>
+                                        <input type="checkbox" class="filled-in" value="Visa"/>
+                                        <span>Visa</span>
+                                    </label>&nbsp;&nbsp;
+                                    <label>
+                                        <input type="checkbox" class="filled-in" value="Master"/>
+                                        <span>Master</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="cardholder_name" name="cardholder_name" type="text" class="validate">
+                                <label for="cardholder_name">Cardholder's Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="card_no" name="card_no" type="number" class="validate invalid" data-length="16">
+                                <label for="card_no">Card No</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="card_bank" name="card_bank" type="text" class="validate">
+                                <label for="card_bank">Issuing Bank</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="card_expiry" name="card_expiry" type="text" class="validate">
+                                <label for="card_expiry">Expiry Date</label>
+                            </div>
+                        </div>
+<!--                        <div class="row">-->
+<!--                            <div class="col s12">-->
+<!--                                <p>-->
+<!--                                    <label>-->
+<!--                                        <input type="checkbox" class="filled-in" value="card_consent"/>-->
+<!--                                        <span>I declare all the information is correct at the time of application and I hereby authorize Namlifa to collect RM200 payable to NAMLIFA from my commision as per my Agent Code or Account No:</span>-->
+<!--                                    </label>&nbsp;&nbsp;-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <div class="card-panel white">
+                                    <p>Sign in the box below. <i id="resetSignature" class="material-icons-outlined float-right waves-effect waves-light">refresh</i></p>
+                                    <div id="signatureWidget"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row center-align">
+                        <button class="btn waves-effect waves-light indigo" type="submit" id="submitPayment">Pay Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col s1">
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "www/partials/_footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script src="js/payment.js" defer></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include namlifa_portal *.css
+recursive-include namlifa_portal *.csv
+recursive-include namlifa_portal *.html
+recursive-include namlifa_portal *.ico
+recursive-include namlifa_portal *.js
+recursive-include namlifa_portal *.json
+recursive-include namlifa_portal *.md
+recursive-include namlifa_portal *.png
+recursive-include namlifa_portal *.py
+recursive-include namlifa_portal *.svg
+recursive-include namlifa_portal *.txt
+recursive-exclude namlifa_portal *.pyc
