@@ -1,7 +1,5 @@
 <div class="row">
-    <div class="col s1">
-    </div>
-
+    <div class="col s1"></div>
     <div class="col s10">
         <br>
         <div class="card navbar-dark gradient-45deg-indigo-blue">
@@ -16,41 +14,12 @@
                     </div>
                 </div>  
             </div>
-
-
-
-
             <div class="card-content grey lighten-4">
-
-
                 <form>
                     <div id="personalDetails">
 		        <div class="card-panel indigo white-text center" style="padding:10px">
                     		<p>PERSONAL DETAILS</p>
             		</div>
-                        <div class="row" style="margin-bottom: 1em;">
-                            <div class="col s12">
-                                <label>Membership Type</label>
-                            </div>
-                            <div>
-                                <div class="col s12 m6 l3">
-                                    <img class="z-depth-2" data-member="Ordinary/Affiliate/Provisional" src="/images/Membership_Card_Blue.png">
-                                    <br>Ordinary/Affiliate/Provisional
-                                </div>
-                                <div class="col s12 m6 l3">
-                                    <img class="z-depth-2" data-member="Fellow" src="/images/Membership_Card_Silver.png">
-                                    <br>Fellow
-                                </div>
-                                <div class="col s12 m6 l3" data-member="Associate">
-                                    <img class="z-depth-2" src="/images/Membership_Card_Gold.png">
-                                    <br>Associate
-                                </div>
-                                <div class="col s12 m6 l3" data-member="Life">
-                                    <img class="z-depth-2" src="/images/Membership_Card_White.png">
-                                    <br>Life
-                                </div>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="input-field col s12">
                               <input placeholder="Full Name" id="full_name" name="full_name" type="text" class="validate invalid">
@@ -69,12 +38,12 @@
                         </div>
                         <div class="row">
                         <div class="input-field col s6">
-                            <select id="sex" name="sex">
+                            <select id="gender" name="gender">
                                 <option value="" disabled selected>Choose your option</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
-                            <label for="sex">Sex</label>
+                            <label for="gender">Gender</label>
                         </div>
                         <div class="input-field col s6">
                             <select id="race" name="race">
@@ -121,7 +90,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input placeholder="" id="Email" name="email" type="email" class="validate invalid">
+                                <input placeholder="" id="email" name="email" type="email" class="validate invalid">
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s6">
@@ -133,32 +102,7 @@
                                 </select>
                                 <label for="highest_qualification">Highest Qualification Attained</label>
                             </div>
-                        </div>    
-
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <select id="" name="">
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="Vegetarian">Vegetarian</option>
-                                    <option value="Non-Vegetarian">Non-Vegetarian</option>
-                                </select>
-                                <label for="">Dietary Requirements</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <select id="" name="">
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="XS">XS</option>
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                    <option value="XL">XL</option>
-                                    <option value="XXL">XXL</option>
-                                    <option value="XXXL">XXXL</option>
-                                </select>
-                                <label for="">T-Shirt Size</label>
-                            </div>
                         </div>
-
                         <div class="row">
                             <div class="file-field input-field col s3">
                                 <div class="btn-small indigo">
@@ -179,14 +123,13 @@
 		        <div class="card-panel indigo white-text center" style="padding:10px">
                     		<p>COMPANY DETAILS</p>
             		</div>
-
                         <div class="row">
                             <div class="input-field col s6">
-                              <input placeholder="" id="date_contracted_as_agent" name="date_contracted_as_agent" type="text" class="datepicker">
+                              <input placeholder="" id="date_contracted_as_agent" name="date_contracted_as_agent" type="text">
                               <label for="date_contracted_as_agent">Date Contracted as Agent</label>
                             </div>
                             <div class="input-field col s6">
-                                <input placeholder="" id="agents_code" name="agents_code" type="text" class="validate">
+                                <input placeholder="" id="agents_code" name="agents_code" type="text" class="validate invalid">
                                 <label for="agents_code">Agent's Code</label>
                             </div>
                         </div>
@@ -194,12 +137,8 @@
                             <div class="input-field col s6">
                                 <select id="position" name="position">
                                     <option value="" disabled selected>Choose your option</option>
+                                    <option value="Agent Leader">Agency Leader</option>
                                     <option value="Agent">Agent</option>
-                                    <option value="ASM">ASM</option>
-                                    <option value="USM">USM</option>
-                                    <option value="GSM">GSM</option>
-                                    <option value="AM">AM</option>
-                                    
                                 </select>
                                 <label for="highest_qualification">Position</label>
                             </div>
@@ -208,20 +147,29 @@
                                     <option value="" disabled selected>Choose your option</option>
                                     <option value="Full Time">Full Time</option>
                                     <option value="Part Time">Part Time</option>
-                                    <option value="Conventional">Conventional</option>
-                                    <option value="Takaful">Takaful</option>
                                 </select>
                                 <label for="highest_qualification">Position Type</label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="" id="company" name="company" type="text" class="validate">
-                                    <label for="company">Company</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <input placeholder="" id="agency" name="agency" type="text" class="validate">
-                                    <label for="agency">Agency</label>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="company" name="company" type="text" class="validate">
+                                <label for="company">Company</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <select id="business_type" name="business_type">
+                                    <option disabled selected>Choose your option</option>
+                                    <option value="Conventional">Conventional</option>
+                                    <option value="Takaful">Takaful</option>
+                                    <option value="Both">Both</option>
+                                </select>
+                                <label for="business_type">Type of Business</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="agency" name="agency" type="text" class="validate">
+                                <label for="agency">Agency</label>
                             </div>
                         </div>
                     </div>
@@ -246,78 +194,71 @@
                                         <input placeholder="" id="" name="" type="text" pattern="[0-9]+" class="validate">
           		      		<span class="helper-text" data-error="Invalid key in"></span>
                                     </div>
-				(payabable to NAMLIFA)
+				(payable to NAMLIFA)
 				(NAMLIFA Account: Hong Leong: 2810 000 380, kindly provide bank in slip)
                             </div>
                         </div>
-
-
                         <div class="row">
                             <h6>Credit Card Payment</h6>
                             <div class="col s12">
-				    <select id="" name="">
+                                <select id="card_payment_type" name="">
                                     <option value="" disabled selected>Choose your option</option>
                                     <option value="One Time Deduction">One Time Deduction</option>
-                                  	 <option value="Auto Renewal">Auto Renewal</option>
-				</select>
-
+                                    <option value="Auto Renewal">Auto Renewal</option>
+                                </select>
                             </div>
                         </div>
-
-
                         <div class="row">
                             <div class="input-field col s6">
-                              <input placeholder="" id="" name="" type="text" pattern="[0-9]{13,16}" class="validate">
-                              <label for="">Credit Card No:</label>
-          		      <span class="helper-text" data-error="Invalid key in"></span>
+                                <input placeholder="" id="card_no" name="" type="text" pattern="[0-9]{13,16}" class="validate">
+                                <label for="">Credit Card No:</label>
+          		                <span class="helper-text" data-error="Invalid key in"></span>
                             </div>
                             <div class="input-field col s6">
-                                <input placeholder="" id="" name="" type="text" class="validate">
+                                <input placeholder="" id="bank_name" name="" type="text" class="validate">
                                 <label for="">Issuing Bank</label>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s6">
-                              <input placeholder="" id="" name="" type="text" pattern="^[a-zA-Z].*[\s\.]*$" class="validate">
-			      <label for="">Cardholder's Name</label>
-          		      <span class="helper-text" data-error="Invalid key in"></span>
+                                <input placeholder="" id="card_owner_name" name="card_owner_name" type="text" pattern="^[a-zA-Z].*[\s\.]*$" class="validate">
+                                <label for="">Cardholder's Name</label>
+          		                <span class="helper-text" data-error="Invalid key in"></span>
                             </div>
                             <div class="input-field col s3">
-				<select id="month" name="month">
-				    <option value="01">January</option>
-				    <option value="02">February </option>
-				    <option value="03">March</option>
-				    <option value="04">April</option>
-				    <option value="05">May</option>
-				    <option value="06">June</option>
-				    <option value="07">July</option>
-				    <option value="08">August</option>
-				    <option value="09">September</option>
-				    <option value="10">October</option>
-				    <option value="11">November</option>
-				    <option value="12">December</option>
-				</select>
-				<select id="year" name="year">
-				    <option value="20"> 2020</option>
-				    <option value="21"> 2021</option>
-				    <option value="22"> 2022</option>
-				    <option value="23"> 2023</option>
-				    <option value="24"> 2024</option>
-				    <option value="25"> 2025</option>
-				</select>
+                                <select id="month" name="month">
+                                    <option value="01">January</option>
+                                    <option value="02">February </option>
+                                    <option value="03">March</option>
+                                    <option value="04">April</option>
+                                    <option value="05">May</option>
+                                    <option value="06">June</option>
+                                    <option value="07">July</option>
+                                    <option value="08">August</option>
+                                    <option value="09">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                <select id="year" name="year">
+                                    <option value="20"> 2020</option>
+                                    <option value="21"> 2021</option>
+                                    <option value="22"> 2022</option>
+                                    <option value="23"> 2023</option>
+                                    <option value="24"> 2024</option>
+                                    <option value="25"> 2025</option>
+                                </select>
                                 <label for="agents_code">Expiry Date</label>
                             </div>
                         </div>
-
-
-			<div class="row">
+                    <div class="row">
                             <h6>Company Deduction (Auto Deduction/Renewal) [Except: AIA, AXA Affin, Manulife, Prudential & Takaful Agents)</h6>
                             <div class="col s12">
                                 I,
 			        <div class="input-field inline">
-			            <input placeholder="" id="" name="" type="text" pattern="^[a-zA-Z].*[\s\.]*$" class="validate">
-				    <span class="helper-text" data-error="Invalid key in"></span>
+			            <input placeholder="" id="renewal_name" name="renewal_name" type="text" pattern="^[a-zA-Z].*[\s\.]*$" class="validate">
+				        <span class="helper-text" data-error="Invalid key in"></span>
 			        </div>
 			        declare all the above information is correct at the time of application and I hereby authorise <br>
 			        <div class="input-field inline">
@@ -325,10 +266,10 @@
 			        </div>
 			        (Company) to debit RM
 			        <div class="input-field inline">
-			            <input placeholder="" id="" name="" type="text" pattern="^\d+(?:\.\d{1,2})?$" class="validate">
+			            <input placeholder="" id="renewal_company" name="renewal_company" type="text" pattern="^\d+(?:\.\d{1,2})?$" class="validate">
 				    <span class="helper-text" data-error="Invalid key in"></span>
 			        </div>
-			        payabale to<br>
+			        payable to<br>
 			        NAMLIFA from my commision as per my Agent Code or Account No:
 				<div class="input-field inline">
 			            <input placeholder="" id="" name="" type="text" pattern="[0-9]+" class="validate">
@@ -338,8 +279,6 @@
 			        I understand that membership fees paid are non-refundable.<br>
                             </div>
                         </div>
-
-
                         <div class="row">
                             <div class="col s12 m6">
                                 <div class="card-panel white">
@@ -348,9 +287,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
 		    </div>
 
                     <div id="terms">

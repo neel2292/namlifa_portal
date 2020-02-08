@@ -2,31 +2,84 @@ window.signedTerms = false;
 $(document).ready(function() {
     var elems = document.querySelectorAll('.datepicker');
     var instances = M.Datepicker.init(elems, {format: 'dd/mm/yyyy'});
+    var agent_date = document.querySelectorAll('#date_contracted_as_agent');
+    var agent_date_instance = M.Datepicker.init(agent_date, {format: 'mm/yyyy'});
 
     loadSignPad();
+    
+    var validation = {
+        new_nric_no: function (val) {
+            var match,
+                dob = '';
 
-    // for card type
-    $('.z-depth-2').on('click', function() {
-        var $target = $(this),
-            $parent,
-            $selected
-            type = null; // membership type selected
-
-        if ($target.hasClass('selected')) {
-            $target.removeClass('selected');
-            type = null;
-        }
-        else {
-            $parent = $target.closest('.row'),
-            $selected = $parent.find('.selected')
-            if ($selected.length > 0) {
-                $selected.removeClass('selected');
-                $target.addClass('selected');
+            if (/\d{6}-\d{2}-\d{4}/.test(val)) {
+                match = val.slice(0, 6).match(/.{2}/g).reverse();
+                dob = match[0] + '/' + match[1] + '/' + (parseInt(match[2]) > 40 ? '19' + match[2] : '20' + match[2]); // limitation: can handle up to 2040 only
+                $('#date_of_birth').val(dob);
+                return true;
             }
-            else { $target.addClass('selected'); }
-            type = $target.data('member');
-        }
-    })
+            else { return 'Invalid value for NRIC number' }
+        },
+        full_name: function (val) {
+          if (val !== '') {
+              $('#card_owner_name').val(val);
+              $('#renewal_name').val(val);
+              return true;
+          }
+          else { return 'Name cannot be empty'}
+        },
+        company: function (val) {
+           if (val !== '') {
+               $('#renewal_company').val(val);
+               return true;
+           }
+           else { return 'Name cannot be empty'}
+       },
+        tel_hp: function (val) {
+            if (/60\d{9,}/.test(val)) {
+                return true;
+            }
+            else { return 'Invalid value for Mobile number' }
+        },
+        tel_o: function (val) {
+            if (/60\d{9,}/.test(val)) {
+                return true;
+            }
+            else { return 'Invalid value for Office number' }
+        },
+        tel_h: function (val) {
+            if (/60\d{9,}/.test(val)) {
+                return true;
+            }
+            else { return 'Invalid value for House number' }
+        },
+        tel_fax: function (val) {
+            if (/60\d{9,}/.test(val)) {
+                return true;
+            }
+            else { return 'Invalid value for Fax number' }
+        },
+        email: function (val) {
+            if (/.+@.+\..+/.test(val)) {
+                return true;
+            }
+            else { return 'Invalid value for email' }
+        },
+    };
+
+	$('body').focusout(function (evt) {
+		var $input = $(evt.target),
+			field = $input.attr('name'),
+			valid;
+
+		if (validation[field]) {
+			valid = validation[field]($input.val(), $input);
+			if (valid !== true) {
+				frappe.msgprint(valid);
+				$input.closest('.form-group').addClass('invalid');
+			}
+		}
+    });
 
     $("#submitApplication").on("click", function(e) {
         var $invalid = $('.invalid');

@@ -12,6 +12,7 @@
   "date_of_birth",
   "correspondence_address",
   "postcode",
+  "photo",
   "cb1_column",
   "gender",
   "race",
@@ -31,7 +32,15 @@
   "agency",
   "terms_and_conditions_section",
   "terms",
-  "signature"
+  "terms_signature",
+  "office_use_section",
+  "date_received",
+  "remark",
+  "processed_by",
+  "membership_no",
+  "application_status",
+  "membership_type",
+  "user_id"
  ],
  "fields": [
   {
@@ -135,7 +144,7 @@
    "fieldname": "position",
    "fieldtype": "Select",
    "label": "Position",
-   "options": "Agent\nASM\nUSM\nGSM\nAM"
+   "options": "Agency Leader\nAgent"
   },
   {
    "fieldname": "cb2_column",
@@ -145,7 +154,7 @@
    "fieldname": "position_type",
    "fieldtype": "Select",
    "label": "Position Type",
-   "options": "Full Time\nPart Time\nConventional\nTakaful"
+   "options": "Full Time\nPart Time"
   },
   {
    "fieldname": "company",
@@ -169,12 +178,67 @@
    "label": "Terms"
   },
   {
-   "fieldname": "signature",
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "office_use_section",
+   "fieldtype": "Section Break",
+   "label": "Office Use"
+  },
+  {
+   "fieldname": "date_received",
+   "fieldtype": "Date",
+   "label": "Date Received"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "processed_by",
+   "fieldtype": "Column Break",
+   "label": "Processed By"
+  },
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Data",
+   "label": "Membership No"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Application Status",
+   "options": "Pending\nApproved\nRejected"
+  },
+  {
+   "default": "Ordinary/Affiliate/Provisional",
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "label": "Membership Type",
+   "options": "Ordinary/Affiliate/Provisional\nFellow\nAssociate\nLife"
+  },
+  {
+   "fieldname": "terms_signature",
    "fieldtype": "Attach Image",
    "label": "Signature"
+  },
+  {
+   "depends_on": "eval:doc.application_status=='Active'",
+   "description": "System User (login) ID. If Member status is active it will automatically create the user acount",
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "System Account",
+   "options": "User",
+   "permlevel": 1,
+   "unique": 1
   }
  ],
- "modified": "2020-01-31 20:57:32.245110",
+ "image_field": "photo",
+ "modified": "2020-02-08 11:00:23.630062",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",
@@ -189,6 +253,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
    "share": 1,
    "write": 1
   }

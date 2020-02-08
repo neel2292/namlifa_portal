@@ -22,26 +22,33 @@ $(document).ready(function () {
 	//set avatar
 	$('#nav-avatar').html(frappe.avatar());
 
-	function loadScript(url){
-		var script = document.createElement("script")
-		script.type = "text/javascript";
+	loadScript('https://unpkg.com/imask').then(function () {
+		var $nric_input = $('input[name="new_nric_no"]'),
+			$cell_number = $('input[name="tel_hp"]'),
+			$office_number = $('input[name="tel_o"]'),
+			$house_number = $('input[name="tel_h"]'),
+			$fax_number = $('input[name="tel_fax"]');
 
-		return new Promise(function (resolve) {
-			if (script.readyState){  //IE
-				script.onreadystatechange = function(){
-					if (script.readyState == "loaded" || script.readyState == "complete"){
-						script.onreadystatechange = null;
-						resolve();
-					}
-				};
-			} else {  //Others
-				script.onload = resolve;
-			}
-
-			script.src = url;
-			document.getElementsByTagName("head")[0].appendChild(script);
+		IMask($nric_input[0], {
+			mask: '000000-00-0000'
 		});
-	}
+
+		IMask($cell_number[0], {
+			mask: '{6\\0}00 000 00000'
+		});
+
+		IMask($office_number[0], {
+			mask: '{6\\0}00 000 00000'
+		});
+
+		IMask($house_number[0], {
+			mask: '{6\\0}00 000 00000'
+		});
+		
+		IMask($fax_number[0], {
+			mask: '{6\\0}00 000 00000'
+		});
+	});
 
 	window.erpx = (function () {
 
@@ -227,3 +234,24 @@ $(document).ready(function () {
 		}
 	}());
 });
+
+function loadScript(url){
+    var script = document.createElement("script")
+    script.type = "text/javascript";
+
+    return new Promise(function (resolve) {
+        if (script.readyState){  //IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" || script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    resolve();
+                }
+            };
+        } else {  //Others
+            script.onload = resolve;
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    });
+}
