@@ -15,7 +15,7 @@
     </div>
     <div class="col s10">
         <br>
-        <div class="card navbar-dark gradient-45deg-indigo-blue">
+        <div class="card navbar-dark blue darken-1">
             <div class="card-content">
                 <div class="row">
                     <div class="col s1 hide-on-med-and-down">
@@ -30,7 +30,7 @@
             <div class="card-content grey lighten-4">
                 <form>
                     <div id="personalDetails">
-		                    <div class="card-panel indigo white-text center" style="padding:10px">
+		                    <div class="card-panel blue darken-1 white-text center" style="padding:10px">
                     		<p>PERSONAL DETAILS</p>
             		</div>
                          <div class="row">
@@ -128,10 +128,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row center-align">
-                        <button class="btn waves-effect waves-light indigo" type="submit" id="submitPayment">Submit Application
-                        </button>
-                    </div>
                 </form>
             </div>
         </div>
@@ -139,6 +135,10 @@
     <div class="col s1">
     </div>
 </div>
+{% endblock %}
+
+{% block sidenav %}
+    {% include "www/member/sidenav.html" %}
 {% endblock %}
 
 {% block footer %}

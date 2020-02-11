@@ -52,8 +52,9 @@
   },
   {
    "fieldname": "namlifa_member_id",
-   "fieldtype": "Data",
-   "label": "Namlifa Membership No"
+   "fieldtype": "Link",
+   "label": "Namlifa Membership No",
+   "options": "Namlifa Member"
   },
   {
    "fieldname": "akard_id_no",
@@ -242,7 +243,7 @@
    "label": "Date"
   }
  ],
- "modified": "2020-02-08 12:08:08.831102",
+ "modified": "2020-02-10 13:36:36.258264",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",

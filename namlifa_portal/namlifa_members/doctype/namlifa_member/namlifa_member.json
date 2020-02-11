@@ -24,7 +24,7 @@
   "highest_qualification",
   "company_details_section",
   "date_contracted_as_agent",
-  "agents_code",
+  "agent_code",
   "position",
   "cb2_column",
   "position_type",
@@ -136,11 +136,6 @@
    "label": "Date Contracted as Agent"
   },
   {
-   "fieldname": "agents_code",
-   "fieldtype": "Data",
-   "label": "Agent's Code"
-  },
-  {
    "fieldname": "position",
    "fieldtype": "Select",
    "label": "Position",
@@ -227,7 +222,7 @@
    "label": "Signature"
   },
   {
-   "depends_on": "eval:doc.application_status=='Active'",
+   "depends_on": "eval:doc.application_status=='Approved'",
    "description": "System User (login) ID. If Member status is active it will automatically create the user acount",
    "fieldname": "user_id",
    "fieldtype": "Link",
@@ -235,10 +230,15 @@
    "options": "User",
    "permlevel": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "agent_code",
+   "fieldtype": "Data",
+   "label": "Agent's Code"
   }
  ],
  "image_field": "photo",
- "modified": "2020-02-08 11:00:23.630062",
+ "modified": "2020-02-10 16:30:57.057172",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",
@@ -265,6 +265,30 @@
    "read": 1,
    "report": 1,
    "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
    "share": 1,
    "write": 1
   }

@@ -1,0 +1,171 @@
+{
+ "creation": "2020-02-09 17:56:52.825425",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_name",
+  "new_nric_no",
+  "tel_hp",
+  "email",
+  "company",
+  "agent_code",
+  "position",
+  "date_lp101_completed",
+  "lp101_grade",
+  "date_lp102_completed",
+  "lp102_grade",
+  "date_lp103_completed",
+  "lp103_grade",
+  "date_lp104_completed",
+  "lp104_grade",
+  "date_ch1fp_completed",
+  "ch1fp_grade",
+  "date_chapm_completed",
+  "champ_grade",
+  "date_rfp_completed",
+  "rfp_grade",
+  "graduation_date",
+  "date_taken"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "label": "IC No"
+  },
+  {
+   "fieldname": "tel_hp",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "agent_code",
+   "fieldtype": "Data",
+   "label": "Agent Code"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "date_lp101_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP101"
+  },
+  {
+   "fieldname": "lp101_grade",
+   "fieldtype": "Data",
+   "label": "LP101 Grade Achieved"
+  },
+  {
+   "fieldname": "date_lp102_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP102"
+  },
+  {
+   "fieldname": "lp102_grade",
+   "fieldtype": "Data",
+   "label": "LP102 Grade Achieved"
+  },
+  {
+   "fieldname": "date_lp103_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP103"
+  },
+  {
+   "fieldname": "lp103_grade",
+   "fieldtype": "Data",
+   "label": "LP103 Grade"
+  },
+  {
+   "fieldname": "date_lp104_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP104"
+  },
+  {
+   "fieldname": "lp104_grade",
+   "fieldtype": "Data",
+   "label": "LP104 Grade"
+  },
+  {
+   "fieldname": "date_ch1fp_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion Ch1FP"
+  },
+  {
+   "fieldname": "ch1fp_grade",
+   "fieldtype": "Data",
+   "label": "Ch1FP Grade"
+  },
+  {
+   "fieldname": "date_chapm_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion ChAPM"
+  },
+  {
+   "fieldname": "champ_grade",
+   "fieldtype": "Data",
+   "label": "ChAPM Grade"
+  },
+  {
+   "fieldname": "date_rfp_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion RFP"
+  },
+  {
+   "fieldname": "rfp_grade",
+   "fieldtype": "Data",
+   "label": "RFP Grade"
+  },
+  {
+   "fieldname": "graduation_date",
+   "fieldtype": "Date",
+   "label": "Year of Graduation"
+  },
+  {
+   "fieldname": "date_taken",
+   "fieldtype": "Date",
+   "label": "Date Taken"
+  }
+ ],
+ "modified": "2020-02-09 18:03:38.568858",
+ "modified_by": "Administrator",
+ "module": "Namlifa Training",
+ "name": "Namlifa Training",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
