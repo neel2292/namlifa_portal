@@ -236,7 +236,6 @@
    "unique": 1
   },
   {
-<<<<<<< HEAD
    "collapsible_depends_on": "eval:doc.user_id!=\"\"",
    "fieldname": "change_password",
    "fieldtype": "Section Break",
@@ -265,19 +264,15 @@
    "fieldtype": "Check",
    "label": "Logout from all devices while changing Password",
    "permlevel": 1
-  }
- ],
- "image_field": "photo",
- "modified": "2020-02-09 10:57:48.873748",
-=======
-   "fieldname": "agent_code",
-   "fieldtype": "Data",
-   "label": "Agent's Code"
+  },
+  {
+    "fieldname": "agent_code",
+    "fieldtype": "Data",
+    "label": "Agent's Code"
   }
  ],
  "image_field": "photo",
  "modified": "2020-02-10 16:30:57.057172",
->>>>>>> 2a268efcd50fe47d5c924184b404a1071d2aafdc
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",
@@ -315,11 +310,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-<<<<<<< HEAD
-   "role": "System Manager",
-=======
    "role": "Administrator",
->>>>>>> 2a268efcd50fe47d5c924184b404a1071d2aafdc
    "share": 1,
    "write": 1
   },
@@ -331,11 +322,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-<<<<<<< HEAD
-   "role": "Administrator",
-=======
    "role": "System Manager",
->>>>>>> 2a268efcd50fe47d5c924184b404a1071d2aafdc
    "share": 1,
    "write": 1
   }

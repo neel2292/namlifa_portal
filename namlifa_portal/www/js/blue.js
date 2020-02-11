@@ -1,6 +1,6 @@
 window.signedTerms = false;
 $(document).ready(function() {
-    // loadSignPad2();
+    loadSignPad2();
 });
 
 
