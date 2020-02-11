@@ -109,7 +109,7 @@
                                     <span>Photo</span>
                                     <input id="photo" name="photo" type="file">
                                 </div>
-                                <div class="file-path-wrapper">
+                                <div class="file-path-wrapper" style="display: none;">
                                     <input class="file-path validate" type="text">
                                 </div>
                             </div>
@@ -282,8 +282,8 @@
                         <div class="row">
                             <div class="col s12 m6">
                                 <div class="card-panel white">
-                                        <p>Sign in the box below. <br><br><i id="resetSignature2" class="material-icons-outlined float-right waves-effect waves-light">refresh</i></p>
-                                    <div id="signatureWidget2"></div>
+                                    <p>Sign in the box below. <br><br><i class="reset-signature material-icons-outlined float-right waves-effect waves-light">refresh</i></p>
+                                    <div id="paymentSignature" class="signature-widget"></div>
                                 </div>
                             </div>
                         </div>
@@ -319,13 +319,12 @@
                         <div class="row">
                             <div class="col s12 m6">
                                 <div class="card-panel white">
-					<p>Sign in the box below. <br><br><i id="resetSignature" class="material-icons-outlined float-right waves-effect waves-light">refresh</i></p>
-                                    <div id="signatureWidget"></div>
+					<p>Sign in the box below. <br><br><i class="reset-signature material-icons-outlined float-right waves-effect waves-light">refresh</i></p>
+                                    <div id="termsSignature" class="signature-widget"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <input onclick="window.location.href= 'payment';" type="submit" value="Submit request" hidden/>
                     <div class="row center-align">
                         <button class="btn waves-effect waves-light blue darken-1" type="submit" id="submitApplication">Submit Application
                             <i class="material-icons right">send</i>

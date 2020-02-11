@@ -144,7 +144,10 @@ class NamlifaMember(Document):
 			"doctype": "User",
 			"email": member.email,
 			"enabled": 1,
-			"username": member.name
+			"username": member.name,
+			"first_name": member.full_name,
+			"gender": member.gender,
+			"birth_date": member.date_of_birth
 		})
 		user.flags.no_welcome_email = True
 		user.flags.ignore_permissions = True
@@ -172,3 +175,7 @@ def member_login():
 		member = frappe.get_doc('Namlifa Member', member_name[0])
 		
 		return member
+
+@frappe.whitelist(allow_guest=True)
+def member_registration():
+	pass

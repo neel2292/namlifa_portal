@@ -1,9 +1,9 @@
-window.signedTerms = false;
 $(document).ready(function() {
     var elems = document.querySelectorAll('.datepicker');
     var instances = M.Datepicker.init(elems, {format: 'dd/mm/yyyy'});
     var agent_date = document.querySelectorAll('#date_contracted_as_agent');
     var agent_date_instance = M.Datepicker.init(agent_date, {format: 'mm/yyyy'});
+    var signatures = {};
 
     loadSignPad();
     
@@ -85,8 +85,20 @@ $(document).ready(function() {
         var $invalid = $('.invalid');
 
 
-        console.log($invalid);
-        debugger;
+        e.preventDefault();
+        if ($invalid.length) {
+            var errLine = "<p>There are atleast "+ $invalid.length +" error(s) on the page. Look out for red fields.</p>";
+
+            window.erpx.showError(errLine);
+        }
+        else if (Objec.keys(signatures).length !== 2) {
+            var errLine = "<p>Plese sign on signature fields</p>";
+
+            window.erpx.showError(errLine);
+        }
+        else {
+
+        }
         // e.preventDefault();
         // window.location.href = 'payment';
         // if ($invalid.length > 0 ) {
@@ -114,10 +126,10 @@ $(document).ready(function() {
         // return res
     });
 
-    // $("#photo").on("change", function() {
-    //     previewFileURL(this, "#photoPreview");
-    // });
-    //
+    $("#photo").on("change", function() {
+        previewFileURL(this, "#photoPreview");
+    });
+
     // $(document).on("keyup", ".cnf", function() {
     //     var strval = this.value;
     //     if(strval === "603") {
@@ -141,8 +153,33 @@ $(document).ready(function() {
     //         this.value = strval.substr(0, 7) + "-" + strval.substr(7, 9) + "-" + strval.substr(9);
     //     }
     // });
-});
 
+    function loadSignPad() {
+        setTimeout(() => {
+            signPadLoaded = true;
+            $(".signature-widget").empty();
+            $(".signature-widget").jSignature().bind('change', function(e){
+                var $target = $(e.target),
+                    base64_img = $target.jSignature("getData"),
+                    id = $target.attr('id'),
+                    signFile = dataURLtoFile(base64_img, id + '.png');
+
+                signatures[id] = {
+                    img: base64_img
+                };
+            });
+
+            $(".reset-signature").on("click", function(e){
+                var $target = $(e.target),
+                    id = $target.attr('id');
+
+                $target.parent('p').next('.signature-widget').jSignature('reset');
+                delete signatures[id];
+                //$("#signatureWidget").jSignature("reset");
+            });
+        }, 200);
+    }
+});
 
 function dataURLtoFile(dataurl, filename) {
     try{
@@ -162,23 +199,6 @@ function dataURLtoFile(dataurl, filename) {
     }
 }
 
-function loadSignPad() {
-    setTimeout(() => {
-        signPadLoaded = true;
-        $("#signatureWidget").empty();
-        $("#signatureWidget").jSignature().bind('change', function(e){ 
-            var base64_img = $(e.target).jSignature("getData");
-            var signFile = dataURLtoFile(base64_img, 'terms_sign.png');
-            window.signFile = base64_img;
-            window.signedTerms = true;
-        });
-
-        $("#resetSignature").on("click", function(){
-            $("#signatureWidget").jSignature("reset");
-        });
-    }, 200);
-}
-
 const packingFunction = (data, elements) => {
     elements.map(function(x){
         if(x.name) data[x.name] = x.value;
@@ -189,11 +209,16 @@ const packingFunction = (data, elements) => {
 function previewFileURL(input, imgId) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
+
         reader.onload = function(e) {
+            var file = dataURLtoFile(e.target.result, 'photo_image');
+
+            console.log(e);
+
             $(imgId).attr('src', e.target.result);
-            var photoFile = dataURLtoFile(e.target.result, 'photo_image');
             window.photoFile = e.target.result;
-        }        
+        };
+
         reader.readAsDataURL(input.files[0]);
     }
 }

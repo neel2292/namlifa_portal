@@ -40,7 +40,11 @@
   "membership_no",
   "application_status",
   "membership_type",
-  "user_id"
+  "user_id",
+  "change_password",
+  "new_password",
+  "send_password_update_notification",
+  "logout_all_sessions"
  ],
  "fields": [
   {
@@ -232,9 +236,39 @@
    "unique": 1
   },
   {
-   "fieldname": "agent_code",
-   "fieldtype": "Data",
-   "label": "Agent's Code"
+   "collapsible_depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "change_password",
+   "fieldtype": "Section Break",
+   "label": "Change Password",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "new_password",
+   "fieldtype": "Password",
+   "label": "Set New Password",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "send_password_update_notification",
+   "fieldtype": "Check",
+   "label": "Send Password Update Notification",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "logout_all_sessions",
+   "fieldtype": "Check",
+   "label": "Logout from all devices while changing Password",
+   "permlevel": 1
+  },
+  {
+    "fieldname": "agent_code",
+    "fieldtype": "Data",
+    "label": "Agent's Code"
   }
  ],
  "image_field": "photo",

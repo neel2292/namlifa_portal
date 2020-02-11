@@ -29,25 +29,35 @@ $(document).ready(function () {
 			$house_number = $('input[name="tel_h"]'),
 			$fax_number = $('input[name="tel_fax"]');
 
-		IMask($nric_input[0], {
-			mask: '000000-00-0000'
-		});
+		if ($nric_input[0]) {
+			IMask($nric_input[0], {
+				mask: '000000-00-0000'
+			});
+		}
 
-		IMask($cell_number[0], {
-			mask: '{6\\0}00 000 00000'
-		});
+		if ($cell_number[0]) {
+			IMask($cell_number[0], {
+				mask: '{6\\0}00 000 00000'
+			});
+		}
 
-		IMask($office_number[0], {
-			mask: '{6\\0}00 000 00000'
-		});
+		if ($office_number[0]) {
+			IMask($office_number[0], {
+				mask: '{6\\0}00 000 00000'
+			});
+		}
 
-		IMask($house_number[0], {
-			mask: '{6\\0}00 000 00000'
-		});
-		
-		IMask($fax_number[0], {
-			mask: '{6\\0}00 000 00000'
-		});
+		if ($house_number[0]) {
+			IMask($house_number[0], {
+				mask: '{6\\0}00 000 00000'
+			});
+		}
+
+		if ($fax_number[0]) {
+			IMask($fax_number[0], {
+				mask: '{6\\0}00 000 00000'
+			});
+		}
 	});
 
 	window.erpx = (function () {

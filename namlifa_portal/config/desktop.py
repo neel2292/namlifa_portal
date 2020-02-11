@@ -10,5 +10,21 @@ def get_data():
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
 			"label": _("Namlifa Portal")
+		},
+		{
+			"module_name": "Namlifa Members",
+			"color": "red",
+			"icon": "octicon octicon-organization",
+			"type": "module",
+			"label": _("Namlifa Members")
+		},
+		{
+			"module_name": "Namlifa Member",
+			"color": "red",
+			"icon": "octicon octicon-person",
+			"_doctype": "Namlifa Member",
+			"type": "list",
+			"link": "List/Namlifa Member",
+			"label": _("Namlifa Member")
 		}
 	]
