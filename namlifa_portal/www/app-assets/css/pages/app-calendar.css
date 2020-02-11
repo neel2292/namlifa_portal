@@ -1,0 +1,22 @@
+/*----------------------------------------
+  Calendar App
+------------------------------------------*/
+.fc .fc-event {
+  background: #9c27b0;
+  color: #fff;
+  border: none;
+  padding: 4px 7px; }
+
+.fc .fc-button {
+  background: #00bcd4;
+  color: #fff !important;
+  text-shadow: none;
+  border-radius: 2px;
+  height: auto;
+  padding: 10px; }
+
+.fc .fc-content-skeleton tr {
+  border-bottom: none; }
+
+.fc td.fc-day {
+  border-width: 1px !important; }

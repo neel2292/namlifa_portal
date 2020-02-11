@@ -1,0 +1,24 @@
+{% extends "www/main.html" %}
+
+{% block title %}Registration{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/app-assets/css/custom/register.css">
+{% endblock %}
+
+{% block nav %}
+    {% include "www/nav.html" %}
+{% endblock %}
+
+{% block main %}
+    {% include "www/partials/_blueform.html" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "www/partials/_footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script src="js/register.js" defer></script>
+<script src="js/blue.js" defer></script>
+{% endblock %}

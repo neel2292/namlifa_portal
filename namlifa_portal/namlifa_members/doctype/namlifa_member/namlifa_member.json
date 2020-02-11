@@ -1,0 +1,347 @@
+{
+ "autoname": "NM.#####",
+ "creation": "2020-01-31 20:57:32.245110",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details_section",
+  "full_name",
+  "new_nric_no",
+  "old_nric_no",
+  "date_of_birth",
+  "correspondence_address",
+  "postcode",
+  "photo",
+  "cb1_column",
+  "gender",
+  "race",
+  "tel_o",
+  "tel_h",
+  "tel_hp",
+  "tel_fax",
+  "email",
+  "highest_qualification",
+  "company_details_section",
+  "date_contracted_as_agent",
+  "agent_code",
+  "position",
+  "cb2_column",
+  "position_type",
+  "company",
+  "agency",
+  "terms_and_conditions_section",
+  "terms",
+  "terms_signature",
+  "office_use_section",
+  "date_received",
+  "remark",
+  "processed_by",
+  "membership_no",
+  "application_status",
+  "membership_type",
+  "user_id",
+  "change_password",
+  "new_password",
+  "send_password_update_notification",
+  "logout_all_sessions"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "label": "New NRIC No"
+  },
+  {
+   "fieldname": "old_nric_no",
+   "fieldtype": "Data",
+   "label": "Old NRIC No"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "correspondence_address",
+   "fieldtype": "Small Text",
+   "label": "Correspondence Address"
+  },
+  {
+   "fieldname": "postcode",
+   "fieldtype": "Data",
+   "label": "Postcode"
+  },
+  {
+   "fieldname": "cb1_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "race",
+   "fieldtype": "Select",
+   "label": "Race",
+   "options": "Malay\nChinese\nIndians\nOthers"
+  },
+  {
+   "fieldname": "tel_o",
+   "fieldtype": "Data",
+   "label": "Tel (O)"
+  },
+  {
+   "fieldname": "tel_h",
+   "fieldtype": "Data",
+   "label": "Tel (H)"
+  },
+  {
+   "fieldname": "tel_hp",
+   "fieldtype": "Data",
+   "label": "Tel (H/P)"
+  },
+  {
+   "fieldname": "tel_fax",
+   "fieldtype": "Data",
+   "label": "Tel (Fax)"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "highest_qualification",
+   "fieldtype": "Select",
+   "label": "Highest Qualification",
+   "options": "SPM\nSTPM\nCOLLEGE\nTertiary & Above"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "date_contracted_as_agent",
+   "fieldtype": "Date",
+   "label": "Date Contracted as Agent"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Select",
+   "label": "Position",
+   "options": "Agency Leader\nAgent"
+  },
+  {
+   "fieldname": "cb2_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "position_type",
+   "fieldtype": "Select",
+   "label": "Position Type",
+   "options": "Full Time\nPart Time"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "agency",
+   "fieldtype": "Data",
+   "label": "Agency"
+  },
+  {
+   "fieldname": "terms_and_conditions_section",
+   "fieldtype": "Section Break",
+   "label": "Terms and Conditions"
+  },
+  {
+   "default": "<div>Registration of membership will only be processed upon the following:-</div><div>- successful clearance of cheques.</div><div>- successful swiping of credit cards.</div><div>- successful clearance of company deduction.</div><div><br></div><div>For company deduction, kindly allow 30 - 40 days of processing time before delivery of membership card.</div><div><br></div><div>- Membership cards will be delivered within one month from the date of successful registration of membership.</div><div><br></div><div>Membership fees paid are non - refundable.</div><div><br></div><div>In the event of lost of membership card, a replacement fee of RM20/= will be charged for processing of a new card.</div><div><br></div><div>I agree that my signing on the NAMLIFA membership form shall constitute my acceptance of and my agreement to be bound by the terms and conditions contained in this form.</div>",
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Terms"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "office_use_section",
+   "fieldtype": "Section Break",
+   "label": "Office Use"
+  },
+  {
+   "fieldname": "date_received",
+   "fieldtype": "Date",
+   "label": "Date Received"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "processed_by",
+   "fieldtype": "Column Break",
+   "label": "Processed By"
+  },
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Data",
+   "label": "Membership No"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Application Status",
+   "options": "Pending\nApproved\nRejected"
+  },
+  {
+   "default": "Ordinary/Affiliate/Provisional",
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "label": "Membership Type",
+   "options": "Ordinary/Affiliate/Provisional\nFellow\nAssociate\nLife"
+  },
+  {
+   "fieldname": "terms_signature",
+   "fieldtype": "Attach Image",
+   "label": "Signature"
+  },
+  {
+   "depends_on": "eval:doc.application_status=='Approved'",
+   "description": "System User (login) ID. If Member status is active it will automatically create the user acount",
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "System Account",
+   "options": "User",
+   "permlevel": 1,
+   "unique": 1
+  },
+  {
+<<<<<<< HEAD
+   "collapsible_depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "change_password",
+   "fieldtype": "Section Break",
+   "label": "Change Password",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "new_password",
+   "fieldtype": "Password",
+   "label": "Set New Password",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "send_password_update_notification",
+   "fieldtype": "Check",
+   "label": "Send Password Update Notification",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.user_id!=\"\"",
+   "fieldname": "logout_all_sessions",
+   "fieldtype": "Check",
+   "label": "Logout from all devices while changing Password",
+   "permlevel": 1
+  }
+ ],
+ "image_field": "photo",
+ "modified": "2020-02-09 10:57:48.873748",
+=======
+   "fieldname": "agent_code",
+   "fieldtype": "Data",
+   "label": "Agent's Code"
+  }
+ ],
+ "image_field": "photo",
+ "modified": "2020-02-10 16:30:57.057172",
+>>>>>>> 2a268efcd50fe47d5c924184b404a1071d2aafdc
+ "modified_by": "Administrator",
+ "module": "Namlifa Members",
+ "name": "Namlifa Member",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+<<<<<<< HEAD
+   "role": "System Manager",
+=======
+   "role": "Administrator",
+>>>>>>> 2a268efcd50fe47d5c924184b404a1071d2aafdc
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+<<<<<<< HEAD
+   "role": "Administrator",
+=======
+   "role": "System Manager",
+>>>>>>> 2a268efcd50fe47d5c924184b404a1071d2aafdc
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

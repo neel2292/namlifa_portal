@@ -1,0 +1,149 @@
+{% extends "www/main.html" %}
+
+{% block title %}AKARD Form{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block nav %}
+    {% include "www/nav.html" %}
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col s1">
+    </div>
+    <div class="col s10">
+        <br>
+        <div class="card navbar-dark blue darken-1">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s1 hide-on-med-and-down">
+                        <span><img src="/images/logo.svg" width="100" style="padding-top:15px;"></span>
+                    </div>
+                    <div class="col s11" style="vertical-align:middle; padding-left:30px;">
+                        <h3 class="white-text">AKARD FORM</h3>
+                        <p class="white-text">Please fill in the form and submit it upon completion.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content grey lighten-4">
+                <form>
+                    <div id="personalDetails">
+		                    <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+                    		<p>PERSONAL DETAILS</p>
+            		</div>
+                         <div class="row">
+                            <div class="input-field col s4">
+                                <input placeholder="" id="namlifa_member_id" name="namlifa_member_id" type="text" class="validate invalid">
+                                <label for="namlifa_member_id">Namlifa Membership No.</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input placeholder="" id="akard_no" name="akard_no" type="text" class="validate">
+                                <label for="akard_no">AKARD ID No.</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input placeholder="" id="title" name="title" type="text" class="validate">
+                                <label for="title">Mr/Mrs/Dato</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input placeholder="Full Name" id="full_name" name="full_name" type="text" class="validate invalid">
+                              <label for="full_name">Full Name (as in NRIC)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="new_nric_no" name="new_nric_no" type="text" class="validate invalid" data-length="14" pattern="^\d{6}-\d{2}-\d{4}$">
+                                <label for="new_nric_no">New NRIC No</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="agent_code" name="agent_code" type="text" class="validate">
+                                <label for="agent_code">Agent Code</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="" id="company_name" name="company_name" type="text" class="datepicker">
+                                <label for="company_name">Company Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="" id="designation" name="designation" type="text" class="validate">
+                                <label for="designation">Designation</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="" id="agency_address" name="agency_address" type="text" class="cnf validate">
+                                <label for="agency_address">Agency Address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="postcode" name="postcode" type="text" class="validate invalid">
+                                <label for="postcode">Postcode</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="city" name="city" type="text" class="validate invalid">
+                                <label for="city">City</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                              <div class="input-field col s12">
+                                <input placeholder="" id="correspondence_address" name="correspondence_address" type="text" class="validate invalid">
+                                <label for="correspondence_address">Correspondence Address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="correspondence_postcode" name="correspondence_postcode" type="text" class="validate invalid">
+                                <label for="correspondence_postcode">Postcode</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="correspondence_city" name="correspondence_city" type="text" class="validate invalid">
+                                <label for="correspondence_city">City</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="tel_o" name="tel_o" type="text" class="validate invalid">
+                                <label for="tel_o">Tel (Office)</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="tel_hp" name="tel_hp" type="text" class="validate invalid">
+                                <label for="tel_hp">Mobile No</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="" id="tel_fax" name="tel_fax" type="text" class="validate invalid">
+                                <label for="tel_fax">Fax No</label>
+                            </div>
+                            <div class="input-field col s6">
+                                 <input placeholder="" id="email" name="email" type="email" class="validate invalid">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col s1">
+    </div>
+</div>
+{% endblock %}
+
+{% block sidenav %}
+    {% include "www/member/sidenav.html" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "www/partials/_footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
