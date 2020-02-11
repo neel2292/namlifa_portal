@@ -1,0 +1,152 @@
+import frappe
+import json
+
+fields = [
+  {
+    "val": "Name",
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "label": "IC No",
+   "val": "Name"
+  },
+  {
+   "fieldname": "tel_hp",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "val": "Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "val": "Name"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "val": "Name"
+  },
+  {
+   "fieldname": "agent_code",
+   "fieldtype": "Data",
+   "label": "Agent Code",
+      "val": "Name"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_lp101_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP101",
+   "val": "Name"
+  },
+  {
+   "fieldname": "lp101_grade",
+   "fieldtype": "Data",
+   "label": "LP101 Grade Achieved",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_lp102_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP102",
+   "val": "Name"
+  },
+  {
+   "fieldname": "lp102_grade",
+   "fieldtype": "Data",
+   "label": "LP102 Grade Achieved",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_lp103_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP103",
+   "val": "Name"
+  },
+  {
+   "fieldname": "lp103_grade",
+   "fieldtype": "Data",
+   "label": "LP103 Grade",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_lp104_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion LP104",
+   "val": "Name"
+  },
+  {
+   "fieldname": "lp104_grade",
+   "fieldtype": "Data",
+   "label": "LP104 Grade",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_ch1fp_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion Ch1FP",
+   "val": "Name"
+  },
+  {
+   "fieldname": "ch1fp_grade",
+   "fieldtype": "Data",
+   "label": "Ch1FP Grade",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_chapm_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion ChAPM",
+   "val": "Name"
+  },
+  {
+   "fieldname": "champ_grade",
+   "fieldtype": "Data",
+   "label": "ChAPM Grade",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_rfp_completed",
+   "fieldtype": "Date",
+   "label": "Year of Completion RFP",
+   "val": "Name"
+  },
+  {
+   "fieldname": "rfp_grade",
+   "fieldtype": "Data",
+   "label": "RFP Grade",
+   "val": "Name"
+  },
+  {
+   "fieldname": "graduation_date",
+   "fieldtype": "Date",
+   "label": "Year of Graduation",
+   "val": "Name"
+  },
+  {
+   "fieldname": "date_taken",
+   "fieldtype": "Date",
+   "label": "Date Taken",
+   "val": "Name"
+  }
+ ]
+
+def get_context(context):
+
+    context.user = frappe.session.user
+    context.user_doc = frappe.session
+    context.csrf_token = frappe.sessions.get_csrf_token()
+    context.fields = fields
+
+    return context
