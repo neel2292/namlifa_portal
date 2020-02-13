@@ -4,6 +4,7 @@ $(document).ready(function() {
     var agent_date = document.querySelectorAll('#date_contracted_as_agent');
     var agent_date_instance = M.Datepicker.init(agent_date, {format: 'mm/yyyy'});
     var signatures = {};
+    var photo;
 
     loadSignPad();
     
@@ -82,22 +83,34 @@ $(document).ready(function() {
     });
 
     $("#submitApplication").on("click", function(e) {
-        var $invalid = $('.invalid');
+        var $invalid = $('.invalid'),
+            errLine,
+            data = {},
+            elements,
+            res;
 
 
         e.preventDefault();
         if ($invalid.length) {
-            var errLine = "<p>There are atleast "+ $invalid.length +" error(s) on the page. Look out for red fields.</p>";
+            errLine = "<p>There are atleast "+ $invalid.length +" error(s) on the page. Look out for red fields.</p>";
 
             window.erpx.showError(errLine);
         }
-        else if (Objec.keys(signatures).length !== 2) {
-            var errLine = "<p>Plese sign on signature fields</p>";
+        else if (Object.keys(signatures).length !== 2) {
+            errLine = "<p>Plese sign on signature fields</p>";
 
             window.erpx.showError(errLine);
         }
         else {
+            elements = [].slice.call(document.forms[0].elements);
+            data = packingFunction(data, elements);
+            data['photo'] = photo;
+            data['terms_signature'] = signatures['terms_signature'];
+            data['payment_signature'] = signatures['payment_signature'];
 
+            res = window.erpx.call_method("namlifa_portal.namlifa_members.doctype.namlifa_member.member_registration",'Namlifa Member', data);
+
+            console.log(res);
         }
         // e.preventDefault();
         // window.location.href = 'payment';
@@ -179,6 +192,23 @@ $(document).ready(function() {
             });
         }, 200);
     }
+
+    function previewFileURL(input, imgId) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var file = dataURLtoFile(e.target.result, 'photo_image');
+
+                console.log(e);
+
+                $(imgId).attr('src', e.target.result);
+                photo = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 });
 
 function dataURLtoFile(dataurl, filename) {
@@ -205,20 +235,3 @@ const packingFunction = (data, elements) => {
     }); 
     return data;
 };
-
-function previewFileURL(input, imgId) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-            var file = dataURLtoFile(e.target.result, 'photo_image');
-
-            console.log(e);
-
-            $(imgId).attr('src', e.target.result);
-            window.photoFile = e.target.result;
-        };
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}

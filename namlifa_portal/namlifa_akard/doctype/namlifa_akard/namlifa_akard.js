@@ -5,4 +5,7 @@ frappe.ui.form.on('Namlifa Akard', {
 	// refresh: function(frm) {
 
 	// }
+    namlifa_member_id: function (frm) {
+        frm.doc
+    }
 });
