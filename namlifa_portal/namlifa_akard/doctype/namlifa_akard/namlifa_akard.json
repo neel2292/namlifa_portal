@@ -67,18 +67,21 @@
    "label": "Title"
   },
   {
+   "fetch_from": "namlifa_member_id.full_name",
    "fieldname": "full_name",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Full Name"
   },
   {
+   "fetch_from": "namlifa_member_id.new_nric_no",
    "fieldname": "new_nric_no",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "New NRIC No"
   },
   {
+   "fetch_from": "namlifa_member_id.agent_code",
    "fieldname": "agent_code",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Agent Code"
   },
   {
@@ -107,13 +110,15 @@
    "label": "City"
   },
   {
+   "fetch_from": "namlifa_member_id.correspondence_address",
    "fieldname": "correspondence_address",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Correspondence Address"
   },
   {
+   "fetch_from": "namlifa_member_id.postcode",
    "fieldname": "correspondence_postcode",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Correspondence Postcode"
   },
   {
@@ -122,23 +127,27 @@
    "label": "Correspondence City"
   },
   {
+   "fetch_from": "namlifa_member_id.tel_o",
    "fieldname": "tel_o",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Tel (Office)"
   },
   {
+   "fetch_from": "namlifa_member_id.tel_hp",
    "fieldname": "tel_hp",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Mobile No"
   },
   {
+   "fetch_from": "namlifa_member_id.tel_fax",
    "fieldname": "tel_fax",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Fax No"
   },
   {
+   "fetch_from": "namlifa_member_id.email",
    "fieldname": "email",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Email"
   },
   {
@@ -243,7 +252,7 @@
    "label": "Date"
   }
  ],
- "modified": "2020-02-10 13:36:36.258264",
+ "modified": "2020-02-17 14:26:34.363870",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",
