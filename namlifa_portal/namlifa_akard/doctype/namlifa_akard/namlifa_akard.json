@@ -67,23 +67,27 @@
    "label": "Title"
   },
   {
+   "fetch_from": "namlifa_member.full_name",
    "fieldname": "full_name",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Full Name"
   },
   {
+   "fetch_from": "namlifa_member.new_nric_no",
    "fieldname": "new_nric_no",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "New NRIC No"
   },
   {
+   "fetch_from": "namlifa_member.agent_code",
    "fieldname": "agent_code",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Agent Code"
   },
   {
+   "fetch_from": "namlifa_member.company",
    "fieldname": "company_name",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Company Name"
   },
   {
@@ -122,18 +126,21 @@
    "label": "Correspondence City"
   },
   {
+   "fetch_from": "namlifa_member.tel_o",
    "fieldname": "tel_o",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Tel (Office)"
   },
   {
+   "fetch_from": "namlifa_member.tel_hp",
    "fieldname": "tel_hp",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Mobile No"
   },
   {
+   "fetch_from": "namlifa_member.tel_fax",
    "fieldname": "tel_fax",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Fax No"
   },
   {
@@ -243,7 +250,7 @@
    "label": "Date"
   }
  ],
- "modified": "2020-02-10 13:36:36.258264",
+ "modified": "2020-02-18 21:11:52.066260",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",

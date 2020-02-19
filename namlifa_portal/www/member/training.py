@@ -1,152 +1,131 @@
 import frappe
 import json
 
+
 fields = [
   {
    "fieldname": "user_name",
    "fieldtype": "Data",
-   "label": "Name",
-    "fieldvalue": "Neel Singh"
+   "label": "Name"
   },
   {
    "fieldname": "new_nric_no",
    "fieldtype": "Data",
-   "label": "IC No",
-    "fieldvalue": "880808-88-8888"
+   "label": "IC No"
   },
   {
    "fieldname": "tel_hp",
    "fieldtype": "Data",
-   "label": "Mobile No",
-    "fieldvalue": "0123456789"
+   "label": "Mobile No"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email",
-    "fieldvalue": "test@gmail.com"
+   "label": "Email"
   },
   {
    "fieldname": "company",
    "fieldtype": "Data",
-   "label": "Company",
-    "fieldvalue": "Company XXX"
+   "label": "Company"
   },
   {
    "fieldname": "agent_code",
    "fieldtype": "Data",
-   "label": "Agent Code",
-    "fieldvalue": "XXX-007"
+   "label": "Agent Code"
   },
   {
    "fieldname": "position",
    "fieldtype": "Data",
-   "label": "Position",
-    "fieldvalue": "Manager"
+   "label": "Position"
   },
   {
    "fieldname": "date_lp101_completed",
    "fieldtype": "Date",
-   "label": "Year of Completion LP101",
-    "fieldvalue": "2016"
+   "label": "Year of Completion LP101"
   },
   {
    "fieldname": "lp101_grade",
    "fieldtype": "Data",
-   "label": "LP101 Grade Achieved",
-    "fieldvalue": "A"
+   "label": "LP101 Grade Achieved"
   },
   {
    "fieldname": "date_lp102_completed",
    "fieldtype": "Date",
-   "label": "Year of Completion LP102",
-    "fieldvalue": "2017"
+   "label": "Year of Completion LP102"
   },
   {
    "fieldname": "lp102_grade",
    "fieldtype": "Data",
-   "label": "LP102 Grade Achieved",
-    "fieldvalue": "A"
+   "label": "LP102 Grade Achieved"
   },
   {
    "fieldname": "date_lp103_completed",
    "fieldtype": "Date",
-   "label": "Year of Completion LP103",
-    "fieldvalue": "2018"
+   "label": "Year of Completion LP103"
   },
   {
    "fieldname": "lp103_grade",
    "fieldtype": "Data",
-   "label": "LP103 Grade",
-    "fieldvalue": "A"
+   "label": "LP103 Grade"
   },
   {
    "fieldname": "date_lp104_completed",
    "fieldtype": "Date",
-   "label": "Year of Completion LP104",
-    "fieldvalue": "2019"
+   "label": "Year of Completion LP104"
   },
   {
    "fieldname": "lp104_grade",
    "fieldtype": "Data",
-   "label": "LP104 Grade",
-    "fieldvalue": "A"
+   "label": "LP104 Grade"
   },
   {
    "fieldname": "date_ch1fp_completed",
    "fieldtype": "Date",
-   "label": "Year of Completion Ch1FP",
-    "fieldvalue": "2020"
+   "label": "Year of Completion Ch1FP"
   },
   {
    "fieldname": "ch1fp_grade",
    "fieldtype": "Data",
-   "label": "Ch1FP Grade",
-    "fieldvalue": "A"
+   "label": "Ch1FP Grade"
   },
   {
    "fieldname": "date_chapm_completed",
    "fieldtype": "Date",
-   "label": "Year of Completion ChAPM",
-    "fieldvalue": "2020"
+   "label": "Year of Completion ChAPM"
   },
   {
    "fieldname": "champ_grade",
    "fieldtype": "Data",
-   "label": "ChAPM Grade",
-    "fieldvalue": "A"
+   "label": "ChAPM Grade"
   },
   {
    "fieldname": "date_rfp_completed",
    "fieldtype": "Date",
-   "label": "Year of Completion RFP",
-    "fieldvalue": "2018"
+   "label": "Year of Completion RFP"
   },
   {
    "fieldname": "rfp_grade",
    "fieldtype": "Data",
-   "label": "RFP Grade",
-    "fieldvalue": "A"
+   "label": "RFP Grade"
   },
   {
    "fieldname": "graduation_date",
    "fieldtype": "Date",
-   "label": "Year of Graduation",
-    "fieldvalue": "2020"
+   "label": "Year of Graduation"
   },
   {
    "fieldname": "date_taken",
    "fieldtype": "Date",
-   "label": "Date Taken",
-    "fieldvalue": "08-08-2020"
+   "label": "Date Taken"
   }
  ]
 
 def get_context(context):
-
+    training = frappe.db.get_value("Namlifa Training", {"email": frappe.session.user}, "*")
     context.user = frappe.session.user
     context.user_doc = frappe.session
     context.csrf_token = frappe.sessions.get_csrf_token()
     context.fields = fields
+    context.training = training
 
     return context
