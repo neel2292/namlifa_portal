@@ -15,6 +15,18 @@ def get_data():
                                         "type": "doctype",
                                         "name": "Namlifa Akard",
                                 },
+                                {
+                                        "type": "doctype",
+                                        "name": "Namlifa PA",
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Namlifa PI",
+                                },
+                                {
+                                        "type": "doctype",
+                                        "name": "Namlifa Training",
+                                },
 
 
 				{
