@@ -67,19 +67,19 @@
    "label": "Title"
   },
   {
-   "fetch_from": "namlifa_member.full_name",
+   "fetch_from": "namlifa_member_id.full_name",
    "fieldname": "full_name",
    "fieldtype": "Read Only",
    "label": "Full Name"
   },
   {
-   "fetch_from": "namlifa_member.new_nric_no",
+   "fetch_from": "namlifa_member_id.new_nric_no",
    "fieldname": "new_nric_no",
    "fieldtype": "Read Only",
    "label": "New NRIC No"
   },
   {
-   "fetch_from": "namlifa_member.agent_code",
+   "fetch_from": "namlifa_member_id.agent_code",
    "fieldname": "agent_code",
    "fieldtype": "Read Only",
    "label": "Agent Code"
@@ -111,13 +111,15 @@
    "label": "City"
   },
   {
+   "fetch_from": "namlifa_member_id.correspondence_address",
    "fieldname": "correspondence_address",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Correspondence Address"
   },
   {
+   "fetch_from": "namlifa_member_id.postcode",
    "fieldname": "correspondence_postcode",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Correspondence Postcode"
   },
   {
@@ -126,26 +128,27 @@
    "label": "Correspondence City"
   },
   {
-   "fetch_from": "namlifa_member.tel_o",
+   "fetch_from": "namlifa_member_id.tel_o",
    "fieldname": "tel_o",
    "fieldtype": "Read Only",
    "label": "Tel (Office)"
   },
   {
-   "fetch_from": "namlifa_member.tel_hp",
+   "fetch_from": "namlifa_member_id.tel_hp",
    "fieldname": "tel_hp",
    "fieldtype": "Read Only",
    "label": "Mobile No"
   },
   {
-   "fetch_from": "namlifa_member.tel_fax",
+   "fetch_from": "namlifa_member_id.tel_fax",
    "fieldname": "tel_fax",
    "fieldtype": "Read Only",
    "label": "Fax No"
   },
   {
+   "fetch_from": "namlifa_member_id.email",
    "fieldname": "email",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Email"
   },
   {
