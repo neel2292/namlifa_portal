@@ -2,6 +2,7 @@
  "autoname": "NM.#####",
  "creation": "2020-01-31 20:57:32.245110",
  "doctype": "DocType",
+ "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
@@ -266,13 +267,13 @@
    "permlevel": 1
   },
   {
-    "fieldname": "agent_code",
-    "fieldtype": "Data",
-    "label": "Agent's Code"
+   "fieldname": "agent_code",
+   "fieldtype": "Data",
+   "label": "Agent's Code"
   }
  ],
  "image_field": "photo",
- "modified": "2020-02-10 16:30:57.057172",
+ "modified": "2020-02-19 21:46:04.375014",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",
