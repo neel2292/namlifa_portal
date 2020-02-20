@@ -108,7 +108,7 @@ $(document).ready(function() {
             data['terms_signature'] = signatures['terms_signature'];
             data['payment_signature'] = signatures['payment_signature'];
 
-            res = window.erpx.call_method("namlifa_portal.namlifa_members.doctype.namlifa_member.member_registration",'Namlifa Member', data);
+            res = window.erpx.call_method("namlifa_portal.namlifa_members.doctype.namlifa_member.namlifa_member.member_registration",'Namlifa Member', data);
 
             console.log(res);
         }
