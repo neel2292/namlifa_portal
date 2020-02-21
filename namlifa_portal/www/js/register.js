@@ -1,13 +1,13 @@
 $(document).ready(function() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, {format: 'dd/mm/yyyy'});
-    var agent_date = document.querySelectorAll('#date_contracted_as_agent');
-    var agent_date_instance = M.Datepicker.init(agent_date, {format: 'mm/yyyy'});
+    // var elems = document.querySelectorAll('.datepicker');
+    // var instances = M.Datepicker.init(elems, {format: 'dd/mm/yyyy'});
+    // var agent_date = document.querySelectorAll('#date_contracted_as_agent');
+    // var agent_date_instance = M.Datepicker.init(agent_date, {format: 'mm/yyyy'});
     var signatures = {};
     var photo;
 
     loadSignPad();
-    
+
     var validation = {
         new_nric_no: function (val) {
             var match,
@@ -108,7 +108,7 @@ $(document).ready(function() {
             data['terms_signature'] = signatures['terms_signature'];
             data['payment_signature'] = signatures['payment_signature'];
 
-            res = window.erpx.call_method("namlifa_portal.namlifa_members.doctype.namlifa_member.namlifa_member.member_registration",'Namlifa Member', data);
+            res = window.erpx.call_method("namlifa_portal.namlifa_members.doctype.namlifa_member.member_registration",'Namlifa Member', data);
 
             console.log(res);
         }
@@ -232,6 +232,6 @@ function dataURLtoFile(dataurl, filename) {
 const packingFunction = (data, elements) => {
     elements.map(function(x){
         if(x.name) data[x.name] = x.value;
-    }); 
+    });
     return data;
 };

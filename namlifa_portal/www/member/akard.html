@@ -25,20 +25,24 @@
             </div>
             <div class="card-content grey lighten-4">
                 <form>
-                     {% for obj in fields %}
-                        {% if obj.fieldtype == 'Section Break' %}
-                            <div class="card-panel blue darken-1 white-text center" style="padding:10px">
-                    		    <p>{{obj.label}}</p>
-            		        </div>
-                        {% else %}
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{akard[obj.fieldname]}}" disabled>
-                                    <label for="{{obj.fieldname}}">{{obj.label}}</label>
+                      {% if akard != None %}
+                        {% for obj in fields %}
+                            {% if obj.fieldtype == 'Section Break' %}
+                                <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+                                    <p>{{obj.label}}</p>
                                 </div>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                            {% else %}
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{akard[obj.fieldname]}}" disabled>
+                                        <label for="{{obj.fieldname}}">{{obj.label}}</label>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <div>Form is empty</div>
+                    {% endif %}
                 </form>
             </div>
         </div>

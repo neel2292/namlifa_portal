@@ -201,47 +201,6 @@ fields = [
    "label": "Date"
   }
  ]
-fieldname  = [
-"personal_details_section",
-"namlifa_member_id",
-"akard_id_no",
-"title",
-"full_name",
-"new_nric_no",
-"agent_code",
-"company_name",
-"designation",
-"agency_address",
-"postcode",
-"city",
-"correspondence_address",
-"correspondence_postcode",
-"correspondence_city",
-"tel_o",
-"tel_hp",
-"tel_fax",
-"email",
-"branch",
-"akard_plan",
-"akard_builders_award",
-"life_member",
-"payment_details",
-"fee",
-"member_fee",
-"total_payable",
-"total_fee",
-"method_payment",
-"payment_method",
-"amount",
-"cheque_no",
-"card_type",
-"card_bank",
-"card_no",
-"expiry_date",
-"card_name",
-"signature",
-"date"
-]
 
 def get_context(context):
     akard = frappe.db.get_value("Namlifa Akard", {"email": frappe.session.user}, "*")

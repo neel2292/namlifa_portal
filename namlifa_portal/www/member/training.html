@@ -25,7 +25,7 @@
             </div>
             <div class="card-content grey lighten-4">
                 <form>
-                    {% if training is defined %}
+                    {% if  training != None %}
                         {% for obj in fields %}
                             {% if obj.fieldtype == 'Section Break' %}
                                 <div class="card-panel blue darken-1 white-text center" style="padding:10px">

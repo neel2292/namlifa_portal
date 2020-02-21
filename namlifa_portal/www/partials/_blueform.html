@@ -9,10 +9,10 @@
                         <span><img src="/images/logo.svg" width="100" style="padding-top:15px;"></span>
                     </div>
                     <div class="col s11" style="vertical-align:middle; padding-left:30px;">
-                        <h3 class="white-text">MEMBERSHIP APPLICATION FORM</h3>    
+                        <h3 class="white-text">MEMBERSHIP APPLICATION FORM</h3>
                         <p class="white-text">Please fill in the form and submit it upon completion.</p>
                     </div>
-                </div>  
+                </div>
             </div>
             <div class="card-content grey lighten-4">
                 <form>
@@ -56,7 +56,7 @@
                             <label for="race">Race</label>
                         </div>
                         <div class="input-field col s6">
-                            <input placeholder="" id="date_of_birth" name="date_of_birth" type="text" class="datepicker">
+                            <input placeholder="Format: DD/MM/YYYY" id="date_of_birth" name="date_of_birth" type="text">
                             <label for="date_of_birth">Date of Birth</label>
                         </div>
                         </div>
@@ -116,7 +116,7 @@
                             <div class="file-field input-field col s2 center-align">
                                 <span><img src="" id="photoPreview" width="100"></span>
                             </div>
-                        </div>                    
+                        </div>
                     </div>
 
                     <div id="companyDetails">
@@ -125,7 +125,7 @@
             		</div>
                         <div class="row">
                             <div class="input-field col s6">
-                              <input placeholder="" id="date_contracted_as_agent" name="date_contracted_as_agent" type="text">
+                              <input placeholder="Format: MM/YYYY" id="date_contracted_as_agent" name="date_contracted_as_agent" type="text">
                               <label for="date_contracted_as_agent">Date Contracted as Agent</label>
                             </div>
                             <div class="input-field col s6">
@@ -262,17 +262,17 @@
 			        </div>
 			        declare all the above information is correct at the time of application and I hereby authorise <br>
 			        <div class="input-field inline">
-			            <input placeholder="" id="" name="" type="text">
+			            <input placeholder="" id="renewal_company" name="renewal_company" type="text">
 			        </div>
 			        (Company) to debit RM
 			        <div class="input-field inline">
-			            <input placeholder="" id="renewal_company" name="renewal_company" type="text" pattern="^\d+(?:\.\d{1,2})?$" class="validate">
+			            <input placeholder="" id="" name="" type="number" class="validate">
 				    <span class="helper-text" data-error="Invalid key in"></span>
 			        </div>
 			        payable to<br>
 			        NAMLIFA from my commision as per my Agent Code or Account No:
 				<div class="input-field inline">
-			            <input placeholder="" id="" name="" type="text" pattern="[0-9]+" class="validate">
+			            <input placeholder="" id="agent_code" name="agent_code" type="text" pattern="[0-9]+" class="validate">
 				    <span class="helper-text" data-error="Invalid key in"></span>
 			        </div>
 			        , on an Annual Basic,<br>
@@ -301,6 +301,10 @@
                                     <div>- successful clearance of cheques.</div>
                                     <div>- successful swiping of credit cards.</div>
                                     <div>- successful clearance of company deduction.</div>
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <div>By signing this form, I  hereby give consent to NAMLIFA to auto-renew my membership annually. Any request for termination of membership, will need to be made in writing.</div>
                                     <div>
                                         <br>
                                     </div>

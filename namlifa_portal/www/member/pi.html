@@ -1,6 +1,6 @@
 {% extends "www/main.html" %}
 
-{% block title %}Namlifa Professional Indemnity{% endblock %}
+{% block title %}Namlifa Personal Accident{% endblock %}
 
 {% block styles %}
 {% endblock %}
@@ -25,7 +25,7 @@
             </div>
             <div class="card-content grey lighten-4">
                 <form>
-                    {% if pa is defined %}
+                    {% if pi != None %}
                         {% for obj in fields %}
                             {% if obj.fieldtype == 'Section Break' %}
                                 <div class="card-panel blue darken-1 white-text center" style="padding:10px">
@@ -34,7 +34,7 @@
                             {% else %}
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{pa[obj.fieldname]}}" disabled>
+                                        <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{pi[obj.fieldname]}}" disabled>
                                         <label for="{{obj.fieldname}}">{{obj.label}}</label>
                                     </div>
                                 </div>
