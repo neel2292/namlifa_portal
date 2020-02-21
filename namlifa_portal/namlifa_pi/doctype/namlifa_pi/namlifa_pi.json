@@ -9,6 +9,7 @@
   "pi_join_date",
   "receipt_number",
   "branch",
+  "namlifa_pi_members",
   "full_name",
   "new_nric_no",
   "relationship",
@@ -192,9 +193,15 @@
    "fieldname": "certificate_number",
    "fieldtype": "Data",
    "label": "Certificate Number"
+  },
+  {
+   "fieldname": "namlifa_pi_members",
+   "fieldtype": "Table",
+   "label": "Namlifa PI Members",
+   "options": "Namlifa PI Member"
   }
  ],
- "modified": "2020-02-21 18:55:08.952896",
+ "modified": "2020-02-21 08:42:08.905135",
  "modified_by": "Administrator",
  "module": "Namlifa PI",
  "name": "Namlifa PI",
