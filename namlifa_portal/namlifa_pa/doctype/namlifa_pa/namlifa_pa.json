@@ -7,6 +7,7 @@
   "membership_no",
   "membership_expiry",
   "gpa_joined",
+  "namlifa_pa_members",
   "receipt_no",
   "branch",
   "full_name",
@@ -257,9 +258,15 @@
    "fieldname": "nominee_three_share",
    "fieldtype": "Data",
    "label": "Share % 3"
+  },
+  {
+   "fieldname": "namlifa_pa_members",
+   "fieldtype": "Table",
+   "label": "Namlifa PA Members",
+   "options": "Namlifa PA Member"
   }
  ],
- "modified": "2020-02-09 18:55:25.595714",
+ "modified": "2020-02-21 17:09:26.847816",
  "modified_by": "Administrator",
  "module": "Namlifa PA",
  "name": "Namlifa PA",
