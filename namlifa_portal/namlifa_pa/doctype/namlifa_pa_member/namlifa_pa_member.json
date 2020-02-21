@@ -1,0 +1,277 @@
+{
+ "creation": "2020-02-21 17:06:17.875228",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "new_nric_no",
+  "relationship",
+  "age",
+  "occupation",
+  "renewal_application",
+  "sum_assured",
+  "address",
+  "postcode",
+  "city",
+  "state",
+  "tel_o",
+  "tel_hp",
+  "company",
+  "email",
+  "insurance_validity",
+  "credit_card_no",
+  "payment_mode",
+  "bank",
+  "premium_sst",
+  "total_premium",
+  "premium",
+  "over_premium",
+  "auto_renewal",
+  "certificate_number",
+  "nominee_one",
+  "nominee_one_relationship",
+  "nominee_one_ic_no",
+  "nominee_one_share",
+  "nominee_two",
+  "nominee_two_relationship",
+  "nominee_two_ic_no",
+  "nominee_two_share",
+  "nominee_three",
+  "nominee_three_relationship",
+  "nominee_three_ic_no",
+  "nominee_three_share"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IC No"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "renewal_application",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Renewal/New Application"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address"
+  },
+  {
+   "fieldname": "postcode",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Postcode"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "State"
+  },
+  {
+   "fieldname": "tel_o",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tel No(O)"
+  },
+  {
+   "fieldname": "tel_hp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tel H/P"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email"
+  },
+  {
+   "fieldname": "insurance_validity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Period Of Insurance"
+  },
+  {
+   "fieldname": "credit_card_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Credit Card No/Cheque No"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Mode"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bank"
+  },
+  {
+   "fieldname": "premium_sst",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Premium Exclude SST 6%"
+  },
+  {
+   "fieldname": "total_premium",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Premium Include SST 6%"
+  },
+  {
+   "fieldname": "premium",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Premium"
+  },
+  {
+   "fieldname": "over_premium",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Over Premium"
+  },
+  {
+   "fieldname": "auto_renewal",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Auto Renewal"
+  },
+  {
+   "fieldname": "certificate_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Certificate Number"
+  },
+  {
+   "fieldname": "nominee_one",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominee 1"
+  },
+  {
+   "fieldname": "nominee_one_relationship",
+   "fieldtype": "Data",
+   "label": "Nominee Relationship 1"
+  },
+  {
+   "fieldname": "nominee_one_ic_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominee's IC No 1"
+  },
+  {
+   "fieldname": "nominee_one_share",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Share % 1"
+  },
+  {
+   "fieldname": "nominee_two",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominee 2"
+  },
+  {
+   "fieldname": "nominee_two_relationship",
+   "fieldtype": "Data",
+   "label": "Nominee Relationship 2"
+  },
+  {
+   "fieldname": "nominee_two_ic_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominee's IC No 2"
+  },
+  {
+   "fieldname": "nominee_two_share",
+   "fieldtype": "Data",
+   "label": "Share % 2"
+  },
+  {
+   "fieldname": "nominee_three",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominee 3"
+  },
+  {
+   "fieldname": "nominee_three_relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominee Relationship 3"
+  },
+  {
+   "fieldname": "nominee_three_ic_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominee's IC No 3"
+  },
+  {
+   "fieldname": "nominee_three_share",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Share % 3"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-02-21 17:13:54.310316",
+ "modified_by": "Administrator",
+ "module": "Namlifa PA",
+ "name": "Namlifa PA Member",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
