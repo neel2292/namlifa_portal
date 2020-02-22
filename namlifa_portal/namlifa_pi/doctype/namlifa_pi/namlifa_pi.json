@@ -39,8 +39,9 @@
  "fields": [
   {
    "fieldname": "membership_no",
-   "fieldtype": "Data",
-   "label": "Membership No"
+   "fieldtype": "Link",
+   "label": "Membership No",
+   "options": "Namlifa Member"
   },
   {
    "fieldname": "membership_expiry",
@@ -193,7 +194,7 @@
    "label": "Certificate Number"
   }
  ],
- "modified": "2020-02-09 18:39:12.243524",
+ "modified": "2020-02-21 18:55:08.952896",
  "modified_by": "Administrator",
  "module": "Namlifa PI",
  "name": "Namlifa PI",

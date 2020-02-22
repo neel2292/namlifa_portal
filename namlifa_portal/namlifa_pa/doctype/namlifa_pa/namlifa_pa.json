@@ -51,8 +51,9 @@
  "fields": [
   {
    "fieldname": "membership_no",
-   "fieldtype": "Data",
-   "label": "Membership No"
+   "fieldtype": "Link",
+   "label": "Membership No",
+   "options": "Namlifa Member"
   },
   {
    "fieldname": "membership_expiry",

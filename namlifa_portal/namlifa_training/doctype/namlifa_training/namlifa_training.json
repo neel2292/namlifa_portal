@@ -30,33 +30,39 @@
  ],
  "fields": [
   {
+   "fetch_from": "namlifa_member.full_name",
    "fieldname": "user_name",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Name"
   },
   {
+   "fetch_from": "namlifa_member.new_nric_no",
    "fieldname": "new_nric_no",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "IC No"
   },
   {
+   "fetch_from": "namlifa_member.tel_hp",
    "fieldname": "tel_hp",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Mobile No"
   },
   {
+   "fetch_from": "namlifa_member.email",
    "fieldname": "email",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Email"
   },
   {
+   "fetch_from": "namlifa_member.company",
    "fieldname": "company",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Company"
   },
   {
+   "fetch_from": "namlifa_member.agent_code",
    "fieldname": "agent_code",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Agent Code"
   },
   {
@@ -145,7 +151,7 @@
    "label": "Date Taken"
   }
  ],
- "modified": "2020-02-09 18:03:38.568858",
+ "modified": "2020-02-22 07:52:06.781955",
  "modified_by": "Administrator",
  "module": "Namlifa Training",
  "name": "Namlifa Training",
