@@ -9,33 +9,7 @@
   "pi_join_date",
   "receipt_number",
   "branch",
-  "namlifa_pi_members",
-  "full_name",
-  "new_nric_no",
-  "relationship",
-  "age",
-  "occupation",
-  "renewal_application",
-  "agent",
-  "sum_assured",
-  "address",
-  "postcode",
-  "city",
-  "state",
-  "tel_o",
-  "tel_hp",
-  "company",
-  "email",
-  "insurance_validity",
-  "credit_card_no",
-  "payment_mode",
-  "bank",
-  "sst_charge",
-  "total_premium",
-  "premium",
-  "over_premium",
-  "auto_renewal",
-  "certificate_number"
+  "namlifa_pi_members"
  ],
  "fields": [
   {
@@ -65,143 +39,13 @@
    "label": "Branch"
   },
   {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
-  {
-   "fieldname": "new_nric_no",
-   "fieldtype": "Data",
-   "label": "IC No"
-  },
-  {
-   "fieldname": "relationship",
-   "fieldtype": "Data",
-   "label": "Relationship"
-  },
-  {
-   "fieldname": "age",
-   "fieldtype": "Data",
-   "label": "Age"
-  },
-  {
-   "fieldname": "occupation",
-   "fieldtype": "Data",
-   "label": "Occupation"
-  },
-  {
-   "fieldname": "renewal_application",
-   "fieldtype": "Data",
-   "label": "Renewal/New Application"
-  },
-  {
-   "fieldname": "agent",
-   "fieldtype": "Data",
-   "label": "Agent/Leader"
-  },
-  {
-   "fieldname": "sum_assured",
-   "fieldtype": "Data",
-   "label": "Sum Assured"
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Data",
-   "label": "Address"
-  },
-  {
-   "fieldname": "postcode",
-   "fieldtype": "Data",
-   "label": "Postcode"
-  },
-  {
-   "fieldname": "city",
-   "fieldtype": "Data",
-   "label": "City"
-  },
-  {
-   "fieldname": "state",
-   "fieldtype": "Data",
-   "label": "State"
-  },
-  {
-   "fieldname": "tel_o",
-   "fieldtype": "Data",
-   "label": "Tel No(O)"
-  },
-  {
-   "fieldname": "tel_hp",
-   "fieldtype": "Data",
-   "label": "Tel H/P"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Data",
-   "label": "Company"
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "insurance_validity",
-   "fieldtype": "Data",
-   "label": "Period Of Insurance"
-  },
-  {
-   "fieldname": "credit_card_no",
-   "fieldtype": "Data",
-   "label": "Credit Card No"
-  },
-  {
-   "fieldname": "payment_mode",
-   "fieldtype": "Data",
-   "label": "Payment Mode"
-  },
-  {
-   "fieldname": "bank",
-   "fieldtype": "Data",
-   "label": "Bank"
-  },
-  {
-   "fieldname": "sst_charge",
-   "fieldtype": "Data",
-   "label": "Premium Exclude SST 6%"
-  },
-  {
-   "fieldname": "total_premium",
-   "fieldtype": "Data",
-   "label": "Total Premium Include SST 6%"
-  },
-  {
-   "fieldname": "premium",
-   "fieldtype": "Data",
-   "label": "Premium"
-  },
-  {
-   "fieldname": "over_premium",
-   "fieldtype": "Data",
-   "label": "Over Premium"
-  },
-  {
-   "fieldname": "auto_renewal",
-   "fieldtype": "Data",
-   "label": "Auto Renewal"
-  },
-  {
-   "fieldname": "certificate_number",
-   "fieldtype": "Data",
-   "label": "Certificate Number"
-  },
-  {
    "fieldname": "namlifa_pi_members",
    "fieldtype": "Table",
    "label": "Namlifa PI Members",
    "options": "Namlifa PI Member"
   }
  ],
- "modified": "2020-02-21 08:42:08.905135",
+ "modified": "2020-02-24 11:34:21.096663",
  "modified_by": "Administrator",
  "module": "Namlifa PI",
  "name": "Namlifa PI",
