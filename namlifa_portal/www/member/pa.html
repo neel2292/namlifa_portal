@@ -31,6 +31,28 @@
                                 <div class="card-panel blue darken-1 white-text center" style="padding:10px">
                                     <p>{{obj.label}}</p>
                                 </div>
+                            {% elif obj.fieldtype == 'Table' %}
+                                {% if members != None %}
+                                    {% for member in members %}
+                                    <table class="stripped responsive-table">
+                                        <thead>
+                                          <tr>
+                                              <th>Label</th>
+                                              <th>Value</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for field in members_fields %}
+                                          <tr>
+                                            <td>{{field.label}}</td>
+                                            <td>{{member[field.fieldname]}}</td>
+                                          </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    {% endfor %}
+                                {% endif %}
                             {% else %}
                                 <div class="row">
                                     <div class="input-field col s12">
