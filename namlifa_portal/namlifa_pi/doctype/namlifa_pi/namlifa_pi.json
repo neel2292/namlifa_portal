@@ -1,4 +1,5 @@
 {
+ "autoname": "PI.#####",
  "creation": "2020-02-09 18:39:12.243524",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -45,7 +46,7 @@
    "options": "Namlifa PI Member"
   }
  ],
- "modified": "2020-02-24 11:34:21.096663",
+ "modified": "2020-02-28 03:34:11.988304",
  "modified_by": "Administrator",
  "module": "Namlifa PI",
  "name": "Namlifa PI",
