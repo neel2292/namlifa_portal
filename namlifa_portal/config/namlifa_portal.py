@@ -26,14 +26,9 @@ def get_data():
                                 {
                                         "type": "doctype",
                                         "name": "Namlifa Training",
+					"label": _("Namlifa Training History")
                                 },
 
-
-				{
-					"type": "doctype",
-					"name": "Issue",
-					"onboard": 1,
-				},
 			]
 		},
 	]
