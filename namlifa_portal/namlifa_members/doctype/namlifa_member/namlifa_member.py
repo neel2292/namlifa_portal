@@ -196,7 +196,7 @@ def member_registration():
 			del data[e]
 
 	frappe.local.response.update({"data": frappe.get_doc(data).insert().as_dict()})
-	doc = frappe.get_doc("Member Registration", frappe.local.response.data.name)
+	doc = frappe.get_doc("Namlifa Member", frappe.local.response.data.name)
 
 	if files:
 		for f in files:

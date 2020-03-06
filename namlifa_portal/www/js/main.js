@@ -225,21 +225,28 @@ $(document).ready(function () {
 				});
 			},
 			call_method: function (method, doctype, data) {
-				console.log(data);
-				data['doctype'] = doctype;				
-				frappe.call({
-					method: method,
-					args: {
-						data: data
-					},
-					callback: function(res) {
-						console.log(res);
-						window.erpx.showMessage("<p>Thank you for your application</p><p>You will receive an update regarding your application shortly</p>");
-						setTimeout(() => {
-							window.location.href = '/';
-						}, 500);
-					}
+				return new Promise(function (resolve, reject) {
+					console.log(data);
+					data['doctype'] = doctype;
+
+					frappe.call({
+						method: method,
+						args: {
+							data: data
+						},
+						callback: function(res) {
+
+							resolve(res);
+
+							console.log(res);
+							// setTimeout(() => {
+							// 	window.location.href = '/';
+							// }, 500);
+						}
+					});
 				});
+
+
 			}
 		}
 	}());
