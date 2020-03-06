@@ -4,8 +4,9 @@ import json
 fields = [
   {
    "fieldname": "membership_no",
-   "fieldtype": "Data",
-   "label": "Membership No"
+   "fieldtype": "Link",
+   "label": "Membership No",
+   "options": "Namlifa Member"
   },
   {
    "fieldname": "membership_expiry",
@@ -28,38 +29,53 @@ fields = [
    "label": "Branch"
   },
   {
+   "fieldname": "namlifa_pi_members",
+   "fieldtype": "Table",
+   "label": "Namlifa PI Members",
+   "options": "Namlifa PI Member"
+  }
+ ]
+members_fields = [
+  {
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name"
   },
   {
    "fieldname": "new_nric_no",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "IC No"
   },
   {
    "fieldname": "relationship",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Relationship"
   },
   {
    "fieldname": "age",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Age"
   },
   {
    "fieldname": "occupation",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Occupation"
   },
   {
    "fieldname": "renewal_application",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Renewal/New Application"
   },
   {
    "fieldname": "agent",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Agent/Leader"
   },
   {
@@ -160,11 +176,15 @@ fields = [
  ]
 
 def get_context(context):
-    pi = frappe.db.get_value("Namlifa PI", {"email": frappe.session.user}, "*")
+    member_id = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "name")
+    pi = frappe.db.get_value("Namlifa PI", {"membership_no": member_id}, "*")
+    pi_member = frappe.db.get_values("Namlifa PI Member", {"parent": pi.name}, "*")
     context.user = frappe.session.user
     context.user_doc = frappe.session
     context.csrf_token = frappe.sessions.get_csrf_token()
     context.fields = fields
     context.pi = pi
+    context.members_fields = members_fields
+    context.members = pi_member
 
     return context

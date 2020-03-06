@@ -205,7 +205,9 @@
   {
    "fieldname": "membership_no",
    "fieldtype": "Data",
-   "label": "Membership No"
+   "in_list_view": 1,
+   "label": "Membership No",
+   "reqd": 1
   },
   {
    "default": "Pending",
@@ -273,7 +275,7 @@
   }
  ],
  "image_field": "photo",
- "modified": "2020-02-19 21:46:04.375014",
+ "modified": "2020-02-28 04:28:50.958526",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",
@@ -329,6 +331,7 @@
   }
  ],
  "quick_entry": 1,
+ "search_fields": "full_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1
