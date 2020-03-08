@@ -196,7 +196,7 @@ def member_registration():
 			files.append((e, data[e]))
 			del data[e]
 
-	doc = frappe.get_doc({"doctype": "Namlifa Member"}, **data)
+	doc = frappe.get_doc({"doctype": "Namlifa Member", **data})
 
 	doc.insert(ignore_permissions=True, ignore_mandatory=True)
 
