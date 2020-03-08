@@ -182,7 +182,8 @@ def member_login():
 @frappe.whitelist(allow_guest=True)
 def member_registration():
 	date_attrs = ["date_of_birth", "date_contracted_as_agent"]
-	file_attrs = ['photo', 'signature']
+	#file_attrs = ['photo', 'signature']
+	file_attrs = ['terms_signature', 'payment_signature']
 	files = []
 	data = json.loads(frappe.local.form_dict.data)
 
@@ -195,8 +196,11 @@ def member_registration():
 			files.append((e, data[e]))
 			del data[e]
 
-	frappe.local.response.update({"data": frappe.get_doc(data).insert().as_dict()})
-	doc = frappe.get_doc("Namlifa Member", frappe.local.response.data.name)
+	doc = frappe.get_doc({"doctype": "Namlifa Member"}, **data)
+
+	doc.insert(ignore_permissions=True, ignore_mandatory=True)
+
+	files = None
 
 	if files:
 		for f in files:
