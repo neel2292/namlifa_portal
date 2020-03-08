@@ -31,6 +31,7 @@
   "payment_details",
   "fee",
   "member_fee",
+  "late_fee",
   "total_payable",
   "total_fee",
   "method_payment",
@@ -154,24 +155,27 @@
   },
   {
    "fieldname": "branch",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "label": "Branch",
    "options": "KUALA LUMPUR\nJOHOR\nKUCHING\nMELAKA\nMIRI\nN.SEMBILAN\nKLANG\nPAHANG\nSABAH\nSIBU\nPENANG\nPERAK"
   },
   {
    "fieldname": "akard_plan",
-   "fieldtype": "Data",
-   "label": "AKARD Plan"
+   "fieldtype": "Select",
+   "label": "AKARD Plan",
+   "options": "AKARD Personal Gold (minimum of RM 150,001 PC)\nAKARD Personal Platinum (minimum of RM300,001 PC)\nAKARD Personal Diamond (minimum of RM500,001 PC)\nAKARD Personal Diamond (minimum of RM500,001 PC)\nAKARD Leaders (minimum of RM600,001 PC)\nAKARD Million Dollar Agency (minimum of RM 1,200,001 PC)\nAKARD Mega Million Dollar Agency (minimum of RM 5,000,001 PC)\nAKARD Star Rookie (minimum of RM110, 001 PC) (Date of first insurance license Month___ Year___)\nAKARD 101 (Minimum 101 cases - new cases written and stay in force within the calendar year)"
   },
   {
    "fieldname": "akard_builders_award",
-   "fieldtype": "Data",
-   "label": "AKARD Builders Award"
+   "fieldtype": "Select",
+   "label": "AKARD Builders Award",
+   "options": "Silver (minimum 3 AKARD Awardees)\nGold (minimum 6 AKARD Awardess)\nPlatinum (minimum 9 AKARD Awardess)\nDiamond (minimum 12 AKARD Awardees)"
   },
   {
    "fieldname": "life_member",
-   "fieldtype": "Data",
-   "label": "AKARD Life Member"
+   "fieldtype": "Select",
+   "label": "AKARD Life Member",
+   "options": "10 Years - 15 Years\n16 Years\n17 Years"
   },
   {
    "fieldname": "payment_details",
@@ -180,13 +184,15 @@
   },
   {
    "fieldname": "fee",
-   "fieldtype": "Data",
-   "label": "AKARD Fee"
+   "fieldtype": "Select",
+   "label": "AKARD Fee",
+   "options": "480\n500\n650"
   },
   {
    "fieldname": "member_fee",
-   "fieldtype": "Data",
-   "label": "Membership Fee"
+   "fieldtype": "Select",
+   "label": "Membership Fee",
+   "options": "Ordinary (NEW Member (Year 2019 & 2020))\nOrdinary Member"
   },
   {
    "fieldname": "total_payable",
@@ -241,20 +247,26 @@
   {
    "fieldname": "card_name",
    "fieldtype": "Data",
-   "label": "Name"
+   "label": "Credit Card Showing Name"
   },
   {
    "fieldname": "signature",
    "fieldtype": "Signature",
-   "label": "Signature"
+   "label": "Signature",
+   "set_only_once": 1
   },
   {
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
+  },
+  {
+   "fieldname": "late_fee",
+   "fieldtype": "Data",
+   "label": "Late Filing Fee"
   }
  ],
- "modified": "2020-02-28 03:48:46.988108",
+ "modified": "2020-03-07 16:53:17.339379",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",
