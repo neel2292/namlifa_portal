@@ -178,56 +178,42 @@ def member_login():
 
 		return member
 
-
 @frappe.whitelist(allow_guest=True)
 def member_registration():
-	date_attrs = ["date_of_birth", "date_contracted_as_agent"]
-	#file_attrs = ['photo', 'signature']
-	file_attrs = ['terms_signature', 'payment_signature']
-	files = []
-	data = json.loads(frappe.local.form_dict.data)
+        date_attrs = ["date_of_birth", "date_contracted_as_agent"]
+        file_attrs = ['terms_signature', 'payment_signature']
+        files = []
+        data = json.loads(frappe.local.form_dict.data)
+        for e in date_attrs:
+                if data[e]:
+                        data[e] = formatdate(data[e], "yyyy-mm-dd")
+        for e in file_attrs:
+                if data[e]:
+                        files.append((e, data[e]))
+                        del data[e]
+        doc = frappe.get_doc({"doctype": "Namlifa Member", **data})
+        doc.insert(ignore_permissions=True, ignore_mandatory=True)
+        if files:
+                for f in files:
+                        fieldname, filedata = f
+                        filerem, filedata = filedata['img'].split(',', 1)
+                        ext = filerem.split(';')[0].split('/')[1]
+                        filename = "{0}-{1}.{2}".format(doc.name, fieldname, ext)
+                        fileurl = os.path.abspath(frappe.local.site_path) + "/public/files/" + filename
+                        imgdata = base64.b64decode(filedata)
+                        with open(fileurl, 'wb') as fh:
+                                fh.write(imgdata)
 
-	for e in date_attrs:
-		if data[e]:
-			data[e] = formatdate(data[e], "yyyy-mm-dd")
-
-	for e in file_attrs:
-		if data[e]:
-			files.append((e, data[e]))
-			del data[e]
-
-	doc = frappe.get_doc({"doctype": "Namlifa Member", **data})
-
-	doc.insert(ignore_permissions=True, ignore_mandatory=True)
-
-	files = None
-
-	if files:
-		for f in files:
-			fieldname, filedata = f
-			filerem, filedata = filedata.split(',', 1)
-			ext = filerem.split(';')[0].split('/')[1]
-			filedata = filedata.encode()
-			filename = "{0}-{1}.{2}".format(doc.name, fieldname, ext)
-			fileurl = os.path.abspath(frappe.local.site_path) + "/public/files/" + filename
-
-			fh = open(fileurl, "wb")
-			fh.write(filedata.decode('base64'))
-			fh.close()
-
-			_file = frappe.get_doc({
-				"doctype": "File",
-				"file_name": filename,
-				"attached_to_doctype": doc.doctype,
-				"attached_to_name": doc.name,
-				"file_url": "/files/" + filename
-			})
-			_file.save()
-
-			# update values
-			doc.set(fieldname, _file.file_url)
-			doc.save()
-
-	frappe.db.commit()
-
-	return data
+                        _file = frappe.get_doc({
+                                "doctype": "File",
+                                "file_name": filename,
+                                "attached_to_doctype": doc.doctype,
+                                "attached_to_name": doc.name,
+                                "file_url": "/files/" + filename
+                        })
+                        _file.save(ignore_permissions=True)
+                        # update values
+                        doc.set(fieldname, _file.file_url)
+                        doc.save()
+        frappe.db.commit()
+        return data
