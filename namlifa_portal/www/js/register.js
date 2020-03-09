@@ -122,7 +122,8 @@ $(document).ready(function() {
                 'namlifa_portal.namlifa_members.doctype.namlifa_member.namlifa_member.member_registration',
                 'Namlifa Member', data).then(function (res) {
                     console.log(res);
-                    window.erpx.showMessage("<p>Thank you for your application</p><p>You will receive an update regarding your application shortly</p>");
+                    window.erpx.showMessage("<p>Thank you for your application</p>" +
+                        "<p>We will send you the login credential to your email " + data['email']+ "once has been approved</p>");
                 });
 
         }
