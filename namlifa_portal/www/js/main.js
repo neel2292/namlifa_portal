@@ -27,11 +27,18 @@ $(document).ready(function () {
 			$cell_number = $('input[name="tel_hp"]'),
 			$office_number = $('input[name="tel_o"]'),
 			$house_number = $('input[name="tel_h"]'),
-			$fax_number = $('input[name="tel_fax"]');
+			$fax_number = $('input[name="tel_fax"]'),
+			$date_agent = $('input[name="date_contracted_as_agent"]');
 
 		if ($nric_input[0]) {
 			IMask($nric_input[0], {
 				mask: '000000-00-0000'
+			});
+		}
+
+		if ($date_agent[0]) {
+			IMask($date_agent[0], {
+				mask: '00/0000'
 			});
 		}
 

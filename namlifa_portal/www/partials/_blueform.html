@@ -125,7 +125,7 @@
             		</div>
                         <div class="row">
                             <div class="input-field col s6">
-                              <input placeholder="Format: MM/YYYY" id="date_contracted_as_agent" name="date_contracted_as_agent" type="text">
+                              <input placeholder="Format: MM/YYYY" id="date_contracted_as_agent" name="date_contracted_as_agent" data-length="7" pattern="^\d{2}\/\d{4}$" class="validate invalid" type="text">
                               <label for="date_contracted_as_agent">Date Contracted as Agent</label>
                             </div>
                             <div class="input-field col s6">

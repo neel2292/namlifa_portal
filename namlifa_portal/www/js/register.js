@@ -66,6 +66,15 @@ $(document).ready(function() {
             }
             else { return 'Invalid value for email' }
         },
+        date_contracted_as_agent: function (val) {
+            var match,
+                date = '';
+
+            if (/\d{2,}\/\d{4,}/.test(val)) {
+                return true;
+            }
+            else { return 'Invalid value for date contracted as Agent number' }
+        }
     };
 
 	$('body').focusout(function (evt) {
@@ -73,6 +82,7 @@ $(document).ready(function() {
 			field = $input.attr('name'),
 			valid;
 
+		console.log($input)
 		if (validation[field]) {
 			valid = validation[field]($input.val(), $input);
 			if (valid !== true) {
