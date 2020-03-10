@@ -7,7 +7,6 @@
  "field_order": [
   "personal_details_section",
   "namlifa_member_id",
-  "akard_id_no",
   "title",
   "full_name",
   "new_nric_no",
@@ -55,13 +54,9 @@
   {
    "fieldname": "namlifa_member_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Namlifa Membership No",
    "options": "Namlifa Member"
-  },
-  {
-   "fieldname": "akard_id_no",
-   "fieldtype": "Data",
-   "label": "Akard ID No"
   },
   {
    "fieldname": "title",
@@ -72,6 +67,7 @@
    "fetch_from": "namlifa_member_id.full_name",
    "fieldname": "full_name",
    "fieldtype": "Read Only",
+   "in_list_view": 1,
    "label": "Full Name"
   },
   {
@@ -162,6 +158,7 @@
   {
    "fieldname": "akard_plan",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "AKARD Plan",
    "options": "AKARD Personal Gold (minimum of RM 150,001 PC)\nAKARD Personal Platinum (minimum of RM300,001 PC)\nAKARD Personal Diamond (minimum of RM500,001 PC)\nAKARD Personal Diamond (minimum of RM500,001 PC)\nAKARD Leaders (minimum of RM600,001 PC)\nAKARD Million Dollar Agency (minimum of RM 1,200,001 PC)\nAKARD Mega Million Dollar Agency (minimum of RM 5,000,001 PC)\nAKARD Star Rookie (minimum of RM110, 001 PC) (Date of first insurance license Month___ Year___)\nAKARD 101 (Minimum 101 cases - new cases written and stay in force within the calendar year)"
   },
@@ -201,8 +198,9 @@
   },
   {
    "fieldname": "total_fee",
-   "fieldtype": "Data",
-   "label": "Total Fee"
+   "fieldtype": "Currency",
+   "label": "Total Fee",
+   "read_only": 1
   },
   {
    "fieldname": "method_payment",
@@ -252,8 +250,7 @@
   {
    "fieldname": "signature",
    "fieldtype": "Signature",
-   "label": "Signature",
-   "set_only_once": 1
+   "label": "Signature"
   },
   {
    "fieldname": "date",
@@ -266,7 +263,7 @@
    "label": "Late Filing Fee"
   }
  ],
- "modified": "2020-03-07 16:53:17.339379",
+ "modified": "2020-03-10 16:37:03.121983",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",

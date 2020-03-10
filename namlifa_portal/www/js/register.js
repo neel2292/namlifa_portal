@@ -123,7 +123,7 @@ $(document).ready(function() {
                 'Namlifa Member', data).then(function (res) {
                     console.log(res);
                     window.erpx.showMessage("<p>Thank you for your application</p>" +
-                        "<p>We will send you the login credential to your email " + data['email']+ "once has been approved</p>");
+                        "<p>We will send you the login credential to your email " + data['email']+ " once has been approved</p>");
                 });
 
         }

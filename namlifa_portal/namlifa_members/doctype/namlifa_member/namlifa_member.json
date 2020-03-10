@@ -45,7 +45,9 @@
   "change_password",
   "new_password",
   "send_password_update_notification",
-  "logout_all_sessions"
+  "logout_all_sessions",
+  "section_payment_details",
+  "payment_details"
  ],
  "fields": [
   {
@@ -56,6 +58,7 @@
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Full Name"
   },
   {
@@ -213,6 +216,7 @@
    "default": "Pending",
    "fieldname": "application_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Application Status",
    "options": "Pending\nApproved\nRejected"
   },
@@ -220,6 +224,7 @@
    "default": "Ordinary/Affiliate/Provisional",
    "fieldname": "membership_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Membership Type",
    "options": "Ordinary/Affiliate/Provisional\nFellow\nAssociate\nLife"
   },
@@ -272,10 +277,20 @@
    "fieldname": "agent_code",
    "fieldtype": "Data",
    "label": "Agent's Code"
+  },
+  {
+   "fieldname": "section_payment_details",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "payment_details",
+   "fieldtype": "Table",
+   "options": "Namlifa Member Payment"
   }
  ],
  "image_field": "photo",
- "modified": "2020-02-28 04:28:50.958526",
+ "modified": "2020-03-10 15:57:55.098956",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",

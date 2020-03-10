@@ -15,11 +15,6 @@ fields = [
    "options": "Namlifa Member"
   },
   {
-   "fieldname": "akard_id_no",
-   "fieldtype": "Data",
-   "label": "Akard ID No"
-  },
-  {
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title"

@@ -1,0 +1,27 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.application_status==\"Approved\"",
+ "creation": "2020-03-10 16:07:51.850098",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Namlifa Member",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<h3>{{_(\"Fiscal Year\")}}</h3>\n\n<p>{{ _(\"New fiscal year created :- \") }} {{ doc.name }}</p>",
+ "modified": "2020-03-10 16:07:51.850098",
+ "modified_by": "Administrator",
+ "module": "Namlifa Members",
+ "name": "Notification Member Approved",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "email_by_document_field": "user_id"
+  }
+ ],
+ "subject": "Notification for new fiscal year {{ doc.name }}",
+ "value_changed": "application_status"
+}

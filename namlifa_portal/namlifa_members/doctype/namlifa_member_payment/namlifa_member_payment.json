@@ -1,0 +1,82 @@
+{
+ "creation": "2020-03-10 15:55:51.316966",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "receipt_no",
+  "payment_date",
+  "payment_mode",
+  "bank",
+  "credit_card_no",
+  "cheque_no",
+  "auto_renewal",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "receipt_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Receipt No",
+   "reqd": 1,
+   "width": "2"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1,
+   "width": "1"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Mode",
+   "options": "Cash\nCheque\nCredit Card\nCompany\nDeduction",
+   "reqd": 1,
+   "width": "2"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "credit_card_no",
+   "fieldtype": "Data",
+   "label": "Credit Card No"
+  },
+  {
+   "fieldname": "cheque_no",
+   "fieldtype": "Data",
+   "label": "Cheque No"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_renewal",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Auto Renewal",
+   "width": "2"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-03-10 15:59:26.787326",
+ "modified_by": "Administrator",
+ "module": "Namlifa Members",
+ "name": "Namlifa Member Payment",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
