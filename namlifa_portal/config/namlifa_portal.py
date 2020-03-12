@@ -6,28 +6,43 @@ def get_data():
 		{
 			"label": _("Membership Management"),
 			"items": [
-
-                                {
-                                        "type": "doctype",
-                                        "name": "Namlifa Member",
-                                },      
-                                {
-                                        "type": "doctype",
-                                        "name": "Namlifa Akard",
-                                },
-                                {
-                                        "type": "doctype",
-                                        "name": "Namlifa PA",
-                                },
-                                {
-                                        "type": "doctype",
-                                        "name": "Namlifa PI",
-                                },
-                                {
-                                        "type": "doctype",
-                                        "name": "Namlifa Training History",
-                                },
-
+				{
+						"type": "doctype",
+						"name": "Namlifa Member",
+				},      
+				{
+						"type": "doctype",
+						"name": "Namlifa Akard",
+				},
+				{
+						"type": "doctype",
+						"name": "Namlifa PA",
+				},
+				{
+						"type": "doctype",
+						"name": "Namlifa PI",
+				},
+				{
+						"type": "doctype",
+						"name": "Namlifa Training History",
+				},
+			]
+		},
+		{
+			"label": _("Fees"),
+			"items": [
+				{
+						"type": "doctype",
+						"name": "Namlifa Akard Membership",
+				},      
+				{
+						"type": "doctype",
+						"name": "Namlifa Akard Plan",
+				},
+				{
+						"type": "doctype",
+						"name": "Namlifa Akard Builder",
+				}
 			]
 		},
 	]
