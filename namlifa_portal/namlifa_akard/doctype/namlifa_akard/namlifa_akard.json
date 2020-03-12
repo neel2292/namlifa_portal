@@ -23,13 +23,15 @@
   "tel_hp",
   "tel_fax",
   "email",
-  "branch",
   "akard_plan",
+  "member",
+  "branch",
   "akard_builders_award",
   "life_member",
   "payment_details",
   "fee",
   "member_fee",
+  "akard_builders_award_fee",
   "late_fee",
   "total_payable",
   "total_fee",
@@ -157,16 +159,15 @@
   },
   {
    "fieldname": "akard_plan",
-   "fieldtype": "Select",
-   "in_list_view": 1,
+   "fieldtype": "Link",
    "label": "AKARD Plan",
-   "options": "AKARD Personal Gold (minimum of RM 150,001 PC)\nAKARD Personal Platinum (minimum of RM300,001 PC)\nAKARD Personal Diamond (minimum of RM500,001 PC)\nAKARD Personal Diamond (minimum of RM500,001 PC)\nAKARD Leaders (minimum of RM600,001 PC)\nAKARD Million Dollar Agency (minimum of RM 1,200,001 PC)\nAKARD Mega Million Dollar Agency (minimum of RM 5,000,001 PC)\nAKARD Star Rookie (minimum of RM110, 001 PC) (Date of first insurance license Month___ Year___)\nAKARD 101 (Minimum 101 cases - new cases written and stay in force within the calendar year)"
+   "options": "Namlifa Akard Plan"
   },
   {
    "fieldname": "akard_builders_award",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "AKARD Builders Award",
-   "options": "Silver (minimum 3 AKARD Awardees)\nGold (minimum 6 AKARD Awardess)\nPlatinum (minimum 9 AKARD Awardess)\nDiamond (minimum 12 AKARD Awardees)"
+   "options": "Namlifa Akard Builder"
   },
   {
    "fieldname": "life_member",
@@ -180,16 +181,16 @@
    "label": "Payment Details"
   },
   {
+   "fetch_from": "akard_plan.fee",
    "fieldname": "fee",
-   "fieldtype": "Select",
-   "label": "AKARD Fee",
-   "options": "480\n500\n650"
+   "fieldtype": "Currency",
+   "label": "AKARD Fee"
   },
   {
+   "fetch_from": "member.fee",
    "fieldname": "member_fee",
-   "fieldtype": "Select",
-   "label": "Membership Fee",
-   "options": "Ordinary (NEW Member (Year 2019 & 2020))\nOrdinary Member"
+   "fieldtype": "Currency",
+   "label": "Membership Fee"
   },
   {
    "fieldname": "total_payable",
@@ -259,11 +260,23 @@
   },
   {
    "fieldname": "late_fee",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "Late Filing Fee"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Membership",
+   "options": "Namlifa Akard Membership"
+  },
+  {
+   "fetch_from": "akard_builders_award.fee",
+   "fieldname": "akard_builders_award_fee",
+   "fieldtype": "Currency",
+   "label": "Akard Builders Award Fee"
   }
  ],
- "modified": "2020-03-10 16:37:03.121983",
+ "modified": "2020-03-12 13:47:51.420850",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",

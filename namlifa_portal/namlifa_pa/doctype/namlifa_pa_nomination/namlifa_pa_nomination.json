@@ -1,0 +1,63 @@
+{
+ "creation": "2020-03-12 10:18:32.499047",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_proposer",
+  "name_of_nominee",
+  "new_nric_no",
+  "relationship",
+  "address",
+  "share"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_proposer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Proposer"
+  },
+  {
+   "fieldname": "name_of_nominee",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Nominee"
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IC No"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address"
+  },
+  {
+   "fieldname": "share",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Share"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-03-12 10:19:27.463117",
+ "modified_by": "Administrator",
+ "module": "Namlifa PA",
+ "name": "Namlifa PA Nomination",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

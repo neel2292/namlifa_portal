@@ -58,25 +58,21 @@
   {
    "fieldname": "relationship",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Relationship"
   },
   {
    "fieldname": "age",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Age"
   },
   {
    "fieldname": "occupation",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Occupation"
   },
   {
    "fieldname": "renewal_application",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Renewal/New Application"
   },
   {
@@ -88,55 +84,46 @@
   {
    "fieldname": "address",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Address"
   },
   {
    "fieldname": "postcode",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Postcode"
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "City"
   },
   {
    "fieldname": "state",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "State"
   },
   {
    "fieldname": "tel_o",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Tel No(O)"
   },
   {
    "fieldname": "tel_hp",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Tel H/P"
   },
   {
    "fieldname": "company",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Company"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Email"
   },
   {
    "fieldname": "insurance_validity",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Period Of Insurance"
   },
   {
@@ -148,19 +135,16 @@
   {
    "fieldname": "payment_mode",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Payment Mode"
   },
   {
    "fieldname": "bank",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Bank"
   },
   {
    "fieldname": "premium_sst",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Premium Exclude SST 6%"
   },
   {
@@ -172,25 +156,21 @@
   {
    "fieldname": "premium",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Premium"
   },
   {
    "fieldname": "over_premium",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Over Premium"
   },
   {
    "fieldname": "auto_renewal",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Auto Renewal"
   },
   {
    "fieldname": "certificate_number",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Certificate Number"
   },
   {
@@ -264,7 +244,7 @@
   }
  ],
  "istable": 1,
- "modified": "2020-02-21 17:13:54.310316",
+ "modified": "2020-03-12 10:13:45.532269",
  "modified_by": "Administrator",
  "module": "Namlifa PA",
  "name": "Namlifa PA Member",

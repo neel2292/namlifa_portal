@@ -8,7 +8,37 @@
   "membership_no",
   "membership_expiry",
   "gpa_joined",
-  "namlifa_pa_members",
+  "section_details",
+  "name_as_per_ic",
+  "ic_number",
+  "contact_number",
+  "details_col1",
+  "gpa_joined_since",
+  "sum_assured",
+  "premium_incl_sst",
+  "section_details_more",
+  "age",
+  "email_address",
+  "occupation",
+  "address",
+  "period_of_insurance",
+  "master_policy_number",
+  "certificate_number",
+  "more_details_col2",
+  "receipt_number",
+  "payment_mode",
+  "bank",
+  "credit_card_no",
+  "renewal_application",
+  "more_details_col1",
+  "premium_excl_sst",
+  "prorated_premium",
+  "membership_number",
+  "membership_branch",
+  "application_branch",
+  "spaouse_child_nomination",
+  "spaouse_child",
+  "nomination",
   "receipt_no",
   "branch"
  ],
@@ -16,17 +46,20 @@
   {
    "fieldname": "membership_no",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Membership No",
    "options": "Namlifa Member"
   },
   {
    "fieldname": "membership_expiry",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Membership Valid Till"
   },
   {
    "fieldname": "gpa_joined",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "GPA Joined Since"
   },
   {
@@ -40,13 +73,161 @@
    "label": "Branch"
   },
   {
-   "fieldname": "namlifa_pa_members",
+   "fieldname": "spaouse_child",
    "fieldtype": "Table",
-   "label": "Namlifa PA Members",
-   "options": "Namlifa PA Member"
+   "label": "SPAOUSE/CHILD",
+   "options": "Namlifa PA Spaouse"
+  },
+  {
+   "fieldname": "nomination",
+   "fieldtype": "Table",
+   "label": "Nomination",
+   "options": "Namlifa PA Nomination"
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "name_as_per_ic",
+   "fieldtype": "Data",
+   "label": "Name as per IC"
+  },
+  {
+   "fieldname": "ic_number",
+   "fieldtype": "Data",
+   "label": "IC Number"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "gpa_joined_since",
+   "fieldtype": "Data",
+   "label": "GPA Joined Since"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Data",
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "premium_incl_sst",
+   "fieldtype": "Data",
+   "label": "Premium Incl SST"
+  },
+  {
+   "fieldname": "spaouse_child_nomination",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details_col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_details_more",
+   "fieldtype": "Section Break",
+   "label": "More Details"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "period_of_insurance",
+   "fieldtype": "Data",
+   "label": "Period of Insurance"
+  },
+  {
+   "fieldname": "master_policy_number",
+   "fieldtype": "Data",
+   "label": "Master Policy Number"
+  },
+  {
+   "fieldname": "certificate_number",
+   "fieldtype": "Data",
+   "label": "Certificate Number"
+  },
+  {
+   "fieldname": "receipt_number",
+   "fieldtype": "Data",
+   "label": "Receipt Number"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Data",
+   "label": "Payment Mode"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "credit_card_no",
+   "fieldtype": "Data",
+   "label": "Credit Card/Cheque"
+  },
+  {
+   "fieldname": "renewal_application",
+   "fieldtype": "Data",
+   "label": "Renewal/New Apllication"
+  },
+  {
+   "fieldname": "more_details_col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "premium_excl_sst",
+   "fieldtype": "Data",
+   "label": "Premium Excl SST"
+  },
+  {
+   "fieldname": "prorated_premium",
+   "fieldtype": "Data",
+   "label": "Pro-rated Premium"
+  },
+  {
+   "fieldname": "membership_number",
+   "fieldtype": "Data",
+   "label": "Membership Number"
+  },
+  {
+   "fieldname": "membership_branch",
+   "fieldtype": "Data",
+   "label": "Membership Branch"
+  },
+  {
+   "fieldname": "application_branch",
+   "fieldtype": "Data",
+   "label": "Application Branch"
+  },
+  {
+   "fieldname": "more_details_col2",
+   "fieldtype": "Column Break"
   }
  ],
- "modified": "2020-02-28 03:48:10.083072",
+ "modified": "2020-03-12 22:28:56.544907",
  "modified_by": "Administrator",
  "module": "Namlifa PA",
  "name": "Namlifa PA",
