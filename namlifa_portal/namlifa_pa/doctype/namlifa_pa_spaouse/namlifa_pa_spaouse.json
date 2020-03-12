@@ -1,0 +1,68 @@
+{
+ "creation": "2020-03-12 10:11:56.687806",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "new_nric_no",
+  "contact_number",
+  "relationship",
+  "occupation",
+  "sum_assured",
+  "premium_include_sst"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IC No"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "premium_include_sst",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Premium Include SST"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relationship"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-03-12 13:52:37.114839",
+ "modified_by": "Administrator",
+ "module": "Namlifa PA",
+ "name": "Namlifa PA Spaouse",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
