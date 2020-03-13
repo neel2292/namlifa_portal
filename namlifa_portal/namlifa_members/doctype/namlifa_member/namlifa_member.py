@@ -181,14 +181,14 @@ def member_login():
 @frappe.whitelist(allow_guest=True)
 def member_registration():
         date_attrs = ["date_of_birth", "date_contracted_as_agent"]
-        file_attrs = ['terms_signature', 'payment_signature']
+        file_attrs = ['terms_signature', 'payment_signature', 'photo']
         files = []
         data = json.loads(frappe.local.form_dict.data)
         for e in date_attrs:
                 if data[e]:
                         data[e] = formatdate(data[e], "yyyy-mm-dd")
         for e in file_attrs:
-                if data[e]:
+                if e in data:
                         files.append((e, data[e]))
                         del data[e]
         doc = frappe.get_doc({"doctype": "Namlifa Member", **data})
@@ -196,7 +196,10 @@ def member_registration():
         if files:
                 for f in files:
                         fieldname, filedata = f
-                        filerem, filedata = filedata['img'].split(',', 1)
+                        if fieldname == 'photo':
+                                filerem, filedata = filedata.split(',', 1)
+                        else:
+                                filerem, filedata = filedata['img'].split(',', 1)
                         ext = filerem.split(';')[0].split('/')[1]
                         filename = "{0}-{1}.{2}".format(doc.name, fieldname, ext)
                         fileurl = os.path.abspath(frappe.local.site_path) + "/public/files/" + filename
