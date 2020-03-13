@@ -1,5 +1,5 @@
 {
- "autoname": "TH.#####",
+ "autoname": "NT.#####",
  "creation": "2020-02-09 17:56:52.825425",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -152,7 +152,7 @@
    "label": "Date Taken"
   }
  ],
- "modified": "2020-02-28 03:48:20.298934",
+ "modified": "2020-03-13 12:39:10.253401",
  "modified_by": "Administrator",
  "module": "Namlifa Training",
  "name": "Namlifa Training",
