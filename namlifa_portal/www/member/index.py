@@ -7,6 +7,13 @@ def get_context(context):
         raise frappe.Redirect
 
     member = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "*")
+
+    try:
+        if member.membership_type.index('/') > -1:
+            member.membership_type = 'Ordinary'
+    except ValueError:
+        member.membership_type = member.membership_type
+
     akard = frappe.db.get_value("Namlifa Akard", {"namlifa_member_id": member.name}, "*")
     # pa = frappe.db.get_value("Namlifa PA", {"membership_no": membership_no}, "*")
     # pa_member = frappe.db.get_values("Namlifa PA Member", {"parent": pa.name}, "*")
