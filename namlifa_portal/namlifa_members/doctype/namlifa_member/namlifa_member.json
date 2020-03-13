@@ -59,6 +59,7 @@
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Full Name"
   },
   {
@@ -209,6 +210,7 @@
    "fieldname": "membership_no",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Membership No",
    "reqd": 1
   },
@@ -217,6 +219,7 @@
    "fieldname": "application_status",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Application Status",
    "options": "Pending\nApproved\nRejected"
   },
@@ -225,6 +228,7 @@
    "fieldname": "membership_type",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Membership Type",
    "options": "Ordinary/Affiliate/Provisional\nFellow\nAssociate\nLife"
   },
@@ -290,7 +294,7 @@
   }
  ],
  "image_field": "photo",
- "modified": "2020-03-10 15:57:55.098956",
+ "modified": "2020-03-13 22:11:07.899434",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",

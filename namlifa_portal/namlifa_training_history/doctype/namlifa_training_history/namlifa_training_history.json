@@ -22,7 +22,7 @@
   "date_lp104_completed",
   "lp104_grade",
   "date_ch1fp_completed",
-  "ch1fp_grade",
+  "chifp_grade",
   "date_chapm_completed",
   "champ_grade",
   "date_rfp_completed",
@@ -74,77 +74,78 @@
   },
   {
    "fieldname": "date_lp101_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Completion LP101"
   },
   {
    "fieldname": "lp101_grade",
-   "fieldtype": "Data",
-   "label": "LP101 Grade Achieved"
+   "fieldtype": "Select",
+   "label": "LP101 Grade Achieved",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp102_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Completion LP102"
   },
   {
    "fieldname": "lp102_grade",
-   "fieldtype": "Data",
-   "label": "LP102 Grade Achieved"
+   "fieldtype": "Select",
+   "label": "LP102 Grade Achieved",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp103_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Completion LP103"
   },
   {
    "fieldname": "lp103_grade",
-   "fieldtype": "Data",
-   "label": "LP103 Grade"
+   "fieldtype": "Select",
+   "label": "LP103 Grade",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp104_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Completion LP104"
   },
   {
    "fieldname": "lp104_grade",
-   "fieldtype": "Data",
-   "label": "LP104 Grade"
+   "fieldtype": "Select",
+   "label": "LP104 Grade",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_ch1fp_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Completion Ch1FP"
   },
   {
-   "fieldname": "ch1fp_grade",
-   "fieldtype": "Data",
-   "label": "Ch1FP Grade"
-  },
-  {
    "fieldname": "date_chapm_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Completion ChAPM"
   },
   {
    "fieldname": "champ_grade",
-   "fieldtype": "Data",
-   "label": "ChAPM Grade"
+   "fieldtype": "Select",
+   "label": "ChAPM Grade",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_rfp_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Completion RFP"
   },
   {
    "fieldname": "rfp_grade",
-   "fieldtype": "Data",
-   "label": "RFP Grade"
+   "fieldtype": "Select",
+   "label": "RFP Grade",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "graduation_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Year of Graduation"
   },
   {
@@ -158,9 +159,15 @@
    "in_list_view": 1,
    "label": "Membership No",
    "options": "Namlifa Member"
+  },
+  {
+   "fieldname": "chifp_grade",
+   "fieldtype": "Select",
+   "label": "ChIFP Grade",
+   "options": "A\nB\nC\nF\nAB"
   }
  ],
- "modified": "2020-03-13 12:45:13.521700",
+ "modified": "2020-03-13 22:07:04.236166",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",
