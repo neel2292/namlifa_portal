@@ -25,8 +25,6 @@
   "chifp_grade",
   "date_chapm_completed",
   "champ_grade",
-  "date_rfp_completed",
-  "rfp_grade",
   "graduation_date",
   "date_taken"
  ],
@@ -133,17 +131,6 @@
    "options": "A\nB\nC\nF\nAB"
   },
   {
-   "fieldname": "date_rfp_completed",
-   "fieldtype": "Date",
-   "label": "Year of Completion RFP"
-  },
-  {
-   "fieldname": "rfp_grade",
-   "fieldtype": "Select",
-   "label": "RFP Grade",
-   "options": "A\nB\nC\nF\nAB"
-  },
-  {
    "fieldname": "graduation_date",
    "fieldtype": "Date",
    "label": "Year of Graduation"
@@ -167,7 +154,7 @@
    "options": "A\nB\nC\nF\nAB"
   }
  ],
- "modified": "2020-03-13 22:07:04.236166",
+ "modified": "2020-03-13 23:20:44.184865",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",
