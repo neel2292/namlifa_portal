@@ -18,7 +18,18 @@
                     <span class="card-title">Personal Info</span>
                     <p>Name: {{member.full_name}}</p>
                     <p>Namlifa Member ID: {{member.name}}</p>
+		    {% if member.new_nric_no %}
+			<p>New NRIC No: {{member.new_nric_no}}</p>
+		    {% elif member.old_nric_no %}
+			<p>Old NRIC No: {{member.old_nric_no}}</p>
+                    {% endif %}
+		    <p>Tel (H/P): {{member.tel_hp}}</p>
+		    <p>Email: {{member.email}}</p>
                     <p>Status: Active </p>
+		    <p>Join Date: {{member.date_contracted_as_agent}}</p>
+		    <p>Expiry Date: None</p>
+		    <p>Company: {{member.company}}</p>
+		    <p>Agent's Code: {{member.agent_code}}</p>
                     <p>Membership Type: </p>
                     <img src="/images/{{member.membership_type}}.png" alt="{{member.membership_type}} Member" title="{{member.membership_type}} Member" width="300" height="180" style="margin-top: 10px">
                 </div>
