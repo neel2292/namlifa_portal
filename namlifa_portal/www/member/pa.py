@@ -259,6 +259,7 @@ members_fields = [
 
 def get_context(context):
     member_id = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "name")
+    member = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "*")
     pa = frappe.db.get_value("Namlifa PA", {"membership_no": member_id}, "*")
     pa_member = frappe.db.get_values("Namlifa PA Member", {"parent": pa.name}, "*")
     context.user = frappe.session.user
@@ -268,5 +269,6 @@ def get_context(context):
     context.pa = pa
     context.members_fields = members_fields
     context.members = pa_member
+    context.member = member
 
     return context

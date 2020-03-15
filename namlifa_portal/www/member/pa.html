@@ -26,42 +26,75 @@
             <div class="card-content grey lighten-4">
                 <form>
                     {% if pa != None %}
-                        {% for obj in fields %}
-                            {% if obj.fieldtype == 'Section Break' %}
-                                <div class="card-panel blue darken-1 white-text center" style="padding:10px">
-                                    <p>{{obj.label}}</p>
-                                </div>
-                            {% elif obj.fieldtype == 'Table' %}
-                                {% if members != None %}
-                                    {% for member in members %}
-                                    <table class="stripped responsive-table">
-                                        <thead>
-                                          <tr>
-                                              <th>Label</th>
-                                              <th>Value</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for field in members_fields %}
-                                          <tr>
-                                            <td>{{field.label}}</td>
-                                            <td>{{member[field.fieldname]}}</td>
-                                          </tr>
-                                        {% endfor %}
-                                        </tbody>
-                                    </table>
-                                    <br>
-                                    {% endfor %}
-                                {% endif %}
-                            {% else %}
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{pa[obj.fieldname]}}" disabled>
-                                        <label for="{{obj.fieldname}}">{{obj.label}}</label>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
+			<p>Membership No: {{pa.membership_no}}</p>
+			<p>Member Name: {{member.full_name}}</p>
+			<p>IC : {{member.new_nric_no}}</p>
+			<p>Contact Number: {{member.tel_hp}}</p>
+			<p>GPA joined since: Check with lam</p>
+			<p>Sum Assured: Check with lam</p>
+			<p>Premium including SST%: Check with lam</p>
+			{% if members %}
+
+				</br>
+				<p>SPOUSE/CHILD</p>
+				<table class="stripped responsive-table">
+				    <thead>
+					<tr>
+					    <th>Name as per IC</th>
+					    <th>IC Number</th>
+					    <th>Contact Number</th>
+					    <th>Relationship</th>
+					    <th>Occupation</th>
+					    <th>Sum Assured</th>
+					    <th>Premium Including SST</th>
+					</tr>
+				    </thead>
+
+				    <tbody>
+					{% for row in members %}
+					<tr>
+					    <td>{{ row.full_name }}</td>
+					    <td>{{ row.new_nric_no }}</td>
+					    <td>{{ row.tel_hp }}</td>
+					    <td>{{ row.relationship }}</td>
+					    <td>{{ row.occupation }}</td>
+					    <td>{{ row.sum_assured }}</td>
+					    <td>{{ row.total_premium }}</td>
+					</tr>
+					{% endfor %}
+				    </tbody>
+				</table>
+				
+				</br>
+                                <p>Nominee</p>
+                                <table class="stripped responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Name of Proposer</th>
+                                            <th>Name of Nominee</th>
+                                            <th>IC Number</th>
+                                            <th>Relationship</th>
+                                            <th>Address</th>
+                                            <th>Share</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ None }}</td>
+                                            <td>{{ None }}</td>
+                                            <td>{{ None }}</td>
+                                            <td>{{ None }}</td>
+                                            <td>{{ None }}</td>
+                                            <td>{{ None }}</td>
+                                            <td>{{ None }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+			{% endif %}
+
                     {% else %}
                         <div>Form is empty</div>
                     {% endif %}
