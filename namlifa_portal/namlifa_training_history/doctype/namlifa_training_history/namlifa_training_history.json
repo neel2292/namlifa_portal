@@ -14,18 +14,32 @@
   "agent_code",
   "position",
   "date_lp101_completed",
+  "month_lp101_completed",
+  "year_lp101_completed",
   "lp101_grade",
   "date_lp102_completed",
+  "month_lp102_completed",
+  "year_lp102_completed",
   "lp102_grade",
   "date_lp103_completed",
+  "month_lp103_completed",
+  "year_lp103_completed",
   "lp103_grade",
   "date_lp104_completed",
+  "month_lp104_completed",
+  "year_lp104_completed",
   "lp104_grade",
-  "date_ch1fp_completed",
+  "date_chifp_completed",
+  "month_lpifp_completed",
+  "year_lpifp_completed",
   "chifp_grade",
   "date_chapm_completed",
+  "month_chapm_completed",
+  "year_chapm_completed",
   "champ_grade",
   "graduation_date",
+  "month_graduation",
+  "year_graduation",
   "date_taken"
  ],
  "fields": [
@@ -73,6 +87,7 @@
   {
    "fieldname": "date_lp101_completed",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP101"
   },
   {
@@ -84,6 +99,7 @@
   {
    "fieldname": "date_lp102_completed",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP102"
   },
   {
@@ -95,6 +111,7 @@
   {
    "fieldname": "date_lp103_completed",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP103"
   },
   {
@@ -106,6 +123,7 @@
   {
    "fieldname": "date_lp104_completed",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP104"
   },
   {
@@ -115,13 +133,9 @@
    "options": "A\nB\nC\nF\nAB"
   },
   {
-   "fieldname": "date_ch1fp_completed",
-   "fieldtype": "Date",
-   "label": "Year of Completion Ch1FP"
-  },
-  {
    "fieldname": "date_chapm_completed",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion ChAPM"
   },
   {
@@ -133,6 +147,7 @@
   {
    "fieldname": "graduation_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Graduation"
   },
   {
@@ -152,9 +167,85 @@
    "fieldtype": "Select",
    "label": "ChIFP Grade",
    "options": "A\nB\nC\nF\nAB"
+  },
+  {
+   "fieldname": "month_lp101_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP101"
+  },
+  {
+   "fieldname": "year_lp101_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP101"
+  },
+  {
+   "fieldname": "month_lp102_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP102"
+  },
+  {
+   "fieldname": "year_lp102_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP102"
+  },
+  {
+   "fieldname": "month_lp103_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP103"
+  },
+  {
+   "fieldname": "year_lp103_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP103"
+  },
+  {
+   "fieldname": "month_lp104_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP104"
+  },
+  {
+   "fieldname": "year_lp104_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP104"
+  },
+  {
+   "fieldname": "month_lpifp_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LPIFP"
+  },
+  {
+   "fieldname": "year_lpifp_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LPIFP"
+  },
+  {
+   "fieldname": "date_chifp_completed",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Year of Completion ChIFP"
+  },
+  {
+   "fieldname": "month_chapm_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion ChAPM"
+  },
+  {
+   "fieldname": "year_chapm_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion ChAPM"
+  },
+  {
+   "fieldname": "month_graduation",
+   "fieldtype": "Data",
+   "label": "Month of Graduation"
+  },
+  {
+   "fieldname": "year_graduation",
+   "fieldtype": "Data",
+   "label": "Year of Graduation"
   }
  ],
- "modified": "2020-03-13 23:20:44.184865",
+ "modified": "2020-03-18 14:06:39.301745",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",
