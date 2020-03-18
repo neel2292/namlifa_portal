@@ -262,6 +262,8 @@ def get_context(context):
     member = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "*")
     pa = frappe.db.get_value("Namlifa PA", {"membership_no": member_id}, "*")
     pa_member = frappe.db.get_values("Namlifa PA Member", {"parent": pa.name}, "*")
+    pa_spouse = frappe.db.get_values("Namlifa PA Spaouse", {"parent": pa.name}, "*")
+    pa_nominee = frappe.db.get_values("Namlifa PA Nomination", {"parent": pa.name}, "*")
     context.user = frappe.session.user
     context.user_doc = frappe.session
     context.csrf_token = frappe.sessions.get_csrf_token()
@@ -269,6 +271,8 @@ def get_context(context):
     context.pa = pa
     context.members_fields = members_fields
     context.members = pa_member
+    context.pa_spouse = pa_spouse
+    context.pa_nominee = pa_nominee
     context.member = member
 
     return context

@@ -33,7 +33,7 @@
 			<p>GPA joined since: Check with lam</p>
 			<p>Sum Assured: Check with lam</p>
 			<p>Premium including SST%: Check with lam</p>
-			{% if members %}
+			{% if pa_spouse %}
 
 				</br>
 				<p>SPOUSE/CHILD</p>
@@ -51,20 +51,24 @@
 				    </thead>
 
 				    <tbody>
-					{% for row in members %}
+					{% for row in pa_spouse %}
 					<tr>
 					    <td>{{ row.full_name }}</td>
 					    <td>{{ row.new_nric_no }}</td>
-					    <td>{{ row.tel_hp }}</td>
+					    <td>{{ row.contact_number }}</td>
 					    <td>{{ row.relationship }}</td>
 					    <td>{{ row.occupation }}</td>
 					    <td>{{ row.sum_assured }}</td>
-					    <td>{{ row.total_premium }}</td>
+					    <td>{{ row.premium_include_sst }}</td>
 					</tr>
 					{% endfor %}
 				    </tbody>
 				</table>
 				
+			{% endif %}
+
+
+			{% if pa_nominee %}
 				</br>
                                 <p>Nominee</p>
                                 <table class="stripped responsive-table">
@@ -81,15 +85,18 @@
                                     </thead>
 
                                     <tbody>
+                                        {% for row in pa_nominee %}
                                         <tr>
-                                            <td>{{ None }}</td>
-                                            <td>{{ None }}</td>
-                                            <td>{{ None }}</td>
-                                            <td>{{ None }}</td>
-                                            <td>{{ None }}</td>
-                                            <td>{{ None }}</td>
-                                            <td>{{ None }}</td>
+                                            <td>{{ loop.index }}</td>
+                                            <td>{{ row.name_of_proposer }}</td>
+                                            <td>{{ row.name_of_nominee }}</td>
+                                            <td>{{ row.new_nric_no }}</td>
+                                            <td>{{ row.relationship }}</td>
+                                            <td>{{ row.address }}</td>
+                                            <td>{{ row.share }}</td>
                                         </tr>
+                                        {% endfor %}
+
                                     </tbody>
                                 </table>
 
