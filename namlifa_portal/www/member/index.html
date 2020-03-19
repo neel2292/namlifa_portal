@@ -15,22 +15,54 @@
         <div class="col s12 m6">
             <div class="card white-grey darken-1">
                 <div class="card-content black-text">
-			<span class="card-title"><h5><strong>Personal Info</strong></h5></span>
-                    <p>Name: {{member.full_name}}</p>
-                    <p>Namlifa Member ID: {{member.name}}</p>
-		    {% if member.new_nric_no %}
-			<p>New NRIC No: {{member.new_nric_no}}</p>
-		    {% elif member.old_nric_no %}
-			<p>Old NRIC No: {{member.old_nric_no}}</p>
-                    {% endif %}
-		    <p>Tel (H/P): {{member.tel_hp}}</p>
-		    <p>Email: {{member.email}}</p>
-                    <p>Status: Active </p>
-		    <p>Join Date: {{member.date_contracted_as_agent}}</p>
-		    <p>Expiry Date: None</p>
-		    <p>Company: {{member.company}}</p>
-		    <p>Agent's Code: {{member.agent_code}}</p>
-                    <p>Membership Type: </p>
+		    <span class="card-title"><h5><strong>Personal Info</strong></h5></span>
+
+		    <table>
+			<tr>
+		 	    <td>Name:</td>
+		     	    <td>{{member.full_name}}</td>
+			</tr>
+			<tr>
+				<td>Namlifa Member ID:</td>
+				<td>{{member.name}}</td>
+			<tr>
+                        <tr>
+                            <td>New NRIC No:</td>
+                            <td>{{member.new_nric_no}}</td>
+                        </tr>
+                        <tr>
+                            <td>Tel (H/P):</td>
+                            <td>{{member.tel_hp}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>{{member.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Status:</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Join Date:</td>
+                            <td>{{member.date_contracted_as_agent}}</td>
+                        </tr>
+                        <tr>
+                            <td>Expiry Date:</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td>Company:</td>
+                            <td>{{member.company}}</td>
+                        </tr>
+                        <tr>
+                            <td>Agent's Code:</td>
+                            <td>{{member.agent_code}}</td>
+                        </tr>
+			<tr>
+                            <td>Membership Type:</td>
+			<tr>
+		    </table>
+
                     <img src="/images/{{member.membership_type}}.png" alt="{{member.membership_type}} Member" title="{{member.membership_type}} Member" width="300" height="180" style="margin-top: 10px">
                 </div>
             </div>
@@ -49,8 +81,16 @@
             <div class="card white-grey darken-1">
                 <div class="card-content black-text">
 			<span class="card-title"><h5><strong>Akard</strong></h5></span>
-                    <p>AKARD ID No: {{akard.name}}</p>
-                    <p>AKARD Plan: {{akard.akard_plan}}</p>
+                    <table>
+                        <tr>
+                            <td>AKARD ID No:</td>
+                            <td>{{akard.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>AKARD Plan:</td>
+                            <td>{{akard.akard_plan}}</td>
+                        </tr>
+		    </table>
                 </div>
             </div>
         </div>
