@@ -1,6 +1,6 @@
 {% extends "www/main.html" %}
 
-{% block title %}Namlifa Personal Accident{% endblock %}
+{% block title %}Namlifa Personal Indemnity{% endblock %}
 
 {% block styles %}
 {% endblock %}
@@ -23,45 +23,40 @@
                     </div>
                 </div>
             </div>
+
+	</div>
             <div class="card-content grey lighten-4">
                 <form>
-                    {% if pi != None %}
-                        {% for obj in fields %}
-                            {% if obj.fieldtype == 'Section Break' %}
-                                <div class="card-panel blue darken-1 white-text center" style="padding:10px">
-                                    <p>{{obj.label}}</p>
-                                </div>
-                            {% elif obj.fieldtype == 'Table' %}
-                                {% if members != None %}
-                                    {% for member in members %}
-                                    <table class="stripped responsive-table">
-                                        <thead>
-                                          <tr>
-                                              <th>Label</th>
-                                              <th>Value</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for field in members_fields %}
-                                          <tr>
-                                            <td>{{field.label}}</td>
-                                            <td>{{member[field.fieldname]}}</td>
-                                          </tr>
-                                        {% endfor %}
-                                        </tbody>
-                                    </table>
-                                    <br>
-                                    {% endfor %}
-                                {% endif %}
-                            {% else %}
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{pi[obj.fieldname]}}" disabled>
-                                        <label for="{{obj.fieldname}}">{{obj.label}}</label>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
+                    {% if pi %}
+                        <div class="input-field col s12">
+                            <input id="membership_no" type="text" value="{{pi.membership_no}}" disabled>
+                            <label for="membership_no">Membership No</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="full_name" type="text" value="{{member.full_name}}" disabled>
+                            <label for="full_name">Name as per IC</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="new_nric_no" type="text" value="{{member.new_nric_no}}" disabled>
+                            <label for="new_nric_no">IC Number</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="tel_hp" type="text" value="{{pi.tel_hp}}" disabled>
+                            <label for="tel_hp">Contact Number</label>
+                        </div>
+                        <div class="input-field col s12">
+                                <input id="pi_join_date" type="text" value="{{pi.pi_join_date}}" disabled>
+                            <label for="pi_join_date">PI joined since</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="sum_assured" type="text" value="{{pi.sum_assured}}" disabled>
+                            <label for="sum_assured">Sum Assured</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="premium_incl_sst" type="text" value="{{pi.total_premium}}" disabled>
+                            <label for="premium_incl_sst">Premium Incl SST%</label>
+                        </div>
+
                     {% else %}
                         <div>Form is empty</div>
                     {% endif %}
