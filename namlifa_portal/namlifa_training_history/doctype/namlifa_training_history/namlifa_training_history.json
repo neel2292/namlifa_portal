@@ -46,13 +46,17 @@
   {
    "fetch_from": "membership_no.full_name",
    "fieldname": "user_name",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Name"
   },
   {
    "fetch_from": "membership_no.new_nric_no",
    "fieldname": "new_nric_no",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "IC No"
   },
   {
@@ -64,7 +68,9 @@
   {
    "fetch_from": "membership_no.email",
    "fieldname": "email",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Email"
   },
   {
@@ -159,6 +165,7 @@
    "fieldname": "membership_no",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Membership No",
    "options": "Namlifa Member"
   },
@@ -245,7 +252,7 @@
    "label": "Year of Graduation"
   }
  ],
- "modified": "2020-03-18 14:06:39.301745",
+ "modified": "2020-03-23 16:06:09.770841",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",

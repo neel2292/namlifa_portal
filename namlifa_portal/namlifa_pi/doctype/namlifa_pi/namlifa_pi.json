@@ -46,27 +46,37 @@
   {
    "fieldname": "membership_no",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Membership No",
    "options": "Namlifa Member"
   },
   {
    "fieldname": "membership_expiry",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Membership Valid Till"
   },
   {
    "fieldname": "pi_join_date",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "PI Joined Since"
   },
   {
    "fieldname": "receipt_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Receipt Number"
   },
   {
    "fieldname": "branch",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Branch"
   },
   {
@@ -90,6 +100,8 @@
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Name"
   },
   {
@@ -226,7 +238,7 @@
    "fieldtype": "Column Break"
   }
  ],
- "modified": "2020-03-18 17:46:48.291275",
+ "modified": "2020-03-23 15:55:06.714140",
  "modified_by": "Administrator",
  "module": "Namlifa PI",
  "name": "Namlifa PI",
