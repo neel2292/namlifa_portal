@@ -25,21 +25,219 @@
             </div>
             <div class="card-content grey lighten-4">
                 <form>
-                    {% if  training != None %}
-                        {% for obj in fields %}
-                            {% if obj.fieldtype == 'Section Break' %}
-                                <div class="card-panel blue darken-1 white-text center" style="padding:10px">
-                                    <p>{{obj.label}}</p>
-                                </div>
-                            {% else %}
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{training[obj.fieldname]}}" disabled>
-                                        <label for="{{obj.fieldname}}">{{obj.label}}</label>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
+                    {% if training %}
+			  <div class="row">
+			      <div class="input-field col s12">
+				      <input placeholder="Name" id="user_name" name="user_name" type="text" value="{{training.user_name}}" disabled="">
+				  <label for="user_name" class="active">Name</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				      <input placeholder="IC No" id="new_nric_no" name="new_nric_no" type="text" value="{{training.new_nric_no}}" disabled="">
+				  <label for="new_nric_no" class="active">IC No</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Mobile No" id="tel_hp" name="tel_hp" type="text" value="{{training.tel_hp}}" disabled="">
+				  <label for="tel_hp" class="active">Mobile No</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Email" id="email" name="email" type="text" value="{{training.email}}" disabled="">
+				  <label for="email" class="active">Email</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Company" id="company" name="company" type="text" value="{{training.company}}" disabled="">
+				  <label for="company" class="active">Company</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Agent Code" id="agent_code" name="agent_code" type="text" value="{{training.agent_code}}" disabled="">
+				  <label for="agent_code" class="active">Agent Code</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Position" id="position" name="position" type="text" value="{{training.position}}" disabled="">
+				  <label for="position" class="active">Position</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Completion LP101" id="date_lp101_completed" name="date_lp101_completed" type="text" value="{{training.date_lp101_completed}}" disabled="">
+				  <label for="date_lp101_completed" class="active">Year of Completion LP101</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="LP101 Grade Achieved" id="lp101_grade" name="lp101_grade" type="text" value="{{training.lp101_grade}}" disabled="">
+				  <label for="lp101_grade" class="active">LP101 Grade Achieved</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Completion LP102" id="date_lp102_completed" name="date_lp102_completed" type="text" value="{{training.date_lp102_completed}}" disabled="">
+				  <label for="date_lp102_completed" class="active">Year of Completion LP102</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="LP102 Grade Achieved" id="lp102_grade" name="lp102_grade" type="text" value="{{training.lp102_grade}}" disabled="">
+				  <label for="lp102_grade" class="active">LP102 Grade Achieved</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Completion LP103" id="date_lp103_completed" name="date_lp103_completed" type="text" value="{{training.date_lp103_completed}}" disabled="">
+				  <label for="date_lp103_completed" class="active">Year of Completion LP103</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="LP103 Grade" id="lp103_grade" name="lp103_grade" type="text" value="{{training.lp103_grade}}" disabled="">
+				  <label for="lp103_grade" class="active">LP103 Grade</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Completion LP104" id="date_lp104_completed" name="date_lp104_completed" type="text" value="{{training.date_lp104_completed}}" disabled="">
+				  <label for="date_lp104_completed" class="active">Year of Completion LP104</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="LP104 Grade" id="lp104_grade" name="lp104_grade" type="text" value="{{training.lp104_grade}}" disabled="">
+				  <label for="lp104_grade" class="active">LP104 Grade</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Completion ChAPM" id="date_chapm_completed" name="date_chapm_completed" type="text" value="{{training.date_chapm_completed}}" disabled="">
+				  <label for="date_chapm_completed" class="active">Year of Completion ChAPM</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="ChAPM Grade" id="champ_grade" name="champ_grade" type="text" value="{{training.champ_grade}}" disabled="">
+				  <label for="champ_grade" class="active">ChAPM Grade</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Graduation" id="graduation_date" name="graduation_date" type="text" value="{{training.graduation_date}}" disabled="">
+				  <label for="graduation_date" class="active">Year of Graduation</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Date Taken" id="date_taken" name="date_taken" type="text" value="{{training.date_taken}}" disabled="">
+				  <label for="date_taken" class="active">Date Taken</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Membership No" id="membership_no" name="membership_no" type="text" value="{{training.membership_no}}" disabled="">
+				  <label for="membership_no" class="active">Membership No</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="ChIFP Grade" id="chifp_grade" name="chifp_grade" type="text" value="{{training.chifp_grade}}" disabled="">
+				  <label for="chifp_grade" class="active">ChIFP Grade</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Month of Completion LP101" id="month_lp101_completed" name="month_lp101_completed" type="text" value="{{training.month_lp101_completed +'/'+training.year_lp101_completed}}" disabled="">
+				  <label for="month_lp101_completed" class="active">Date of Completion LP101</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Month of Completion LP102" id="month_lp102_completed" name="month_lp102_completed" type="text" value="{{training.month_lp102_completed +'/'+training.year_lp102_completed}}" disabled="">
+				  <label for="month_lp102_completed" class="active">Date of Completion LP102</label>
+			      </div>
+			  </div>
+
+			 <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Month of Completion LP103" id="month_lp103_completed" name="month_lp103_completed" type="text" value="{{training.month_lp103_completed +'/'+training.year_lp103_completed}}" disabled="">
+				  <label for="month_lp103_completed" class="active">Date of Completion LP103</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Month of Completion LP104" id="month_lp104_completed" name="month_lp104_completed" type="text" value="{{training.month_lp104_completed +'/'+training.year_lp104_completed}}" disabled="">
+				  <label for="month_lp104_completed" class="active">Date of Completion LP104</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Month of Completion LPIFP" id="month_lpifp_completed" name="month_lpifp_completed" type="text" value="{{training.month_lpifp_completed +'/'+training.year_lpifp_completed}}" disabled="">
+				  <label for="month_lpifp_completed" class="active">Date of Completion LPIFP</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Completion ChIFP" id="date_chifp_completed" name="date_chifp_completed" type="text" value="{{training.date_chifp_completed}}" disabled="">
+				  <label for="date_chifp_completed" class="active">Year of Completion ChIFP</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				      <input placeholder="Month of Completion ChAPM" id="month_chapm_completed" name="month_chapm_completed" type="text" value="{{training.month_chapm_completed +'/'+training.year_chapm_completed}}" disabled="">
+				  <label for="month_chapm_completed" class="active">Date of Completion ChAPM</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Month of Graduation" id="month_graduation" name="month_graduation" type="text" value="{{training.month_graduation +'/'+training.year_graduation}}" disabled="">
+				  <label for="month_graduation" class="active">Date of Graduation</label>
+			      </div>
+			  </div>
+
+			  <div class="row">
+			      <div class="input-field col s12">
+				  <input placeholder="Year of Graduation" id="year_graduation" name="year_graduation" type="text" value="1990" disabled="">
+				  <label for="year_graduation" class="active">Year of Graduation</label>
+			      </div>
+			  </div>
+
+
+
                     {% else %}
                         <div>Form is empty</div>
                     {% endif %}

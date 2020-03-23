@@ -186,11 +186,6 @@ fields = [
    "label": "Name"
   },
   {
-   "fieldname": "signature",
-   "fieldtype": "Signature",
-   "label": "Signature"
-  },
-  {
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"

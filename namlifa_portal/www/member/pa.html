@@ -24,44 +24,113 @@
                 </div>
             </div>
             <div class="card-content grey lighten-4">
-                <form>
-                    {% if pa != None %}
-                        {% for obj in fields %}
-                            {% if obj.fieldtype == 'Section Break' %}
-                                <div class="card-panel blue darken-1 white-text center" style="padding:10px">
-                                    <p>{{obj.label}}</p>
-                                </div>
-                            {% elif obj.fieldtype == 'Table' %}
-                                {% if members != None %}
-                                    {% for member in members %}
-                                    <table class="stripped responsive-table">
-                                        <thead>
-                                          <tr>
-                                              <th>Label</th>
-                                              <th>Value</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for field in members_fields %}
-                                          <tr>
-                                            <td>{{field.label}}</td>
-                                            <td>{{member[field.fieldname]}}</td>
-                                          </tr>
+		<form>
+                    {% if pa %}
+                        <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+                            <p>Personal Details</p>
+                        </div>
+			<div class="row">
+				<div class="input-field col s12">
+				    <input id="membership_no" type="text" value="{{pa.membership_no}}" disabled>
+				    <label for="membership_no">Membership No</label>
+				</div>
+				<div class="input-field col s12">
+				    <input id="full_name" type="text" value="{{member.full_name}}" disabled>
+				    <label for="full_name">Name as per IC</label>
+				</div>
+				<div class="input-field col s12">
+				    <input id="new_nric_no" type="text" value="{{member.new_nric_no}}" disabled>
+				    <label for="new_nric_no">IC Number</label>
+				</div>
+				<div class="input-field col s12">
+				    <input id="tel_hp" type="text" value="{{pa.contact_number}}" disabled>
+				    <label for="tel_hp">Contact Number</label>
+				</div>
+				<div class="input-field col s12">
+					<input id="gpa_joined_since" type="text" value="{{pa.gpa_joined_since}}" disabled>
+				    <label for="gpa_joined_since">GPA joined since</label>
+				</div>
+				<div class="input-field col s12">
+				    <input id="sum_assured" type="text" value="{{pa.sum_assured}}" disabled>
+				    <label for="sum_assured">Sum Assured</label>
+				</div>
+				<div class="input-field col s12">
+				    <input id="premium_incl_sst" type="text" value="{{pa.premium_incl_sst}}" disabled>
+				    <label for="premium_incl_sst">Premium Incl SST%</label>
+				</div>
+			</div>
+			{% if pa_spouse %}
+
+                        <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+				<p>SPOUSE/CHILD</p>
+                        </div>
+				<table class="stripped responsive-table">
+				    <thead>
+					<tr>
+					    <th>Name as per IC</th>
+					    <th>IC Number</th>
+					    <th>Contact Number</th>
+					    <th>Relationship</th>
+					    <th>Occupation</th>
+					    <th>Sum Assured</th>
+					    <th>Premium Including SST</th>
+					</tr>
+				    </thead>
+
+				    <tbody>
+					{% for row in pa_spouse %}
+					<tr>
+					    <td>{{ row.full_name }}</td>
+					    <td>{{ row.new_nric_no }}</td>
+					    <td>{{ row.contact_number }}</td>
+					    <td>{{ row.relationship }}</td>
+					    <td>{{ row.occupation }}</td>
+					    <td>{{ row.sum_assured }}</td>
+					    <td>{{ row.premium_include_sst }}</td>
+					</tr>
+					{% endfor %}
+				    </tbody>
+				</table>
+			{% endif %}
+
+
+			{% if pa_nominee %}
+
+			<div class="card-panel blue darken-1 white-text center" style="padding:10px">
+				<p>Nominee</p>
+                        </div>
+
+                                <table class="stripped responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Name of Proposer</th>
+                                            <th>Name of Nominee</th>
+                                            <th>IC Number</th>
+                                            <th>Relationship</th>
+                                            <th>Address</th>
+                                            <th>Share</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        {% for row in pa_nominee %}
+                                        <tr>
+                                            <td>{{ loop.index }}</td>
+                                            <td>{{ row.name_of_proposer }}</td>
+                                            <td>{{ row.name_of_nominee }}</td>
+                                            <td>{{ row.new_nric_no }}</td>
+                                            <td>{{ row.relationship }}</td>
+                                            <td>{{ row.address }}</td>
+                                            <td>{{ row.share }}</td>
+                                        </tr>
                                         {% endfor %}
-                                        </tbody>
-                                    </table>
-                                    <br>
-                                    {% endfor %}
-                                {% endif %}
-                            {% else %}
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input placeholder="{{obj.label}}" id="{{obj.fieldname}}" name="{{obj.fieldname}}" type="text" value="{{pa[obj.fieldname]}}" disabled>
-                                        <label for="{{obj.fieldname}}">{{obj.label}}</label>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+
+			{% endif %}
+
                     {% else %}
                         <div>Form is empty</div>
                     {% endif %}

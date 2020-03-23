@@ -1,9 +1,11 @@
 {
+ "autoname": "TH.#####",
  "creation": "2020-03-01 11:41:56.143977",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "membership_no",
   "user_name",
   "new_nric_no",
   "tel_hp",
@@ -12,55 +14,73 @@
   "agent_code",
   "position",
   "date_lp101_completed",
+  "month_lp101_completed",
+  "year_lp101_completed",
   "lp101_grade",
   "date_lp102_completed",
+  "month_lp102_completed",
+  "year_lp102_completed",
   "lp102_grade",
   "date_lp103_completed",
+  "month_lp103_completed",
+  "year_lp103_completed",
   "lp103_grade",
   "date_lp104_completed",
+  "month_lp104_completed",
+  "year_lp104_completed",
   "lp104_grade",
-  "date_ch1fp_completed",
-  "ch1fp_grade",
+  "date_chifp_completed",
+  "month_lpifp_completed",
+  "year_lpifp_completed",
+  "chifp_grade",
   "date_chapm_completed",
+  "month_chapm_completed",
+  "year_chapm_completed",
   "champ_grade",
-  "date_rfp_completed",
-  "rfp_grade",
   "graduation_date",
+  "month_graduation",
+  "year_graduation",
   "date_taken"
  ],
  "fields": [
   {
-   "fetch_from": "namlifa_member.full_name",
+   "fetch_from": "membership_no.full_name",
    "fieldname": "user_name",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Name"
   },
   {
-   "fetch_from": "namlifa_member.new_nric_no",
+   "fetch_from": "membership_no.new_nric_no",
    "fieldname": "new_nric_no",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "IC No"
   },
   {
-   "fetch_from": "namlifa_member.tel_hp",
+   "fetch_from": "membership_no.tel_hp",
    "fieldname": "tel_hp",
    "fieldtype": "Read Only",
    "label": "Mobile No"
   },
   {
-   "fetch_from": "namlifa_member.email",
+   "fetch_from": "membership_no.email",
    "fieldname": "email",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Email"
   },
   {
-   "fetch_from": "namlifa_member.company",
+   "fetch_from": "membership_no.company",
    "fieldname": "company",
    "fieldtype": "Read Only",
    "label": "Company"
   },
   {
-   "fetch_from": "namlifa_member.agent_code",
+   "fetch_from": "membership_no.agent_code",
    "fieldname": "agent_code",
    "fieldtype": "Read Only",
    "label": "Agent Code"
@@ -72,86 +92,167 @@
   },
   {
    "fieldname": "date_lp101_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP101"
   },
   {
    "fieldname": "lp101_grade",
-   "fieldtype": "Data",
-   "label": "LP101 Grade Achieved"
+   "fieldtype": "Select",
+   "label": "LP101 Grade Achieved",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp102_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP102"
   },
   {
    "fieldname": "lp102_grade",
-   "fieldtype": "Data",
-   "label": "LP102 Grade Achieved"
+   "fieldtype": "Select",
+   "label": "LP102 Grade Achieved",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp103_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP103"
   },
   {
    "fieldname": "lp103_grade",
-   "fieldtype": "Data",
-   "label": "LP103 Grade"
+   "fieldtype": "Select",
+   "label": "LP103 Grade",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp104_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion LP104"
   },
   {
    "fieldname": "lp104_grade",
-   "fieldtype": "Data",
-   "label": "LP104 Grade"
-  },
-  {
-   "fieldname": "date_ch1fp_completed",
-   "fieldtype": "Data",
-   "label": "Year of Completion Ch1FP"
-  },
-  {
-   "fieldname": "ch1fp_grade",
-   "fieldtype": "Data",
-   "label": "Ch1FP Grade"
+   "fieldtype": "Select",
+   "label": "LP104 Grade",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_chapm_completed",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Completion ChAPM"
   },
   {
    "fieldname": "champ_grade",
-   "fieldtype": "Data",
-   "label": "ChAPM Grade"
-  },
-  {
-   "fieldname": "date_rfp_completed",
-   "fieldtype": "Data",
-   "label": "Year of Completion RFP"
-  },
-  {
-   "fieldname": "rfp_grade",
-   "fieldtype": "Data",
-   "label": "RFP Grade"
+   "fieldtype": "Select",
+   "label": "ChAPM Grade",
+   "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "graduation_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "hidden": 1,
    "label": "Year of Graduation"
   },
   {
    "fieldname": "date_taken",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Date Taken"
+  },
+  {
+   "fieldname": "membership_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Membership No",
+   "options": "Namlifa Member"
+  },
+  {
+   "fieldname": "chifp_grade",
+   "fieldtype": "Select",
+   "label": "ChIFP Grade",
+   "options": "A\nB\nC\nF\nAB"
+  },
+  {
+   "fieldname": "month_lp101_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP101"
+  },
+  {
+   "fieldname": "year_lp101_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP101"
+  },
+  {
+   "fieldname": "month_lp102_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP102"
+  },
+  {
+   "fieldname": "year_lp102_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP102"
+  },
+  {
+   "fieldname": "month_lp103_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP103"
+  },
+  {
+   "fieldname": "year_lp103_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP103"
+  },
+  {
+   "fieldname": "month_lp104_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LP104"
+  },
+  {
+   "fieldname": "year_lp104_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LP104"
+  },
+  {
+   "fieldname": "month_lpifp_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion LPIFP"
+  },
+  {
+   "fieldname": "year_lpifp_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion LPIFP"
+  },
+  {
+   "fieldname": "date_chifp_completed",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Year of Completion ChIFP"
+  },
+  {
+   "fieldname": "month_chapm_completed",
+   "fieldtype": "Data",
+   "label": "Month of Completion ChAPM"
+  },
+  {
+   "fieldname": "year_chapm_completed",
+   "fieldtype": "Data",
+   "label": "Year of Completion ChAPM"
+  },
+  {
+   "fieldname": "month_graduation",
+   "fieldtype": "Data",
+   "label": "Month of Graduation"
+  },
+  {
+   "fieldname": "year_graduation",
+   "fieldtype": "Data",
+   "label": "Year of Graduation"
   }
  ],
- "modified": "2020-03-01 11:46:03.819664",
+ "modified": "2020-03-23 16:06:09.770841",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",
