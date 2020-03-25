@@ -82,6 +82,7 @@
                 <div class="card-content black-text">
 			<span class="card-title"><h5><strong>Akard</strong></h5></span>
                     <table>
+                        {% if akard %}
                         <tr>
                             <td>AKARD ID No:</td>
                             <td>{{akard.name}}</td>
@@ -90,6 +91,16 @@
                             <td>AKARD Plan:</td>
                             <td>{{akard.akard_plan}}</td>
                         </tr>
+                        {% else %}
+                        <tr>
+                            <td>AKARD ID No:</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>AKARD Plan:</td>
+                            <td>N/A</td>
+                        </tr>
+                        {% endif %}
 		    </table>
                 </div>
             </div>
