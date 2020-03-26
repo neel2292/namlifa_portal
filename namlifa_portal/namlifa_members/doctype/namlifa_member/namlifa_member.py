@@ -37,6 +37,14 @@ class NamlifaMember(Document):
                                         self.owner = self.user_id
                         else:
                                 self.user_id = ''
+
+
+                self.db_update()
+
+        def on_submit(self):
+                if self.membership_no:
+                    if self.name != self.membership_no:
+                        self.name = self.membership_no
                 self.db_update()
 
         def validate(self):
@@ -52,6 +60,7 @@ class NamlifaMember(Document):
                                 self.validate_id()
                         if self.user_id is None and existing_member.user_id:
                                 frappe.permissions.remove_user_permissions('Namlifa Member', self.name, existing_member.user_id)
+
 
                 # clear new password
                 self.__new_password = self.new_password
