@@ -123,7 +123,20 @@ $(document).ready(function() {
                 'Namlifa Member', data).then(function (res) {
                     console.log(res);
                     window.erpx.showMessage("<p>Thank you for your application</p>" +
-                        "<p>We will send you the login credential to your email " + data['email']+ " once has been approved</p>");
+                        "<p>We will send you the login credential to your email " + data['email']+ " once has been approved</p>" +
+                        "<p>You will be redirected in <span id=\"countdown\">5</span> seconds</p>"
+                    );
+
+                    var count = 5;
+                    var interval = setInterval(function() {
+                      count--;
+                      $('#countdown').text(count);
+                      if (count == 0) {
+                        clearInterval(interval);
+                        // redirect to home page
+                        window.location.replace(window.location.origin);
+                      }
+                    }, 1000);
                 });
 
         }

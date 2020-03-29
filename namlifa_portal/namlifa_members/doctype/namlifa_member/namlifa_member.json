@@ -294,7 +294,7 @@
   }
  ],
  "image_field": "photo",
- "modified": "2020-03-26 18:43:01.670244",
+ "modified": "2020-03-28 16:15:58.132495",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",
@@ -345,6 +345,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Namlifa Admin",
    "share": 1,
    "write": 1
   }

@@ -152,7 +152,7 @@
    "label": "Date Taken"
   }
  ],
- "modified": "2020-03-13 12:39:10.253401",
+ "modified": "2020-03-27 15:49:10.974926",
  "modified_by": "Administrator",
  "module": "Namlifa Training",
  "name": "Namlifa Training",
@@ -167,6 +167,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Namlifa Admin",
    "share": 1,
    "write": 1
   }

@@ -1,5 +1,5 @@
 {
- "autoname": "AK.#####",
+ "autoname": "field:membership_no",
  "creation": "2020-02-08 10:58:36.528998",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -7,6 +7,7 @@
  "field_order": [
   "personal_details_section",
   "namlifa_member_id",
+  "membership_no",
   "title",
   "full_name",
   "new_nric_no",
@@ -56,9 +57,7 @@
   {
    "fieldname": "namlifa_member_id",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Namlifa Membership No",
+   "label": "Namlifa Membership ID",
    "options": "Namlifa Member"
   },
   {
@@ -276,9 +275,16 @@
    "fieldname": "akard_builders_award_fee",
    "fieldtype": "Currency",
    "label": "Akard Builders Award Fee"
+  },
+  {
+   "fetch_from": "namlifa_member_id.membership_no",
+   "fieldname": "membership_no",
+   "fieldtype": "Data",
+   "label": "Membership No",
+   "unique": 1
   }
  ],
- "modified": "2020-03-23 16:04:42.262397",
+ "modified": "2020-03-28 16:41:55.148263",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",
@@ -295,10 +301,23 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Namlifa Admin",
+   "share": 1,
+   "write": 1
   }
  ],
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "membership_no",
  "track_changes": 1
 }

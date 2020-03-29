@@ -17,23 +17,31 @@ $(function () {
 	}).trigger('hashchange');
 
     $('.login-form').on('submit', function (e) {
-        var args = {};
+        var args = {},
+            route = window.location.hash.slice(1);
 
+        console.log(route)
         e.preventDefault();
 
-        args.cmd = 'login';
-		args.usr = frappe.utils.xss_sanitise(($("#login-username").val() || "").trim());
-		args.pwd = $("#login-password").val();
-		args.device = "desktop";
-		if(!args.usr || !args.pwd) {
-		    //TODO: show alert no username password provided
-            if (!args.usr) { $("#login-username").addClass('invalid');  }
-            if (!args.pwd) { $("#login-password").addClass('invalid');  }
-			return false;
-		}
-		loading(true);
-		login.call(args);
-		return false;
+        if (route === 'forgot') {
+
+        }
+        else {
+            args.cmd = 'login';
+            args.usr = frappe.utils.xss_sanitise(($("#login-username").val() || "").trim());
+            args.pwd = $("#login-password").val();
+            args.device = "desktop";
+            if(!args.usr || !args.pwd) {
+                //TODO: show alert no username password provided
+                if (!args.usr) { $("#login-username").addClass('invalid');  }
+                if (!args.pwd) { $("#login-password").addClass('invalid');  }
+                return false;
+            }
+            loading(true);
+            login.call(args);
+
+        }
+        return false;
     });
 
     $('input').on('change', function (e) {
@@ -103,7 +111,7 @@ $(function () {
 
         var login_handlers = {
             200: function(data) {
-                if (data.home_page === '/desk') { data.home_page = '/member'; }
+                if (data.home_page === '/desk' || data.home_page === '/me') { data.home_page = '/member'; }
                 if(data.message == 'Logged In'){
                     login.set_indicator("{{ _("Success") }}", 'green');
                     window.location.href = frappe.utils.get_url_arg("redirect-to") || data.home_page;
