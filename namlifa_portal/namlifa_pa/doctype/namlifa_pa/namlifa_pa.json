@@ -13,35 +13,36 @@
   "name_as_per_ic",
   "ic_number",
   "contact_number",
+  "occupation",
   "details_col1",
+  "email_address",
+  "age",
+  "address",
   "gpa_joined_since",
+  "section_details_more",
+  "membership_number",
   "sum_assured",
   "premium_incl_sst",
-  "section_details_more",
-  "age",
-  "email_address",
-  "occupation",
-  "address",
   "period_of_insurance",
   "master_policy_number",
-  "certificate_number",
+  "branch",
   "more_details_col2",
+  "membership_branch",
   "receipt_number",
   "payment_mode",
   "bank",
   "credit_card_no",
   "renewal_application",
   "more_details_col1",
+  "application_branch",
   "premium_excl_sst",
   "prorated_premium",
-  "membership_number",
-  "membership_branch",
-  "application_branch",
+  "certificate_number",
+  "receipt_no",
+  "auto_renewal_pa",
   "spaouse_child_nomination",
   "spaouse_child",
-  "nomination",
-  "receipt_no",
-  "branch"
+  "nomination"
  ],
  "fields": [
   {
@@ -52,11 +53,13 @@
    "unique": 1
   },
   {
+   "fetch_from": "membership_id.expiry_date",
    "fieldname": "membership_expiry",
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Membership Valid Till"
+   "label": "Membership Valid Till",
+   "read_only": 1
   },
   {
    "fieldname": "gpa_joined",
@@ -78,7 +81,7 @@
   {
    "fieldname": "spaouse_child",
    "fieldtype": "Table",
-   "label": "SPAOUSE/CHILD",
+   "label": "SPOUSE/CHILD",
    "options": "Namlifa PA Spaouse"
   },
   {
@@ -234,9 +237,15 @@
    "fieldtype": "Link",
    "label": "Membership ID",
    "options": "Namlifa Member"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_renewal_pa",
+   "fieldtype": "Check",
+   "label": "Auto Renewal"
   }
  ],
- "modified": "2020-03-28 16:42:38.400547",
+ "modified": "2020-04-01 23:43:54.937580",
  "modified_by": "Administrator",
  "module": "Namlifa PA",
  "name": "Namlifa PA",

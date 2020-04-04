@@ -36,6 +36,9 @@
   "terms_signature",
   "office_use_section",
   "date_received",
+  "branch",
+  "join_date",
+  "expiry_date",
   "remark",
   "processed_by",
   "membership_no",
@@ -56,6 +59,7 @@
    "label": "Personal Details"
   },
   {
+   "bold": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -68,6 +72,7 @@
    "label": "New NRIC No"
   },
   {
+   "bold": 1,
    "fieldname": "old_nric_no",
    "fieldtype": "Data",
    "label": "Old NRIC No"
@@ -95,15 +100,17 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "Male\nFemale"
+   "options": "MALE\nFEMALE"
   },
   {
+   "bold": 1,
    "fieldname": "race",
    "fieldtype": "Select",
    "label": "Race",
-   "options": "Malay\nChinese\nIndians\nOthers"
+   "options": "MALAY\nCHINESE\nINDIANS\nOTHERS"
   },
   {
+   "bold": 1,
    "fieldname": "tel_o",
    "fieldtype": "Data",
    "label": "Tel (O)"
@@ -129,12 +136,14 @@
    "label": "Email"
   },
   {
+   "bold": 1,
    "fieldname": "highest_qualification",
    "fieldtype": "Select",
    "label": "Highest Qualification",
    "options": "SPM\nSTPM\nCOLLEGE\nTertiary & Above"
   },
   {
+   "bold": 1,
    "fieldname": "company_details_section",
    "fieldtype": "Section Break",
    "label": "Company Details"
@@ -145,29 +154,33 @@
    "label": "Date Contracted as Agent"
   },
   {
+   "bold": 1,
    "fieldname": "position",
    "fieldtype": "Select",
    "label": "Position",
-   "options": "Agency Leader\nAgent"
+   "options": "AGENCY LEADER\nAGENT"
   },
   {
    "fieldname": "cb2_column",
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "position_type",
    "fieldtype": "Select",
    "label": "Position Type",
-   "options": "Full Time\nPart Time"
+   "options": "FULL TIME\nPART TIME"
   },
   {
+   "bold": 1,
    "fieldname": "company",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Company"
   },
   {
+   "bold": 1,
    "fieldname": "agency",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Agency"
   },
   {
@@ -215,15 +228,17 @@
    "unique": 1
   },
   {
-   "default": "Pending",
+   "bold": 1,
+   "default": "PENDING",
    "fieldname": "application_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Application Status",
-   "options": "Pending\nApproved\nRejected"
+   "options": "PENDING\nAPPROVED\nREJECTED"
   },
   {
+   "bold": 1,
    "default": "Ordinary/Affiliate/Provisional",
    "fieldname": "membership_type",
    "fieldtype": "Select",
@@ -278,6 +293,7 @@
    "permlevel": 1
   },
   {
+   "bold": 1,
    "fieldname": "agent_code",
    "fieldtype": "Data",
    "label": "Agent's Code"
@@ -291,10 +307,26 @@
    "fieldname": "payment_details",
    "fieldtype": "Table",
    "options": "Namlifa Member Payment"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "branch",
+   "fieldtype": "Text",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join Date"
   }
  ],
  "image_field": "photo",
- "modified": "2020-03-28 16:15:58.132495",
+ "modified": "2020-04-03 19:59:06.277347",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",

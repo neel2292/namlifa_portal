@@ -45,7 +45,7 @@
  ],
  "fields": [
   {
-   "fetch_from": "membership_no.full_name",
+   "fetch_from": "membership_id.full_name",
    "fieldname": "user_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -53,7 +53,7 @@
    "label": "Name"
   },
   {
-   "fetch_from": "membership_no.new_nric_no",
+   "fetch_from": "membership_id.new_nric_no",
    "fieldname": "new_nric_no",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -61,7 +61,7 @@
    "label": "IC No"
   },
   {
-   "fetch_from": "membership_no.tel_hp",
+   "fetch_from": "membership_id.tel_hp",
    "fieldname": "tel_hp",
    "fieldtype": "Read Only",
    "label": "Mobile No"
@@ -75,18 +75,19 @@
    "label": "Email"
   },
   {
-   "fetch_from": "membership_no.company",
+   "fetch_from": "membership_id.company",
    "fieldname": "company",
    "fieldtype": "Read Only",
    "label": "Company"
   },
   {
-   "fetch_from": "membership_no.agent_code",
+   "fetch_from": "membership_id.agent_code",
    "fieldname": "agent_code",
    "fieldtype": "Read Only",
    "label": "Agent Code"
   },
   {
+   "fetch_from": "membership_id.position",
    "fieldname": "position",
    "fieldtype": "Data",
    "label": "Position"
@@ -258,7 +259,7 @@
    "unique": 1
   }
  ],
- "modified": "2020-03-28 16:42:22.009825",
+ "modified": "2020-04-01 23:49:11.587458",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",

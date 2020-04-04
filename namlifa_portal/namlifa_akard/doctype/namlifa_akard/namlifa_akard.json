@@ -25,13 +25,24 @@
   "tel_fax",
   "email",
   "akard_plan",
+  "akard_personal_gold",
+  "akard_personal_diamond",
+  "akard_leaders_direct",
+  "column_break_24",
+  "akard_million_dollar_agency",
+  "akard_mega_million_dollar_agency",
+  "akard_star_rookie",
+  "column_break_28",
+  "akard_101",
+  "akard_personal_platinum",
+  "section_break_31",
+  "html_42",
   "member",
   "branch",
   "akard_builders_award",
   "life_member",
   "payment_details",
   "fee",
-  "member_fee",
   "akard_builders_award_fee",
   "late_fee",
   "total_payable",
@@ -45,8 +56,11 @@
   "card_no",
   "expiry_date",
   "card_name",
-  "signature",
-  "date"
+  "date",
+  "processing_section_section",
+  "received_date",
+  "receipt_no",
+  "join_date"
  ],
  "fields": [
   {
@@ -57,15 +71,17 @@
   {
    "fieldname": "namlifa_member_id",
    "fieldtype": "Link",
-   "label": "Namlifa Membership ID",
+   "label": "NAMLIFA Membership ID",
    "options": "Namlifa Member"
   },
   {
+   "bold": 1,
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title"
   },
   {
+   "bold": 1,
    "fetch_from": "namlifa_member_id.full_name",
    "fieldname": "full_name",
    "fieldtype": "Data",
@@ -80,23 +96,27 @@
    "label": "New NRIC No"
   },
   {
+   "bold": 1,
    "fetch_from": "namlifa_member_id.agent_code",
    "fieldname": "agent_code",
    "fieldtype": "Read Only",
    "label": "Agent Code"
   },
   {
-   "fetch_from": "namlifa_member.company",
+   "bold": 1,
+   "fetch_from": "namlifa_member_id.company",
    "fieldname": "company_name",
    "fieldtype": "Read Only",
    "label": "Company Name"
   },
   {
+   "bold": 1,
    "fieldname": "designation",
    "fieldtype": "Data",
    "label": "Designation"
   },
   {
+   "bold": 1,
    "fieldname": "agency_address",
    "fieldtype": "Data",
    "label": "Agency Address"
@@ -107,25 +127,29 @@
    "label": "Postcode"
   },
   {
+   "bold": 1,
    "fieldname": "city",
    "fieldtype": "Data",
    "label": "City"
   },
   {
+   "bold": 1,
    "fetch_from": "namlifa_member_id.correspondence_address",
    "fieldname": "correspondence_address",
    "fieldtype": "Read Only",
    "label": "Correspondence Address"
   },
   {
+   "bold": 1,
    "fetch_from": "namlifa_member_id.postcode",
    "fieldname": "correspondence_postcode",
    "fieldtype": "Read Only",
    "label": "Correspondence Postcode"
   },
   {
+   "bold": 1,
    "fieldname": "correspondence_city",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Correspondence City"
   },
   {
@@ -153,18 +177,21 @@
    "label": "Email"
   },
   {
+   "bold": 1,
    "fieldname": "branch",
    "fieldtype": "Select",
-   "label": "Branch",
+   "label": "Preferred Branch",
    "options": "KUALA LUMPUR\nJOHOR\nKUCHING\nMELAKA\nMIRI\nN.SEMBILAN\nKLANG\nPAHANG\nSABAH\nSIBU\nPENANG\nPERAK"
   },
   {
+   "bold": 1,
+   "default": "0",
    "fieldname": "akard_plan",
-   "fieldtype": "Link",
-   "label": "AKARD Plan",
-   "options": "Namlifa Akard Plan"
+   "fieldtype": "Section Break",
+   "label": "Award Category"
   },
   {
+   "bold": 1,
    "fieldname": "akard_builders_award",
    "fieldtype": "Link",
    "label": "AKARD Builders Award",
@@ -188,12 +215,6 @@
    "label": "AKARD Fee"
   },
   {
-   "fetch_from": "member.fee",
-   "fieldname": "member_fee",
-   "fieldtype": "Currency",
-   "label": "Membership Fee"
-  },
-  {
    "fieldname": "total_payable",
    "fieldtype": "Section Break",
    "label": "Total Payable"
@@ -210,6 +231,7 @@
    "label": "Method of Payment"
   },
   {
+   "bold": 1,
    "fieldname": "payment_method",
    "fieldtype": "Data",
    "label": "Method of Payment"
@@ -225,11 +247,13 @@
    "label": "Cheque No"
   },
   {
+   "bold": 1,
    "fieldname": "card_type",
    "fieldtype": "Data",
    "label": "Card Type"
   },
   {
+   "bold": 1,
    "fieldname": "card_bank",
    "fieldtype": "Data",
    "label": "Issuing Bank"
@@ -250,11 +274,6 @@
    "label": "Credit Card Showing Name"
   },
   {
-   "fieldname": "signature",
-   "fieldtype": "Signature",
-   "label": "Signature"
-  },
-  {
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
@@ -265,6 +284,7 @@
    "label": "Late Filing Fee"
   },
   {
+   "bold": 1,
    "fieldname": "member",
    "fieldtype": "Link",
    "label": "Membership",
@@ -282,9 +302,96 @@
    "fieldtype": "Data",
    "label": "Membership No",
    "unique": 1
+  },
+  {
+   "fieldname": "html_42",
+   "fieldtype": "HTML",
+   "options": "<table cellspacing=\"5\">\n  <tbody><tr>\n    <td>\n      <input autocomplete=\"off\" class=\"input-with-feedback form-control\" type=\"text\">\n    </td>\n\n    <td><pre>  +  </pre></td>\n\n    <td>\n      <input autocomplete=\"off\" class=\"input-with-feedback form-control\" type=\"text\">\n    </td>\n    <td><pre>  =  </pre></td>\n    <td>\n      <input autocomplete=\"off\" class=\"input-with-feedback form-control\" type=\"text\">\n    </td>\n  </tr>\n</tbody></table>"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_personal_gold",
+   "fieldtype": "Check",
+   "label": "AKARD PERSONAL GOLD"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_personal_diamond",
+   "fieldtype": "Check",
+   "label": "AKARD PERSONAL DIAMOND"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_leaders_direct",
+   "fieldtype": "Check",
+   "label": "AKARD LEADERS DIRECT"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_million_dollar_agency",
+   "fieldtype": "Check",
+   "label": "AKARD MILLION DOLLAR AGENCY"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_mega_million_dollar_agency",
+   "fieldtype": "Check",
+   "label": "AKARD MEGA MILLION DOLLAR AGENCY"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_star_rookie",
+   "fieldtype": "Check",
+   "label": "AKARD STAR ROOKIE"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_101",
+   "fieldtype": "Check",
+   "label": "AKARD 101"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_personal_platinum",
+   "fieldtype": "Check",
+   "label": "AKARD PERSONAL PLATINUM"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "processing_section_section",
+   "fieldtype": "Section Break",
+   "label": "Processing Section"
+  },
+  {
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "label": "Received Date"
+  },
+  {
+   "fieldname": "receipt_no",
+   "fieldtype": "Data",
+   "label": "Receipt No"
+  },
+  {
+   "fetch_from": "namlifa_member_id.join_date",
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join Date",
+   "read_only": 1
   }
  ],
- "modified": "2020-03-28 16:41:55.148263",
+ "modified": "2020-04-03 19:55:51.714666",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",

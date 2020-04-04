@@ -52,11 +52,13 @@
    "unique": 1
   },
   {
+   "fetch_from": "membership_id.expiry_date",
    "fieldname": "membership_expiry",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Membership Valid Till"
+   "label": "Membership Valid Till",
+   "read_only": 1
   },
   {
    "fieldname": "pi_join_date",
@@ -244,7 +246,7 @@
    "options": "Namlifa Member"
   }
  ],
- "modified": "2020-03-28 16:42:31.394014",
+ "modified": "2020-04-01 23:45:34.701782",
  "modified_by": "Administrator",
  "module": "Namlifa PI",
  "name": "Namlifa PI",
