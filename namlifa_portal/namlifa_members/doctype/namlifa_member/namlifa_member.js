@@ -3,27 +3,52 @@
 
 
 frappe.ui.form.on('Namlifa Member', {
-	// refresh: function(frm) {
-
-	// }
-
-	"new_nric_no" : function(frm) {
-	
-		console.log('hijuju')
+	"onload" : function(frm) {
 		loadScript('https://unpkg.com/imask').then(function () {
+			var $nric_input = $('input[data-fieldname="new_nric_no"]'),
+			    $cell_number = $('input[data-fieldname="tel_hp"]');
 
-			var $nric_input = $('input[data-fieldname="new_nric_no"]')
-			if ($nric_input[0]) {
-                        	IMask($nric_input[0], {
-				mask: '000000-00-0000'
-                        });
-                }
+			IMask($nric_input[0], {
+				mask: '000000\-00\-0000'
+			});
+
+			IMask($cell_number[0], {
+				mask: '{6\\0}00 000 00000'
+			});
 	        });
-	
+	},
+
+
+	new_nric_no : function (frm) {
+		frappe.call({
+			method: "namlifa_portal.namlifa_members.doctype.namlifa_member.namlifa_member.validate_new_nric_no",	
+			args: {
+				new_nric_no: frm.doc.new_nric_no
+			},
+			callback: function(r) {
+				if (!r.message){
+					frappe.throw(__("Invalid value for NRIC number"));
+				}
+			}
+		});
+	},
+
+        tel_hp : function (frm) {
+                frappe.call({
+                        method: "namlifa_portal.namlifa_members.doctype.namlifa_member.namlifa_member.validate_tel_hp",    
+                        args: {
+                                tel_hp: frm.doc.tel_hp
+                        },
+                        callback: function(r) {
+                                if (!r.message){
+                                        frappe.throw(__("Invalid value for Mobile number"));
+                                }
+                        }
+                });
+        },
 
 
 
-	}
 });
 
 

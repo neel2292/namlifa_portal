@@ -5,7 +5,7 @@
 from __future__ import unicode_literals
 import frappe, json, base64, os, copy, re
 from frappe import throw, _
-from frappe.utils import getdate, validate_email_add, today, formatdate
+from frappe.utils import getdate, validate_email_add, today, formatdate, random_string
 from frappe.model.document import Document
 from collections import namedtuple
 
@@ -29,15 +29,24 @@ class NamlifaMember(Document):
 
                 # sync userid with email and owner
                 if self.user_id:
+                        self.__new_password = random_string(10)
                         self.update_user()
                         if self.application_status == 'Approved':
                                 if self.user_id is not self.email:
                                         self.email = self.user_id
                                 if self.user_id is not self.owner:
                                         self.owner = self.user_id
+                                if self.__new_password:
+                                        frappe.sendmail(recipients=self.email,
+                                                        subject="Your account is approved",
+                                                        template="approved_user",
+                                                        args={
+                                                                'full_name': self.email,
+                                                                'password': self.__new_password
+                                                        })
+
                         else:
                                 self.user_id = ''
-
 
                 self.db_update()
 
@@ -50,6 +59,8 @@ class NamlifaMember(Document):
         def validate(self):
                 self.validate_date()
                 self.validate_email()
+                self.validate_new_nric_no()
+                self.validate_tel_hp()
 
                 if self.user_id:
                         self.validate_duplicate_user_id()
@@ -79,6 +90,14 @@ class NamlifaMember(Document):
         def validate_email(self):
                 if self.email:
                         validate_email_add(self.email, True)
+
+        def validate_new_nric_no(self):
+                if not validate_new_nric_no(self.new_nric_no):
+                    throw(_('Invalid value for NRIC number'))
+
+        def validate_tel_hp(self):
+                if not validate_tel_hp(self.tel_hp):
+                    throw(_('Invalid value for Mobile number'))
 
         def validate_id(self):
                 user = frappe.db.sql_list("""select name from `tabUser` where
@@ -167,7 +186,6 @@ class NamlifaMember(Document):
                         if self.__logout_all_sessions:
                                 user.logout_all_sessions = self.__logout_all_sessions
                 else:
-                        from frappe.utils import random_string
                         user.new_password = random_string(10)
                 user.insert(ignore_permissions=True)
                 user.add_roles("Namlifa Member")
@@ -229,3 +247,18 @@ def member_registration():
                         doc.save()
         frappe.db.commit()
         return data
+
+@frappe.whitelist()
+def validate_new_nric_no(new_nric_no):
+        if re.match("\d{6}-\d{2}-\d{4}", new_nric_no):
+                return True
+        return False
+
+@frappe.whitelist()
+def validate_tel_hp(tel_hp):
+        if re.match("60[\d ]{9,}", tel_hp):
+                return True
+        return False
+
+
+
