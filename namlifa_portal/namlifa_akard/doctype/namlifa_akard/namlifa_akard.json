@@ -75,13 +75,11 @@
    "options": "Namlifa Member"
   },
   {
-   "bold": 1,
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title"
   },
   {
-   "bold": 1,
    "fetch_from": "namlifa_member_id.full_name",
    "fieldname": "full_name",
    "fieldtype": "Data",
@@ -96,27 +94,23 @@
    "label": "New NRIC No"
   },
   {
-   "bold": 1,
    "fetch_from": "namlifa_member_id.agent_code",
    "fieldname": "agent_code",
    "fieldtype": "Read Only",
    "label": "Agent Code"
   },
   {
-   "bold": 1,
    "fetch_from": "namlifa_member_id.company",
    "fieldname": "company_name",
    "fieldtype": "Read Only",
    "label": "Company Name"
   },
   {
-   "bold": 1,
    "fieldname": "designation",
    "fieldtype": "Data",
    "label": "Designation"
   },
   {
-   "bold": 1,
    "fieldname": "agency_address",
    "fieldtype": "Data",
    "label": "Agency Address"
@@ -127,27 +121,23 @@
    "label": "Postcode"
   },
   {
-   "bold": 1,
    "fieldname": "city",
    "fieldtype": "Data",
    "label": "City"
   },
   {
-   "bold": 1,
    "fetch_from": "namlifa_member_id.correspondence_address",
    "fieldname": "correspondence_address",
    "fieldtype": "Read Only",
    "label": "Correspondence Address"
   },
   {
-   "bold": 1,
    "fetch_from": "namlifa_member_id.postcode",
    "fieldname": "correspondence_postcode",
    "fieldtype": "Read Only",
    "label": "Correspondence Postcode"
   },
   {
-   "bold": 1,
    "fieldname": "correspondence_city",
    "fieldtype": "Read Only",
    "label": "Correspondence City"
@@ -177,7 +167,6 @@
    "label": "Email"
   },
   {
-   "bold": 1,
    "fieldname": "branch",
    "fieldtype": "Select",
    "label": "Preferred Branch",
@@ -191,7 +180,6 @@
    "label": "Award Category"
   },
   {
-   "bold": 1,
    "fieldname": "akard_builders_award",
    "fieldtype": "Link",
    "label": "AKARD Builders Award",
@@ -201,7 +189,7 @@
    "fieldname": "life_member",
    "fieldtype": "Select",
    "label": "AKARD Life Member",
-   "options": "10 Years - 15 Years\n16 Years\n17 Years"
+   "options": "10 YEARS - 15 YEARS\n16 YEARS\n17 YEARS"
   },
   {
    "fieldname": "payment_details",
@@ -231,7 +219,6 @@
    "label": "Method of Payment"
   },
   {
-   "bold": 1,
    "fieldname": "payment_method",
    "fieldtype": "Data",
    "label": "Method of Payment"
@@ -247,13 +234,11 @@
    "label": "Cheque No"
   },
   {
-   "bold": 1,
    "fieldname": "card_type",
    "fieldtype": "Data",
    "label": "Card Type"
   },
   {
-   "bold": 1,
    "fieldname": "card_bank",
    "fieldtype": "Data",
    "label": "Issuing Bank"
@@ -284,7 +269,6 @@
    "label": "Late Filing Fee"
   },
   {
-   "bold": 1,
    "fieldname": "member",
    "fieldtype": "Link",
    "label": "Membership",
@@ -391,7 +375,7 @@
    "read_only": 1
   }
  ],
- "modified": "2020-04-03 19:55:51.714666",
+ "modified": "2020-04-04 17:17:58.580007",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",

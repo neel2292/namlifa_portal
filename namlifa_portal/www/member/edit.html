@@ -1,0 +1,100 @@
+{% extends "www/main.html" %}
+
+{% block title %}Member Profile{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block nav %}
+    {% include "www/nav.html" %}
+{% endblock %}
+
+{% block main %}
+<div class="row margin-left">
+    <div class="col s1">
+    </div>
+    <div class="col s10">
+        <br>
+        <div class="card navbar-dark blue darken-1">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s11" style="vertical-align:middle; padding-left:30px;">
+                        <h3 class="white-text">Edit Info</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content grey lighten-4">
+                <form>
+                    {% if member %}
+                        <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+                            <p>Address</p>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Address" id="address" name="address" type="text" value="{{member.correspondence_address}}" disabled>
+                                <label for="address">Correspondence Address</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Postcode" id="postcode" name="postcode" type="text" value="{{member.postcode}}" disabled>
+                                <label for="postcode">Postcode</label>
+                            </div>
+                        </div>
+                        <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+                            <p>Contact</p>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="tel_o" name="tel_o" type="text" value="{{member.tel_o}}" disabled>
+                                <label for="tel_o">Tel(O)</label>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="input-field col s12">
+                                <input id="tel_h" name="tel_h" type="text" value="{{member.tel_h}}" disabled>
+                                <label for="tel_h">Tel(H)</label>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="input-field col s12">
+                                <input id="tel_hp" name="tel_hp" type="text" value="{{member.tel_hp}}" disabled>
+                                <label for="tel_hp">Tel(H/P)</label>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="input-field col s12">
+                                <input id="tel_fax" name="tel_fax" type="text" value="{{member.tel_fax}}" disabled>
+                                <label for="tel_fax">Tel(Fax)</label>
+                            </div>
+                        </div>
+                        <div class="row center-align">
+                            <button class="btn waves-effect waves-light blue darken-1" type="submit" id="edit">
+                                Edit
+                            </button>
+                            <button class="btn waves-effect waves-light blue darken-1" type="submit" id="save_edit">
+                                Save
+                            </button>
+                            <button class="btn waves-effect waves-light red darken-1" type="submit" id="cancel">
+                                Cancel
+                            </button>
+                        </div>
+                    {% else %}
+                        <div>Form is empty</div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col s1">
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/js/edit.js" defer></script>
+{% endblock %}
+
+{% block sidenav %}
+    {% include "www/member/sidenav.html" %}
+{% endblock %}

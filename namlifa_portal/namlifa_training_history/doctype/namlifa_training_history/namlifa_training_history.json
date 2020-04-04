@@ -6,26 +6,37 @@
  "engine": "InnoDB",
  "field_order": [
   "membership_id",
+  "students_details_section",
   "membership_no",
   "user_name",
   "new_nric_no",
-  "tel_hp",
   "email",
-  "company",
+  "column_break_6",
+  "tel_hp",
+  "company_details_section",
   "agent_code",
   "position",
-  "date_lp101_completed",
+  "column_break_12",
+  "company",
+  "section_break_14",
   "month_lp101_completed",
   "year_lp101_completed",
+  "date_lp101_completed",
+  "column_break_19",
   "lp101_grade",
+  "lp102_business_insurance_principles_marketing_section",
   "date_lp102_completed",
   "month_lp102_completed",
   "year_lp102_completed",
+  "column_break_24",
   "lp102_grade",
+  "lp103_associated_legal_principles_in_life_insurance_section",
   "date_lp103_completed",
   "month_lp103_completed",
   "year_lp103_completed",
+  "column_break_30",
   "lp103_grade",
+  "lp104_business_insurance_risk_continuation_planning_section",
   "date_lp104_completed",
   "month_lp104_completed",
   "year_lp104_completed",
@@ -45,6 +56,7 @@
  ],
  "fields": [
   {
+   "bold": 1,
    "fetch_from": "membership_id.full_name",
    "fieldname": "user_name",
    "fieldtype": "Data",
@@ -257,9 +269,59 @@
    "fieldtype": "Data",
    "label": "Membership No",
    "unique": 1
+  },
+  {
+   "fieldname": "students_details_section",
+   "fieldtype": "Section Break",
+   "label": "Student Details"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "LP101 Personal Insurance : Principles & Marketing"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lp102_business_insurance_principles_marketing_section",
+   "fieldtype": "Section Break",
+   "label": "LP102 Business Insurance : Principles & Marketing"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lp103_associated_legal_principles_in_life_insurance_section",
+   "fieldtype": "Section Break",
+   "label": "LP103 Associated Legal Principles in Life Insurance"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lp104_business_insurance_risk_continuation_planning_section",
+   "fieldtype": "Section Break",
+   "label": "LP104 Business Insurance : Risk & Continuation Planning"
   }
  ],
- "modified": "2020-04-01 23:49:11.587458",
+ "modified": "2020-04-04 17:23:37.911025",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",

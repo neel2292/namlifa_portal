@@ -59,7 +59,6 @@
    "label": "Personal Details"
   },
   {
-   "bold": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -72,7 +71,6 @@
    "label": "New NRIC No"
   },
   {
-   "bold": 1,
    "fieldname": "old_nric_no",
    "fieldtype": "Data",
    "label": "Old NRIC No"
@@ -103,7 +101,6 @@
    "options": "MALE\nFEMALE"
   },
   {
-   "bold": 1,
    "fieldname": "race",
    "fieldtype": "Select",
    "label": "Race",
@@ -136,14 +133,12 @@
    "label": "Email"
   },
   {
-   "bold": 1,
    "fieldname": "highest_qualification",
    "fieldtype": "Select",
    "label": "Highest Qualification",
    "options": "SPM\nSTPM\nCOLLEGE\nTertiary & Above"
   },
   {
-   "bold": 1,
    "fieldname": "company_details_section",
    "fieldtype": "Section Break",
    "label": "Company Details"
@@ -154,7 +149,6 @@
    "label": "Date Contracted as Agent"
   },
   {
-   "bold": 1,
    "fieldname": "position",
    "fieldtype": "Select",
    "label": "Position",
@@ -165,20 +159,17 @@
    "fieldtype": "Column Break"
   },
   {
-   "bold": 1,
    "fieldname": "position_type",
    "fieldtype": "Select",
    "label": "Position Type",
    "options": "FULL TIME\nPART TIME"
   },
   {
-   "bold": 1,
    "fieldname": "company",
    "fieldtype": "Text",
    "label": "Company"
   },
   {
-   "bold": 1,
    "fieldname": "agency",
    "fieldtype": "Text",
    "label": "Agency"
@@ -228,7 +219,6 @@
    "unique": 1
   },
   {
-   "bold": 1,
    "default": "PENDING",
    "fieldname": "application_status",
    "fieldtype": "Select",
@@ -238,14 +228,13 @@
    "options": "PENDING\nAPPROVED\nREJECTED"
   },
   {
-   "bold": 1,
-   "default": "Ordinary/Affiliate/Provisional",
+   "default": "ORDINARY",
    "fieldname": "membership_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Membership Type",
-   "options": "Ordinary/Affiliate/Provisional\nFellow\nAssociate\nLife"
+   "options": "ORDINARY\nAFFILIATE\nPROVISIONAL\nFELLOW\nASSOCIATE\nLIFE"
   },
   {
    "fieldname": "terms_signature",
@@ -293,7 +282,6 @@
    "permlevel": 1
   },
   {
-   "bold": 1,
    "fieldname": "agent_code",
    "fieldtype": "Data",
    "label": "Agent's Code"
@@ -314,7 +302,6 @@
    "label": "Expiry Date"
   },
   {
-   "bold": 1,
    "fieldname": "branch",
    "fieldtype": "Text",
    "label": "Branch"
@@ -326,7 +313,7 @@
   }
  ],
  "image_field": "photo",
- "modified": "2020-04-03 19:59:06.277347",
+ "modified": "2020-04-04 17:22:53.461569",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",

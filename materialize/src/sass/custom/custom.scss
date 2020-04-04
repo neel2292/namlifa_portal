@@ -43,6 +43,9 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 .nav-links-small {
   display: none;
 }
+.margin-left {
+  margin-left: 250px;
+}
 
 @media only screen and (max-width: 601px) {
   #nav-avatar {
@@ -54,15 +57,18 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
       }
     }
   }
-  .nav-links {
-    display: none;
-  }
+  //.nav-links {
+  //  display: none;
+  //}
   .nav-links-small {
     display: initial;
   }
 }
 
 @media only screen and (max-width: 993px) {
+  .margin-left {
+    margin-left: 250px;
+  }
   .app-logo {
     margin-left: 46px;
     line-height: 46px;

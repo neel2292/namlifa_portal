@@ -36,18 +36,27 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 .nav-links-small {
   display: none; }
 
+.margin-left {
+  margin-left: 250px;
+}
+
 @media only screen and (max-width: 601px) {
   #nav-avatar {
     height: 56px; }
     #nav-avatar .avatar div, #nav-avatar .avatar .avatar-frame {
       margin-top: 4px;
       margin-bottom: 4px; }
-  .nav-links {
-    display: none; }
+  /*.nav-links {*/
+  /*  display: none; }*/
   .nav-links-small {
     display: initial; } }
 
 @media only screen and (max-width: 993px) {
+  .margin-left {
+    margin-left: 0;
+  }
   .app-logo {
     margin-left: 46px;
-    line-height: 46px; } }
+    line-height: 46px;
+  }
+}

@@ -10,60 +10,67 @@
 {% endblock %}
 
 {% block main %}
-<div style="margin-left: 250px;">
+<div class="margin-left">
     <div class="row">
         <div class="col s12 m6">
             <div class="card white-grey darken-1">
                 <div class="card-content black-text">
-		    <span class="card-title"><h5><strong>Personal Info</strong></h5></span>
-
-		    <table>
-			<tr>
-		 	    <td>Name:</td>
-		     	    <td>{{member.full_name}}</td>
-			</tr>
-			<tr>
-				<td>Namlifa Member ID:</td>
-				<td>{{member.name}}</td>
-			<tr>
-                        <tr>
-                            <td>New NRIC No:</td>
-                            <td>{{member.new_nric_no}}</td>
-                        </tr>
-                        <tr>
-                            <td>Tel (H/P):</td>
-                            <td>{{member.tel_hp}}</td>
-                        </tr>
-                        <tr>
-                            <td>Email:</td>
-                            <td>{{member.email}}</td>
-                        </tr>
-                        <tr>
-                            <td>Status:</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>Join Date:</td>
-                            <td>{{member.date_contracted_as_agent}}</td>
-                        </tr>
-                        <tr>
-                            <td>Expiry Date:</td>
-                            <td>None</td>
-                        </tr>
-                        <tr>
-                            <td>Company:</td>
-                            <td>{{member.company}}</td>
-                        </tr>
-                        <tr>
-                            <td>Agent's Code:</td>
-                            <td>{{member.agent_code}}</td>
-                        </tr>
-			<tr>
-                            <td>Membership Type:</td>
-			<tr>
-		    </table>
-
-                    <img src="/images/{{member.membership_type}}.png" alt="{{member.membership_type}} Member" title="{{member.membership_type}} Member" width="300" height="180" style="margin-top: 10px">
+		            <span class="card-title"><h5><strong>Personal Info</strong></h5></span>
+                    {% if member %}
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td>{{member.full_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Namlifa Member ID:</td>
+                                <td>{{member.name}}</td>
+                            </tr>
+                            <tr>
+                                <td>New NRIC No:</td>
+                                <td>{{member.new_nric_no}}</td>
+                            </tr>
+                            <tr>
+                                <td>Tel (H/P):</td>
+                                <td>{{member.tel_hp}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>{{member.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status:</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Join Date:</td>
+                                <td>{{member.date_contracted_as_agent}}</td>
+                            </tr>
+                            <tr>
+                                <td>Expiry Date:</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Company:</td>
+                                <td>{{member.company}}</td>
+                            </tr>
+                            <tr>
+                                <td>Agent's Code:</td>
+                                <td>{{member.agent_code}}</td>
+                            </tr>
+                            <tr>
+                                <td>Membership Type:</td>
+                            </tr>
+                        </table>
+                        <img src="/images/{{member.membership_type}}.png" alt="{{member.membership_type}} Member" title="{{member.membership_type}} Member" width="300" height="180" style="margin-top: 10px">
+                    {% else %}
+                        <table>
+                             <tr>
+                                <td>Name:</td>
+                                <td>{{frappe.session.user}}</td>
+                            </tr>
+                        </table>
+                    {% endif %}
                 </div>
             </div>
         </div>
