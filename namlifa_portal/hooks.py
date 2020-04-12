@@ -17,6 +17,9 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/namlifa_portal/css/namlifa_portal.css"
 # app_include_js = "/assets/namlifa_portal/js/namlifa_portal.js"
+app_include_js = [
+    "/assets/namlifa_portal/js/swiss_common.js"
+    ]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/namlifa_portal/css/namlifa_portal.css"
@@ -30,6 +33,18 @@ app_license = "MIT"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+doctype_js = {
+	"Namlifa PA" : "customization/pa.js",
+	"Namlifa PI" : "customization/namlifa_pi.js",
+	"Namlifa Training History" : "customization/namlifa_th.js",
+}
+doctype_list_js = {
+        "Namlifa PA" : "customization/upper_namlifa.js",
+        "Namlifa Member" : "customization/upper_namlifa.js",
+        "Namlifa PI" : "customization/upper_namlifa.js",
+        "Namlifa Akard" : "customization/upper_namlifa.js",
+        "Namlifa Training History" : "customization/upper_namlifa.js",
+}
 
 # Home Pages
 # ----------
