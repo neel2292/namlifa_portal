@@ -17,6 +17,7 @@ frappe.listview_settings['Namlifa PA'] = {
 
 frappe.listview_settings['Namlifa PI'] = {
     onload: function(listview) {
+	    $('input[data-fieldname="name"]').parent().remove();
             upperNamlifa();
     }
 }
