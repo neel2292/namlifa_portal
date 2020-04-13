@@ -30,9 +30,11 @@
   "cb2_column",
   "position_type",
   "company",
+  "business_type",
   "agency",
   "terms_and_conditions_section",
   "terms",
+  "receipt",
   "terms_signature",
   "office_use_section",
   "date_received",
@@ -50,7 +52,8 @@
   "send_password_update_notification",
   "logout_all_sessions",
   "section_payment_details",
-  "payment_details"
+  "payment_details",
+  "amended_from"
  ],
  "fields": [
   {
@@ -104,10 +107,9 @@
    "fieldname": "race",
    "fieldtype": "Select",
    "label": "Race",
-   "options": "MALAY\nCHINESE\nINDIANS\nOTHERS"
+   "options": "MALAY\nCHINESE\nINDIAN\nOTHERS"
   },
   {
-   "bold": 1,
    "fieldname": "tel_o",
    "fieldtype": "Data",
    "label": "Tel (O)"
@@ -136,7 +138,7 @@
    "fieldname": "highest_qualification",
    "fieldtype": "Select",
    "label": "Highest Qualification",
-   "options": "SPM\nSTPM\nCOLLEGE\nTertiary & Above"
+   "options": "SPM\nSTPM\nCOLLEGE\nTERTIARY & ABOVE"
   },
   {
    "fieldname": "company_details_section",
@@ -145,7 +147,7 @@
   },
   {
    "fieldname": "date_contracted_as_agent",
-   "fieldtype": "Date",
+   "fieldtype": "Data",
    "label": "Date Contracted as Agent"
   },
   {
@@ -166,12 +168,12 @@
   },
   {
    "fieldname": "company",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Company"
   },
   {
    "fieldname": "agency",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Agency"
   },
   {
@@ -180,7 +182,7 @@
    "label": "Terms and Conditions"
   },
   {
-   "default": "<div>Registration of membership will only be processed upon the following:-</div><div>- successful clearance of cheques.</div><div>- successful swiping of credit cards.</div><div>- successful clearance of company deduction.</div><div><br></div><div>For company deduction, kindly allow 30 - 40 days of processing time before delivery of membership card.</div><div><br></div><div>- Membership cards will be delivered within one month from the date of successful registration of membership.</div><div><br></div><div>Membership fees paid are non - refundable.</div><div><br></div><div>In the event of lost of membership card, a replacement fee of RM20/= will be charged for processing of a new card.</div><div><br></div><div>I agree that my signing on the NAMLIFA membership form shall constitute my acceptance of and my agreement to be bound by the terms and conditions contained in this form.</div>",
+   "default": "<div>Registration of membership will only be processed upon the following:-</div><div>- successful clearance of cheques.</div><div>- successful swiping of credit cards.</div><div>- successful clearance of company deduction.</div><div><br></div><div>For company deduction, kindly allow 30 - 40 days of processing time.</div><div><br></div><div>Membership fees paid are non - refundable.</div><div><br></div><div>I agree that my signing on the NAMLIFA membership form shall constitute my acceptance of and my agreement to be bound by the terms and conditions contained in this form.</div>",
    "fieldname": "terms",
    "fieldtype": "Text Editor",
    "label": "Terms"
@@ -219,13 +221,13 @@
    "unique": 1
   },
   {
-   "default": "PENDING",
+   "default": "Pending",
    "fieldname": "application_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Application Status",
-   "options": "PENDING\nAPPROVED\nREJECTED"
+   "options": "Pending\nApproved\nRejected"
   },
   {
    "default": "ORDINARY",
@@ -303,17 +305,38 @@
   },
   {
    "fieldname": "branch",
-   "fieldtype": "Text",
+   "fieldtype": "Data",
    "label": "Branch"
   },
   {
    "fieldname": "join_date",
    "fieldtype": "Date",
    "label": "Join Date"
+  },
+  {
+   "default": "CONVENTIONAL",
+   "fieldname": "business_type",
+   "fieldtype": "Select",
+   "label": "Type of Business",
+   "options": "CONVENTIONAL\nTAKAFUL\nBOTH"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Namlifa Member",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "receipt",
+   "fieldtype": "Attach Image",
+   "label": "Receipt"
   }
  ],
  "image_field": "photo",
- "modified": "2020-04-04 17:22:53.461569",
+ "modified": "2020-04-12 16:00:20.513752",
  "modified_by": "Administrator",
  "module": "Namlifa Members",
  "name": "Namlifa Member",
@@ -380,7 +403,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "search_fields": "full_name",
  "sort_field": "modified",
  "sort_order": "DESC",

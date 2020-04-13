@@ -1,0 +1,64 @@
+{
+ "creation": "2020-04-04 17:56:15.959058",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "workshop__programme",
+  "date",
+  "venue",
+  "cpd_hours",
+  "type_of_cpd_hour",
+  "cpd_letter"
+ ],
+ "fields": [
+  {
+   "fieldname": "workshop__programme",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "WORKSHOP / PROGRAMME"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "DATE"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "VENUE"
+  },
+  {
+   "fieldname": "cpd_hours",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CPD HOURS"
+  },
+  {
+   "fieldname": "type_of_cpd_hour",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "TYPE OF CPD HOUR",
+   "options": "\nSTRUCTURED\nNON-STRUCTURED\nBSC"
+  },
+  {
+   "fieldname": "cpd_letter",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "CPD LETTER"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-04 20:39:04.588477",
+ "modified_by": "Administrator",
+ "module": "Namlifa Training History",
+ "name": "Namlifa CPD Workshop Programme",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

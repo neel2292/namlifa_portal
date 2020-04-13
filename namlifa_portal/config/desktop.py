@@ -7,7 +7,7 @@ def get_data():
                 {
                         "module_name": "Namlifa Portal",
                         "category": "Modules",
-                        "label": _("Namlifa Portal"),
+                        "label": _("NAMLIFA Portal"),
                         "color": "#FF888B",
                         "icon": "octicon octicon-organization",
                         "type": "module",

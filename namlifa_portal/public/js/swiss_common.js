@@ -39,6 +39,7 @@ function upperCase(){
 
 var ic_number = '000000\-00\-0000',
     date = '00-00-0000',
+	month_year = '00/0000'
     card_no = '0000 0000 0000 0000',
     cell_number = '{6\\0}0000000000';
 

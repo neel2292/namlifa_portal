@@ -28,9 +28,24 @@
                       {% if akard != None %}
                         {% for obj in fields %}
                             {% if obj.fieldtype == 'Section Break' %}
-                                <div class="card-panel blue darken-1 white-text center" style="padding:10px">
-                                    <p>{{obj.label}}</p>
-                                </div>
+                                {% if obj.label %}
+                                    <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+                                        <p>{{obj.label}}</p>
+                                    </div>
+                                {% endif %}
+                            {% elif obj.fieldtype == 'Check' %}
+                                <p>
+                                    <label>
+                                        {% if akard[obj.fieldname]  == 1 %}
+                                            <input type="checkbox" class="filled-in" checked="checked" disabled/>
+                                        {% else %}
+                                            <input type="checkbox" class="filled-in" disabled/>
+                                        {% endif %}
+                                        <span>{{obj.label}}</span>
+                                    </label>
+                                </p>
+                            {% elif obj.fieldtype == 'Column Break' or obj.fieldtype == 'HTML' %}
+
                             {% else %}
                                 <div class="row">
                                     <div class="input-field col s12">

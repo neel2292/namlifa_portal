@@ -40,19 +40,28 @@
   "date_lp104_completed",
   "month_lp104_completed",
   "year_lp104_completed",
+  "column_break_36",
   "lp104_grade",
+  "chartered_investment_finance_practitioner_section",
   "date_chifp_completed",
   "month_lpifp_completed",
   "year_lpifp_completed",
+  "column_break_42",
   "chifp_grade",
+  "chartered_agency_practice_manager_chapm_section",
   "date_chapm_completed",
   "month_chapm_completed",
   "year_chapm_completed",
+  "column_break_48",
   "champ_grade",
+  "graduation_details_section",
   "graduation_date",
   "month_graduation",
   "year_graduation",
-  "date_taken"
+  "column_break_54",
+  "date_taken",
+  "attended_namlifas_cpd_workshop__programme_section",
+  "table_56"
  ],
  "fields": [
   {
@@ -62,7 +71,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Name"
+   "label": "Name",
+   "read_only": 1
   },
   {
    "fetch_from": "membership_id.new_nric_no",
@@ -70,16 +80,18 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "IC No"
+   "label": "IC No",
+   "read_only": 1
   },
   {
    "fetch_from": "membership_id.tel_hp",
    "fieldname": "tel_hp",
    "fieldtype": "Read Only",
-   "label": "Mobile No"
+   "label": "Mobile No",
+   "read_only": 1
   },
   {
-   "fetch_from": "membership_no.email",
+   "fetch_from": "membership_id.email",
    "fieldname": "email",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -102,66 +114,67 @@
    "fetch_from": "membership_id.position",
    "fieldname": "position",
    "fieldtype": "Data",
-   "label": "Position"
+   "label": "Position",
+   "read_only": 1
   },
   {
    "fieldname": "date_lp101_completed",
    "fieldtype": "Date",
    "hidden": 1,
-   "label": "Year of Completion LP101"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "lp101_grade",
    "fieldtype": "Select",
-   "label": "LP101 Grade Achieved",
+   "label": "Grade",
    "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp102_completed",
    "fieldtype": "Date",
    "hidden": 1,
-   "label": "Year of Completion LP102"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "lp102_grade",
    "fieldtype": "Select",
-   "label": "LP102 Grade Achieved",
+   "label": "Grade",
    "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp103_completed",
    "fieldtype": "Date",
    "hidden": 1,
-   "label": "Year of Completion LP103"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "lp103_grade",
    "fieldtype": "Select",
-   "label": "LP103 Grade",
+   "label": "Grade",
    "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_lp104_completed",
    "fieldtype": "Date",
    "hidden": 1,
-   "label": "Year of Completion LP104"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "lp104_grade",
    "fieldtype": "Select",
-   "label": "LP104 Grade",
+   "label": "Grade",
    "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "date_chapm_completed",
    "fieldtype": "Date",
    "hidden": 1,
-   "label": "Year of Completion ChAPM"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "champ_grade",
    "fieldtype": "Select",
-   "label": "ChAPM Grade",
+   "label": "Grade",
    "options": "A\nB\nC\nF\nAB"
   },
   {
@@ -178,74 +191,74 @@
   {
    "fieldname": "chifp_grade",
    "fieldtype": "Select",
-   "label": "ChIFP Grade",
+   "label": "Grade",
    "options": "A\nB\nC\nF\nAB"
   },
   {
    "fieldname": "month_lp101_completed",
    "fieldtype": "Data",
-   "label": "Month of Completion LP101"
+   "label": "Month of Completion "
   },
   {
    "fieldname": "year_lp101_completed",
    "fieldtype": "Data",
-   "label": "Year of Completion LP101"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "month_lp102_completed",
    "fieldtype": "Data",
-   "label": "Month of Completion LP102"
+   "label": "Month of Completion"
   },
   {
    "fieldname": "year_lp102_completed",
    "fieldtype": "Data",
-   "label": "Year of Completion LP102"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "month_lp103_completed",
    "fieldtype": "Data",
-   "label": "Month of Completion LP103"
+   "label": "Month of Completion"
   },
   {
    "fieldname": "year_lp103_completed",
    "fieldtype": "Data",
-   "label": "Year of Completion LP103"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "month_lp104_completed",
    "fieldtype": "Data",
-   "label": "Month of Completion LP104"
+   "label": "Month of Completion"
   },
   {
    "fieldname": "year_lp104_completed",
    "fieldtype": "Data",
-   "label": "Year of Completion LP104"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "month_lpifp_completed",
    "fieldtype": "Data",
-   "label": "Month of Completion LPIFP"
+   "label": "Month of Completion"
   },
   {
    "fieldname": "year_lpifp_completed",
    "fieldtype": "Data",
-   "label": "Year of Completion LPIFP"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "date_chifp_completed",
    "fieldtype": "Date",
    "hidden": 1,
-   "label": "Year of Completion ChIFP"
+   "label": "(ChIFP)"
   },
   {
    "fieldname": "month_chapm_completed",
    "fieldtype": "Data",
-   "label": "Month of Completion ChAPM"
+   "label": "Month of Completion"
   },
   {
    "fieldname": "year_chapm_completed",
    "fieldtype": "Data",
-   "label": "Year of Completion ChAPM"
+   "label": "Year of Completion"
   },
   {
    "fieldname": "month_graduation",
@@ -268,6 +281,7 @@
    "fieldname": "membership_no",
    "fieldtype": "Data",
    "label": "Membership No",
+   "read_only": 1,
    "unique": 1
   },
   {
@@ -319,9 +333,50 @@
    "fieldname": "lp104_business_insurance_risk_continuation_planning_section",
    "fieldtype": "Section Break",
    "label": "LP104 Business Insurance : Risk & Continuation Planning"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chartered_investment_finance_practitioner_section",
+   "fieldtype": "Section Break",
+   "label": "Chartered Investment & Finance Practitioner"
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chartered_agency_practice_manager_chapm_section",
+   "fieldtype": "Section Break",
+   "label": "Chartered Agency & Practice Manager"
+  },
+  {
+   "fieldname": "column_break_48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "graduation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Graduation Details"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table_56",
+   "fieldtype": "Table",
+   "options": "Namlifa CPD Workshop Programme"
+  },
+  {
+   "fieldname": "attended_namlifas_cpd_workshop__programme_section",
+   "fieldtype": "Section Break",
+   "label": "Attended NAMLIFA's CPD Workshop / Programme"
   }
  ],
- "modified": "2020-04-04 17:23:37.911025",
+ "modified": "2020-04-12 15:29:25.281346",
  "modified_by": "Administrator",
  "module": "Namlifa Training History",
  "name": "Namlifa Training History",

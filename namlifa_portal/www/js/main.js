@@ -6,15 +6,20 @@ $(document).ready(function () {
 			.replace('https://', '')
 			.replace(location.host, '')
 			.replace(/#$/, '')
-			.split('?')[0];
-	
+			.split('?')[0],
+		$sidenav = $('.sidenav');
+
 	//initialize materialize
 	$('.modal').modal();
+
+	if ($(window).width() < 961) {
+		$('.sidenav-close').on('click', $sidenav.attr('style', 'transform: translateX(-105%)'));
+	}
 
 	//highlight module
 	$('.navbar ul a[href="/' + CURRENT_URL.split('/')[1] + '"]').addClass('active');
 
-	//highlight & expand submodule
+	// //highlight & expand submodule
 	$('.sidenav li a[href="'+ CURRENT_URL + '"]')
 		.addClass('active')
 		.closest('ul').closest('li').addClass('active open').find('> div').show();
@@ -28,6 +33,8 @@ $(document).ready(function () {
 			$office_number = $('input[name="tel_o"]'),
 			$house_number = $('input[name="tel_h"]'),
 			$fax_number = $('input[name="tel_fax"]'),
+			$card_no = $('input[name="card_no"]'),
+			$expiry_date = $('input[name="card_expiry_date"]'),
 			$date_agent = $('input[name="date_contracted_as_agent"]');
 
 		if ($nric_input[0]) {
@@ -42,27 +49,39 @@ $(document).ready(function () {
 			});
 		}
 
+		if ($expiry_date[0]) {
+			IMask($expiry_date[0], {
+				mask: '00/0000'
+			});
+		}
+
+		if ($card_no[0]) {
+			IMask($card_no[0], {
+				mask: '0000 0000 0000 0000'
+			});
+		}
+
 		if ($cell_number[0]) {
 			IMask($cell_number[0], {
-				mask: '{6\\0}00 000 00000'
+				mask: '{6\\0}0000000000'
 			});
 		}
 
 		if ($office_number[0]) {
 			IMask($office_number[0], {
-				mask: '{6\\0}00 000 00000'
+				mask: '{6\\0}0000000000'
 			});
 		}
 
 		if ($house_number[0]) {
 			IMask($house_number[0], {
-				mask: '{6\\0}00 000 00000'
+				mask: '{6\\0}0000000000'
 			});
 		}
 
 		if ($fax_number[0]) {
 			IMask($fax_number[0], {
-				mask: '{6\\0}00 000 00000'
+				mask: '{6\\0}0000000000'
 			});
 		}
 	});
@@ -136,6 +155,7 @@ $(document).ready(function () {
 						name = clone.name;
 						delete clone.name; //do not update name
 						frappe.call({
+							type: "POST",
 							method: FRAPPE_CLIENT + '.set_value',
 							args: {
 								doctype: doctype,
@@ -236,6 +256,7 @@ $(document).ready(function () {
 					console.log(data);
 					data['doctype'] = doctype;
 
+					console.log(data);
 					frappe.call({
 						method: method,
 						args: {

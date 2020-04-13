@@ -1,0 +1,63 @@
+{
+ "creation": "2020-04-09 22:31:15.682358",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_premium_credit",
+  "unlimited_conventional_credit",
+  "unlimited_takaful_credit",
+  "limited_conventional_credit",
+  "limited_takaful_credit",
+  "total_conventional_credit",
+  "total_takaful_credit"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_premium_credit",
+   "fieldtype": "Currency",
+   "label": "Personal Premium Credit (RM)"
+  },
+  {
+   "fieldname": "unlimited_conventional_credit",
+   "fieldtype": "Currency",
+   "label": "Unlimited Conventional Credit"
+  },
+  {
+   "fieldname": "unlimited_takaful_credit",
+   "fieldtype": "Currency",
+   "label": "Unlimited Takaful Credit"
+  },
+  {
+   "fieldname": "limited_conventional_credit",
+   "fieldtype": "Currency",
+   "label": "Limited Conventional Credit"
+  },
+  {
+   "fieldname": "limited_takaful_credit",
+   "fieldtype": "Currency",
+   "label": "Limited Takaful Credit"
+  },
+  {
+   "fieldname": "total_conventional_credit",
+   "fieldtype": "Currency",
+   "label": "Total Conventional Credit"
+  },
+  {
+   "fieldname": "total_takaful_credit",
+   "fieldtype": "Currency",
+   "label": "Total Takaful Credit"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-09 22:31:15.682358",
+ "modified_by": "Administrator",
+ "module": "Namlifa Akard",
+ "name": "Akard Million Dollar Agency",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

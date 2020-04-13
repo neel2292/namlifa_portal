@@ -34,13 +34,15 @@ app_include_js = [
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 doctype_js = {
-	"Namlifa PA" : "customization/pa.js",
-	"Namlifa PI" : "customization/namlifa_pi.js",
-	"Namlifa Training History" : "customization/namlifa_th.js",
+    "Namlifa Member": "customization/namlifa_member.js",
+    "Namlifa Akard": "customization/namlifa_akard.js",
+	"Namlifa PA": "customization/namlifa_pa.js",
+	"Namlifa PI": "customization/namlifa_pi.js",
+	"Namlifa Training History": "customization/namlifa_th.js",
 }
 doctype_list_js = {
-        "Namlifa PA" : "customization/upper_namlifa.js",
         "Namlifa Member" : "customization/upper_namlifa.js",
+        "Namlifa PA" : "customization/upper_namlifa.js",
         "Namlifa PI" : "customization/upper_namlifa.js",
         "Namlifa Akard" : "customization/upper_namlifa.js",
         "Namlifa Training History" : "customization/upper_namlifa.js",

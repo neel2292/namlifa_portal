@@ -7,6 +7,7 @@
  "field_order": [
   "personal_details_section",
   "namlifa_member_id",
+  "akard_id",
   "membership_no",
   "title",
   "full_name",
@@ -24,25 +25,38 @@
   "tel_hp",
   "tel_fax",
   "email",
-  "akard_plan",
+  "award_category_section",
   "akard_personal_gold",
-  "akard_personal_diamond",
-  "akard_leaders_direct",
-  "column_break_24",
-  "akard_million_dollar_agency",
-  "akard_mega_million_dollar_agency",
-  "akard_star_rookie",
-  "column_break_28",
-  "akard_101",
+  "table_23",
   "akard_personal_platinum",
-  "section_break_31",
-  "html_42",
+  "table_25",
+  "akard_personal_diamond",
+  "table_27",
+  "akard_leaders_direct",
+  "table_29",
+  "akard_million_dollar_agency",
+  "table_31",
+  "akard_mega_million_dollar_agency",
+  "table_33",
+  "akard_star_rookie",
+  "table_35",
+  "akard_101",
+  "table_37",
+  "section_break_34",
+  "premium_credit",
+  "html_37",
+  "premium_takaful",
+  "html_38",
+  "premium_total",
+  "section_break_37",
   "member",
   "branch",
   "akard_builders_award",
+  "award_name",
   "life_member",
   "payment_details",
   "fee",
+  "member_fee",
   "akard_builders_award_fee",
   "late_fee",
   "total_payable",
@@ -82,7 +96,7 @@
   {
    "fetch_from": "namlifa_member_id.full_name",
    "fieldname": "full_name",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Full Name"
@@ -139,7 +153,7 @@
   },
   {
    "fieldname": "correspondence_city",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
    "label": "Correspondence City"
   },
   {
@@ -169,15 +183,8 @@
   {
    "fieldname": "branch",
    "fieldtype": "Select",
-   "label": "Preferred Branch",
+   "label": "Branch",
    "options": "KUALA LUMPUR\nJOHOR\nKUCHING\nMELAKA\nMIRI\nN.SEMBILAN\nKLANG\nPAHANG\nSABAH\nSIBU\nPENANG\nPERAK"
-  },
-  {
-   "bold": 1,
-   "default": "0",
-   "fieldname": "akard_plan",
-   "fieldtype": "Section Break",
-   "label": "Award Category"
   },
   {
    "fieldname": "akard_builders_award",
@@ -201,6 +208,12 @@
    "fieldname": "fee",
    "fieldtype": "Currency",
    "label": "AKARD Fee"
+  },
+  {
+   "fetch_from": "member.fee",
+   "fieldname": "member_fee",
+   "fieldtype": "Currency",
+   "label": "Membership Fee"
   },
   {
    "fieldname": "total_payable",
@@ -250,7 +263,7 @@
   },
   {
    "fieldname": "expiry_date",
-   "fieldtype": "Date",
+   "fieldtype": "Data",
    "label": "Expiry Date"
   },
   {
@@ -288,15 +301,21 @@
    "unique": 1
   },
   {
-   "fieldname": "html_42",
-   "fieldtype": "HTML",
-   "options": "<table cellspacing=\"5\">\n  <tbody><tr>\n    <td>\n      <input autocomplete=\"off\" class=\"input-with-feedback form-control\" type=\"text\">\n    </td>\n\n    <td><pre>  +  </pre></td>\n\n    <td>\n      <input autocomplete=\"off\" class=\"input-with-feedback form-control\" type=\"text\">\n    </td>\n    <td><pre>  =  </pre></td>\n    <td>\n      <input autocomplete=\"off\" class=\"input-with-feedback form-control\" type=\"text\">\n    </td>\n  </tr>\n</tbody></table>"
+   "fieldname": "award_category_section",
+   "fieldtype": "Section Break",
+   "label": "Award Category"
   },
   {
    "default": "0",
    "fieldname": "akard_personal_gold",
    "fieldtype": "Check",
    "label": "AKARD PERSONAL GOLD"
+  },
+  {
+   "default": "0",
+   "fieldname": "akard_personal_platinum",
+   "fieldtype": "Check",
+   "label": "AKARD PERSONAL PLATINUM"
   },
   {
    "default": "0",
@@ -335,24 +354,6 @@
    "label": "AKARD 101"
   },
   {
-   "default": "0",
-   "fieldname": "akard_personal_platinum",
-   "fieldtype": "Check",
-   "label": "AKARD PERSONAL PLATINUM"
-  },
-  {
-   "fieldname": "column_break_24",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_28",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_31",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "processing_section_section",
    "fieldtype": "Section Break",
    "label": "Processing Section"
@@ -365,17 +366,99 @@
   {
    "fieldname": "receipt_no",
    "fieldtype": "Data",
-   "label": "Receipt No"
+   "label": "Receipt No."
   },
   {
    "fetch_from": "namlifa_member_id.join_date",
    "fieldname": "join_date",
-   "fieldtype": "Date",
-   "label": "Join Date",
-   "read_only": 1
+   "fieldtype": "Read Only",
+   "label": "Join Date"
+  },
+  {
+   "fieldname": "akard_id",
+   "fieldtype": "Data",
+   "label": "AKARD ID"
+  },
+  {
+   "fieldname": "premium_credit",
+   "fieldtype": "Data",
+   "label": "PREMIUM CREDIT (CONVENTIONAL)"
+  },
+  {
+   "fieldname": "premium_takaful",
+   "fieldtype": "Data",
+   "label": "PREMIUM CREDIT (TAKAFUL)"
+  },
+  {
+   "fieldname": "premium_total",
+   "fieldtype": "Data",
+   "label": "PREMIUM CREDIT (TOTAL)"
+  },
+  {
+   "fieldname": "section_break_37",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_34",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_37",
+   "fieldtype": "HTML",
+   "options": "+"
+  },
+  {
+   "fieldname": "html_38",
+   "fieldtype": "HTML",
+   "options": "="
+  },
+  {
+   "fieldname": "award_name",
+   "fieldtype": "Text",
+   "label": "Award Name"
+  },
+  {
+   "fieldname": "table_23",
+   "fieldtype": "Table",
+   "options": "Akard Personal Gold"
+  },
+  {
+   "fieldname": "table_25",
+   "fieldtype": "Table",
+   "options": "Akard Personal Platinum"
+  },
+  {
+   "fieldname": "table_27",
+   "fieldtype": "Table",
+   "options": "Akard Personal Diamond"
+  },
+  {
+   "fieldname": "table_29",
+   "fieldtype": "Table",
+   "options": "Akard Leaders Direct"
+  },
+  {
+   "fieldname": "table_31",
+   "fieldtype": "Table",
+   "options": "Akard Million Dollar Agency"
+  },
+  {
+   "fieldname": "table_33",
+   "fieldtype": "Table",
+   "options": "Akard Mega Million Dollar Agency"
+  },
+  {
+   "fieldname": "table_35",
+   "fieldtype": "Table",
+   "options": "Akard Star Rookie"
+  },
+  {
+   "fieldname": "table_37",
+   "fieldtype": "Table",
+   "options": "Akard 101"
   }
  ],
- "modified": "2020-04-04 17:17:58.580007",
+ "modified": "2020-04-12 16:12:31.486042",
  "modified_by": "Administrator",
  "module": "Namlifa Akard",
  "name": "Namlifa Akard",

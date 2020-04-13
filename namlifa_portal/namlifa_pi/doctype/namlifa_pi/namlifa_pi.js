@@ -2,7 +2,6 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Namlifa PI', {
-	// refresh: function(frm) {
-
-	// }
+	// none
 });
+

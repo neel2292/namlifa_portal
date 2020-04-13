@@ -14,8 +14,8 @@ def get_context(context):
         print("well, it WASN'T defined after all!")
     else:
         try:
-            if member.membership_type.index('/') > -1:
-                member.membership_type = 'Ordinary'
+            if member.membership_type == 'AFFILIATE' or member.membership_type == 'PROVISIONAL':
+                member.membership_type = 'ORDINARY'
         except ValueError:
             member.membership_type = member.membership_type
 

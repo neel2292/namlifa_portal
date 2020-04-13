@@ -212,8 +212,8 @@ fields = [
 
 def get_context(context):
     member_id = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "name")
-    member = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "*")
-    training = frappe.db.get_value("Namlifa Training History", {"membership_no": member_id}, "*")
+    # member = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "*")
+    training = frappe.db.get_value("Namlifa Training History", {"membership_id": member_id}, "*")
     context.user = frappe.session.user
     context.user_doc = frappe.session
     context.csrf_token = frappe.sessions.get_csrf_token()

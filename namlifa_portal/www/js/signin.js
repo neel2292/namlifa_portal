@@ -16,7 +16,7 @@ $(function () {
         $('#' + route + '-page').toggle(true);
 	}).trigger('hashchange');
 
-    $('.login-form').on('submit', function (e) {
+    $('.login-form, .forgot-form').on('submit', function (e) {
         var args = {},
             route = window.location.hash.slice(1);
 
@@ -24,7 +24,34 @@ $(function () {
         e.preventDefault();
 
         if (route === 'forgot') {
+          args.email = frappe.utils.xss_sanitise(($("#forgot-email").val() || "").trim());
 
+          if (!args.email) {
+            $("#forgot-email").addClass('invalid');
+          }
+          else {
+            loading(true);
+            window.erpx.call_method(
+                    'namlifa_portal.namlifa_members.doctype.namlifa_member.namlifa_member.forgot_password',
+                    'Namlifa Member',
+                    args
+                )
+                .then(function (res) {
+                    if (res && res.message) {
+                      if (res.message.error) {
+                        window.erpx.showError('<p>' + res.message.text + '</p>');
+                      }
+                      else {
+                        window.erpx.showMessage('<p>' + res.message.text + '</p>');
+                        $("#forgot-email").val('');
+                      }
+                    }
+                    else {
+                      window.erpx.showError('<p>Something went wrong. Please try again.</p>');
+                    }
+                    loading(false);
+                });
+          }
         }
         else {
             args.cmd = 'login';
@@ -111,6 +138,7 @@ $(function () {
 
         var login_handlers = {
             200: function(data) {
+                console.log(data);
                 if (data.home_page === '/desk' || data.home_page === '/me') { data.home_page = '/member'; }
                 if(data.message == 'Logged In'){
                     login.set_indicator("{{ _("Success") }}", 'green');

@@ -3,19 +3,26 @@ import json
 
 fields = [
   {
+   "fetch_from": "membership_id.membership_no",
    "fieldname": "membership_no",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Membership No",
-   "options": "Namlifa Member"
+   "unique": 1
   },
   {
+   "fetch_from": "membership_id.expiry_date",
    "fieldname": "membership_expiry",
-   "fieldtype": "Data",
-   "label": "Membership Valid Till"
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Membership Valid Till",
+   "read_only": 1
   },
   {
    "fieldname": "gpa_joined",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "GPA Joined Since"
   },
   {
@@ -29,10 +36,171 @@ fields = [
    "label": "Branch"
   },
   {
-   "fieldname": "namlifa_pa_members",
+   "fieldname": "nomination",
    "fieldtype": "Table",
-   "label": "Namlifa PA Members",
-   "options": "Namlifa PA Member"
+   "label": "NOMINATION",
+   "options": "Namlifa PA Nomination"
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "name_as_per_ic",
+   "fieldtype": "Data",
+   "label": "Name as per IC"
+  },
+  {
+   "fieldname": "ic_number",
+   "fieldtype": "Data",
+   "label": "IC Number"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "gpa_joined_since",
+   "fieldtype": "Date",
+   "label": "GPA Joined Since"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Data",
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "premium_incl_sst",
+   "fieldtype": "Data",
+   "label": "Premium Incl SST"
+  },
+  {
+   "fieldname": "details_col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_details_more",
+   "fieldtype": "Section Break",
+   "label": "More Details"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "period_of_insurance",
+   "fieldtype": "Data",
+   "label": "Period of Insurance"
+  },
+  {
+   "fieldname": "master_policy_number",
+   "fieldtype": "Data",
+   "label": "Master Policy Number"
+  },
+  {
+   "fieldname": "certificate_number",
+   "fieldtype": "Data",
+   "label": "Certificate Number"
+  },
+  {
+   "fieldname": "receipt_number",
+   "fieldtype": "Data",
+   "label": "Receipt Number"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Data",
+   "label": "Payment Mode"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "credit_card_no",
+   "fieldtype": "Data",
+   "label": "Credit Card/Cheque"
+  },
+  {
+   "fieldname": "more_details_col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "premium_excl_sst",
+   "fieldtype": "Data",
+   "label": "Premium Excl SST"
+  },
+  {
+   "fieldname": "prorated_premium",
+   "fieldtype": "Data",
+   "label": "Pro-rated Premium"
+  },
+  {
+   "fieldname": "membership_number",
+   "fieldtype": "Data",
+   "label": "Membership Number"
+  },
+  {
+   "fieldname": "membership_branch",
+   "fieldtype": "Data",
+   "label": "Membership Branch"
+  },
+  {
+   "fieldname": "application_branch",
+   "fieldtype": "Data",
+   "label": "Application Branch"
+  },
+  {
+   "fieldname": "more_details_col2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "membership_id",
+   "fieldtype": "Link",
+   "label": "Membership ID",
+   "options": "Namlifa Member"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_renewal_pa",
+   "fieldtype": "Check",
+   "label": "Auto Renewal"
+  },
+  {
+   "fieldname": "renewalnew_application",
+   "fieldtype": "Select",
+   "label": "Renewal/New Application",
+   "options": "\nRENEWAL\nNEW APPLICATION"
+  },
+  {
+   "fieldname": "spouse_child_nomination",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "spouse_child",
+   "fieldtype": "Table",
+   "label": "SPOUSE/CHILD",
+   "options": "Namlifa PA Spouse"
   }
  ]
 members_fields = [
@@ -51,25 +219,21 @@ members_fields = [
   {
    "fieldname": "relationship",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Relationship"
   },
   {
    "fieldname": "age",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Age"
   },
   {
    "fieldname": "occupation",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Occupation"
   },
   {
    "fieldname": "renewal_application",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Renewal/New Application"
   },
   {
@@ -81,55 +245,46 @@ members_fields = [
   {
    "fieldname": "address",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Address"
   },
   {
    "fieldname": "postcode",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Postcode"
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "City"
   },
   {
    "fieldname": "state",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "State"
   },
   {
    "fieldname": "tel_o",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Tel No(O)"
   },
   {
    "fieldname": "tel_hp",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Tel H/P"
   },
   {
    "fieldname": "company",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Company"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Email"
   },
   {
    "fieldname": "insurance_validity",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Period Of Insurance"
   },
   {
@@ -141,19 +296,16 @@ members_fields = [
   {
    "fieldname": "payment_mode",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Payment Mode"
   },
   {
    "fieldname": "bank",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Bank"
   },
   {
    "fieldname": "premium_sst",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Premium Exclude SST 6%"
   },
   {
@@ -165,25 +317,21 @@ members_fields = [
   {
    "fieldname": "premium",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Premium"
   },
   {
    "fieldname": "over_premium",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Over Premium"
   },
   {
    "fieldname": "auto_renewal",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Auto Renewal"
   },
   {
    "fieldname": "certificate_number",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Certificate Number"
   },
   {
@@ -256,13 +404,95 @@ members_fields = [
    "label": "Share % 3"
   }
  ]
+nomination_fields = [
+  {
+   "fieldname": "name_of_proposer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Proposer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_of_nominee",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Nominee"
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IC No"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address"
+  },
+  {
+   "fieldname": "share",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Share"
+  }
+ ]
+spouse_fields = [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "new_nric_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IC No"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "sum_assured",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sum Assured"
+  },
+  {
+   "fieldname": "premium_include_sst",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Premium Include SST"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Relationship"
+  }
+ ]
 
 def get_context(context):
     member_id = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "name")
     member = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "*")
-    pa = frappe.db.get_value("Namlifa PA", {"membership_no": member_id}, "*")
+    pa = frappe.db.get_value("Namlifa PA", {"membership_id": member_id}, "*")
     pa_member = frappe.db.get_values("Namlifa PA Member", {"parent": pa.name}, "*")
-    pa_spouse = frappe.db.get_values("Namlifa PA Spaouse", {"parent": pa.name}, "*")
+    pa_spouse = frappe.db.get_values("Namlifa PA Spouse", {"parent": pa.name}, "*")
     pa_nominee = frappe.db.get_values("Namlifa PA Nomination", {"parent": pa.name}, "*")
     context.user = frappe.session.user
     context.user_doc = frappe.session
@@ -270,7 +500,9 @@ def get_context(context):
     context.fields = fields
     context.pa = pa
     context.members_fields = members_fields
-    context.members = pa_member
+    context.nomination_fields = nomination_fields
+    context.spouse_fields = spouse_fields
+    context.pa_member = pa_member
     context.pa_spouse = pa_spouse
     context.pa_nominee = pa_nominee
     context.member = member

@@ -16,38 +16,100 @@
             </div>
             <div class="card-content grey lighten-4">
                 <form>
-                    <div id="personalDetails">
-		        <div class="card-panel blue darken-1 white-text center" style="padding:10px">
-                    		<p>PERSONAL DETAILS</p>
-            		</div>
-
-
-                        <div class="row" style="margin-bottom: 1em;">
+                    <div class="row" style="margin-bottom: 1em;">
                             <div class="col s12">
                                 <label>Membership Type</label>
                             </div>
                             <div>
                                 <div class="col s12 m6 l3">
-                                    <img class="z-depth-2" data-member="Ordinary/Affiliate/Provisional" src="/images/Ordinary.png">
+                                    <img class="z-depth-2" data-member="Ordinary/Affiliate/Provisional" src="/images/ORDINARY.png">
                                     <br>Ordinary/Affiliate/Provisional
+
+
                                 </div>
                                 <div class="col s12 m6 l3">
-                                    <img class="z-depth-2" data-member="Fellow" src="/images/Fellow.png">
+                                    <img class="z-depth-2" data-member="Fellow" src="/images/FELLOW.png">
                                     <br>Fellow
                                 </div>
                                 <div class="col s12 m6 l3" data-member="Associate">
-                                    <img class="z-depth-2" src="/images/Associate.png">
+                                    <img class="z-depth-2" src="/images/ASSOCIATE.png">
                                     <br>Associate
                                 </div>
                                 <div class="col s12 m6 l3" data-member="Life">
-                                    <img class="z-depth-2" src="/images/Life.png">
+                                    <img class="z-depth-2" src="/images/LIFE.png">
                                     <br>Life
                                 </div>
                             </div>
+                            <div class="col s12" style="margin-top: 1em;">
+                                <p style="font-weight: bold;">AFFILIATE MEMBER (RM100/year)</p>
+                                <ol>
+                                    <li>Engaged in providing financial services to clients or education programmes related to financial services e.g. bankers, unit trust agents, accountants, lecturers and trainers in financial services.</li>
+                                    <li>Engaged in Life Insurance selling / management or Financial Services for not less than twelve (12) months and is a non-resident of Malaysia.</li>
+                                    <li>Not eligible to vote or hold office in the National Council.</li>
+                                </ol>
+
+                                <p style="font-weight: bold;">PROVISIONAL MEMBER</p>
+                                <p></p>
+                                <ol>
+                                    <li>RM10 / year for Provisional Membership (1st time application only and permitted once in a lifetime).</li>
+                                    <li>Engaged in Life Insurance marketing (includes fee-based financial services provides who recommend Life Insurance as one of thier products).</li>
+                                    <li>Shall not be eligible to vote or hold office in the National Council of the Association but may participate in all Association’s activities.</li>
+                                    <li>Automatic upgrade to Ordinary Member after one (1) year.</li>
+                                </ol>
+
+                                <p style="font-weight: bold;">ORDINARY MEMBER (RM100/year)</p>
+                                <ol>
+                                    <li>Engaged in Life Insurance Marketing for a period of not less than one (1) year.</li>
+                                </ol>
+
+                                <p style="font-weight: bold;">FELLOW MEMBER (RM200/year)</p>
+                                <p>
+                                    Membership is by invitation and shall be based on the following criteria :
+                                </p>
+                                <ol>
+                                    <li>Engaged in the Life Insurance business for a period of not less than ten (10) years.</li>
+                                    <li>Been an Associate Member for at least a minimum period of not less than three (3) years.</li>
+                                    <li>Holder of at least Fellow, Certified Life Practitioner (FCLP) designation or any higher designation conferred by the Association or any designations deemed relevant by the National Council.</li>
+                                    <li>Served at Branch or National Council or any Association activities deemed relevant by the National Council for at least six (6) years, and did not bring any disrepute to the Association.</li>
+                                    <li>Made substantial contributions to the Association or the life insurance industry as deemed relevant by the National Council.</li>
+                                </ol>
+                                <p> The National Council shall have full discretion to approve or disapprove any Fellow membership application without signation of reasons. Fellow members may use the designation NAMLIFA Fellow after their names.</p><br>
+
+                                <p style="font-weight: bold;">ASSOCIATE MEMBER (RM150/year)</p>
+                                <ol>
+                                    <li>Engaged in Life Insurance Marketing and Financial Services for a period of not less than three (3) year.</li>
+                                    <li>Been an Ordinary Member for a minimum period of twelve (12) months.</li>
+                                    <li>Holder of at least Certified Life Planner & Marketer (CLPM) or any higher designations deemed relevant by the National Council.</li>
+                                    <li>Associate members may use the designation Associate NAMLIFA after their name.</li>
+                                </ol>
+
+                                <p style="font-weight: bold;">LIFE MEMBER </p>
+                                <ol>
+                                    <li>Been an Ordinary, Associate or Fellow Member and a financial member for at least five (5) consecutive years prior to the date of application.</li>
+                                    <li>Based on election by the National Council. Such election shall be at the discretion of the National Council and shall be subject to a lump sum payment of RM3,000.</li>
+                                    <li>Shall comply to such conditions that the National Council may prescribe from time to time.</li>
+                                </ol>
+                                <p>Life Member who have ceased to be life insurance agents or financial service providers will not vote at meetings of the Association or hold any office in the Association.</p><br>
+                            </div>
                         </div>
-
-
-
+                    <div id="personalDetails">
+		        <div class="card-panel blue darken-1 white-text center" style="padding:10px">
+                    		<p>PERSONAL DETAILS</p>
+            		</div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select id="membership_type" name="membership_type">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="ORDINARY">ORDINARY</option>
+                                    <option value="AFFILIATE">AFFILIATE</option>
+                                    <option value="PROVISIONAL">PROVISIONAL</option>
+                                    <option value="FELLOW">FELLOW</option>
+                                    <option value="ASSOCIATE">ASSOCIATE</option>
+                                    <option value="LIFE">LIFE</option>
+                                </select>
+                                <label for="membership_type">Membership type</label>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="input-field col s12">
                               <input placeholder="Full Name" id="full_name" name="full_name" type="text" class="validate invalid">
@@ -68,18 +130,18 @@
                         <div class="input-field col s6">
                             <select id="gender" name="gender">
                                 <option value="" disabled selected>Choose your option</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
                             </select>
                             <label for="gender">Gender</label>
                         </div>
                         <div class="input-field col s6">
                             <select id="race" name="race">
                                 <option value="" disabled selected>Choose your option</option>
-                                <option value="Malay">Malay</option>
-                                <option value="Chinese">Chinese</option>
-                                <option value="Indians">Indians</option>
-                                <option value="Others">Others</option>
+                                <option value="MALAY">MALAY</option>
+                                <option value="CHINESE">CHINESE</option>
+                                <option value="INDIAN">INDIAN</option>
+                                <option value="OTHERS">OTHERS</option>
                             </select>
                             <label for="race">Race</label>
                         </div>
@@ -108,7 +170,7 @@
                             <label for="tel_h">Tel(H)</label>
                         </div>
                         <div class="input-field col s3">
-                            <input placeholder="" id="tel_hp" name="tel_hp" type="text" class="cnf validate">
+                            <input placeholder="" id="tel_hp" name="tel_hp" type="text" class="validate invalid">
                             <label for="tel_hp">Tel(H/P)</label>
                         </div>
                         <div class="input-field col s3">
@@ -127,7 +189,7 @@
                                     <option value="SPM">SPM</option>
                                     <option value="STPM">STPM</option>
                                     <option value="COLLEGE">COLLEGE</option>
-                                    <option value="Tertiary & Above">Tertiary & Above</option>
+                                    <option value="TERTIARY & ABOVE">TERTIARY & ABOVE</option>
                                 </select>
                                 <label for="highest_qualification">Highest Qualification Attained</label>
                             </div>
@@ -166,16 +228,16 @@
                             <div class="input-field col s6">
                                 <select id="position" name="position">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="Agency Leader">Agency Leader</option>
-                                    <option value="Agent">Agent</option>
+                                    <option value="AGENCY LEADER">AGENCY LEADER</option>
+                                    <option value="AGENT">AGENT</option>
                                 </select>
                                 <label for="highest_qualification">Position</label>
                             </div>
                             <div class="input-field col s6">
                                 <select id="position_type" name="position_type">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="Full Time">Full Time</option>
-                                    <option value="Part Time">Part Time</option>
+                                    <option value="FULL TIME">FULL TIME</option>
+                                    <option value="PART TIME">PART TIME</option>
                                 </select>
                                 <label for="highest_qualification">Position Type</label>
                             </div>
@@ -187,10 +249,10 @@
                             </div>
                             <div class="input-field col s6">
                                 <select id="business_type" name="business_type">
-                                    <option disabled selected>Choose your option</option>
-                                    <option value="Conventional">Conventional</option>
-                                    <option value="Takaful">Takaful</option>
-                                    <option value="Both">Both</option>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="CONVENTIONAL">CONVENTIONAL</option>
+                                    <option value="TAKAFUL">TAKAFUL</option>
+                                    <option value="BOTH">BOTH</option>
                                 </select>
                                 <label for="business_type">Type of Business</label>
                             </div>
@@ -209,7 +271,7 @@
             		</div>
 
                         <div class="row">
-			    <h6>Cash / Cheque Payment</h6>
+			    <h6>1. Cash / Cheque Payment</h6>
 			    <div class="col s6" style="width:35%">
 				Enclose Payment RM
 				    <div class="input-field inline">
@@ -220,19 +282,19 @@
 			    <div class="col s6">
                                 by Cash / Cheque No.
                                     <div class="input-field inline" style="margin-bottom: 3px">
-                                        <input placeholder="" id="" name="" type="text" pattern="[0-9]+" class="validate">
+                                        <input placeholder="" id="" name="" type="text" class="validate">
           		      		<span class="helper-text" data-error="Invalid key in"></span>
                                     </div>
 				(payable to NAMLIFA)
-				(NAMLIFA Account: Hong Leong: 2810 000 380, kindly provide bank in slip)
+				(NAMLIFA Account: Hong Leong: 2810 0000 380, kindly provide bank in slip)
                             </div>
                         </div>
                         <div class="row">
-                            <h6>Credit Card Payment</h6>
+                            <h6>2. Credit Card Payment</h6>
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
-                                <input placeholder="" id="card_no" name="" type="text" pattern="[0-9]{13,16}" class="validate">
+                                <input placeholder="" id="card_no" name="card_no" type="text" class="validate">
                                 <label for="">Credit Card No:</label>
           		                <span class="helper-text" data-error="Invalid key in"></span>
                             </div>
@@ -249,33 +311,12 @@
           		                <span class="helper-text" data-error="Invalid key in"></span>
                             </div>
                             <div class="input-field col s3">
-                                <select id="month" name="month">
-                                    <option value="01">January</option>
-                                    <option value="02">February </option>
-                                    <option value="03">March</option>
-                                    <option value="04">April</option>
-                                    <option value="05">May</option>
-                                    <option value="06">June</option>
-                                    <option value="07">July</option>
-                                    <option value="08">August</option>
-                                    <option value="09">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
-                                <select id="year" name="year">
-                                    <option value="20"> 2020</option>
-                                    <option value="21"> 2021</option>
-                                    <option value="22"> 2022</option>
-                                    <option value="23"> 2023</option>
-                                    <option value="24"> 2024</option>
-                                    <option value="25"> 2025</option>
-                                </select>
-                                <label for="agents_code">Expiry Date</label>
+                                <input placeholder="Format: MM/YYYY" id="card_expiry_date" name="card_expiry_date" type="text" class="validate">
+                                <label for="card_expiry_date">Expiry Date</label>
                             </div>
                         </div>
-                    <div class="row">
-                            <h6>Company Deduction (Auto Deduction/Renewal) [Except: AIA, AXA Affin, Manulife, Prudential & Takaful Agents)</h6>
+                        <div class="row">
+                            <h6>3. Company Deduction (Auto Deduction/Renewal) [Except: AIA, AXA Affin, Manulife, Prudential & Takaful Agents)</h6>
                             <div class="col s12">
                                 I,
 			        <div class="input-field inline">
@@ -294,11 +335,27 @@
 			        payable to<br>
 			        NAMLIFA from my commision as per my Agent Code or Account No:
 				<div class="input-field inline">
-			            <input placeholder="" id="agent_code" name="agent_code" type="text" pattern="[0-9]+" class="validate">
+			            <input placeholder="" id="agent_code" name="agent_code" type="text" class="validate">
 				    <span class="helper-text" data-error="Invalid key in"></span>
 			        </div>
-			        , on an Annual Basic,<br>
-			        I understand that membership fees paid are non-refundable.<br>
+			        , on an Annual Basis.<br>
+
+		    		<div class="row">
+                            <div class="file-field input-field col s3">
+                                <div class="btn-small blue darken-1">
+                                    <span>Receipt</span>
+                                    <input id="receipt" name="receipt" type="file">
+                                </div>
+                                <div class="file-path-wrapper" style="display: none;">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                            <div class="file-field input-field col s2 center-align">
+                                <span><img src="" id="receiptPreview" width="100"></span>
+                            </div>
+                        </div>
+
+		    		<br>I understand that membership fees paid are non-refundable.<br>
                             </div>
                         </div>
                         <div class="row">
@@ -326,11 +383,11 @@
                                     <div>
                                         <br>
                                     </div>
-                                    <div>By signing this form, I  hereby give consent to NAMLIFA to auto-renew my membership annually. Any request for termination of membership, will need to be made in writing.</div>
+                                    <div>By signing this form, I hereby give consent to NAMLIFA to auto-renew my membership annually. Any request for termination of membership, will need to be made in writing.</div>
                                     <div>
                                         <br>
                                     </div>
-                                    <div>For company deduction, kindly allow 30 - 40 days of processing time before delivery of membership card.</div>
+                                    <div>For company deduction, kindly allow 30 - 40 days of processing time.</div>
                                     <div><br></div>
                                     <div>Membership fees paid are non - refundable.</div>
                                     <div><br></div>

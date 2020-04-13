@@ -9,4 +9,5 @@ def get_context(context):
     member = frappe.db.get_value("Namlifa Member", {"email": frappe.session.user}, "*")
 
     context.member = member
+    context.csrf_token = frappe.sessions.get_csrf_token()
     return context

@@ -32,7 +32,7 @@
   "payment_mode",
   "bank",
   "credit_card_no",
-  "renewal_application",
+  "renewalnew_application",
   "more_details_col1",
   "application_branch",
   "premium_excl_sst",
@@ -40,8 +40,8 @@
   "certificate_number",
   "receipt_no",
   "auto_renewal_pa",
-  "spaouse_child_nomination",
-  "spaouse_child",
+  "spouse_child_nomination",
+  "spouse_child",
   "nomination"
  ],
  "fields": [
@@ -79,15 +79,9 @@
    "label": "Branch"
   },
   {
-   "fieldname": "spaouse_child",
-   "fieldtype": "Table",
-   "label": "SPOUSE/CHILD",
-   "options": "Namlifa PA Spaouse"
-  },
-  {
    "fieldname": "nomination",
    "fieldtype": "Table",
-   "label": "Nomination",
+   "label": "NOMINATION",
    "options": "Namlifa PA Nomination"
   },
   {
@@ -112,7 +106,7 @@
   },
   {
    "fieldname": "gpa_joined_since",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "GPA Joined Since"
   },
   {
@@ -124,10 +118,6 @@
    "fieldname": "premium_incl_sst",
    "fieldtype": "Data",
    "label": "Premium Incl SST"
-  },
-  {
-   "fieldname": "spaouse_child_nomination",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "details_col1",
@@ -195,11 +185,6 @@
    "label": "Credit Card/Cheque"
   },
   {
-   "fieldname": "renewal_application",
-   "fieldtype": "Data",
-   "label": "Renewal/New Apllication"
-  },
-  {
    "fieldname": "more_details_col1",
    "fieldtype": "Column Break"
   },
@@ -243,9 +228,25 @@
    "fieldname": "auto_renewal_pa",
    "fieldtype": "Check",
    "label": "Auto Renewal"
+  },
+  {
+   "fieldname": "renewalnew_application",
+   "fieldtype": "Select",
+   "label": "Renewal/New Application",
+   "options": "\nRENEWAL\nNEW APPLICATION"
+  },
+  {
+   "fieldname": "spouse_child_nomination",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "spouse_child",
+   "fieldtype": "Table",
+   "label": "SPOUSE/CHILD",
+   "options": "Namlifa PA Spouse"
   }
  ],
- "modified": "2020-04-01 23:43:54.937580",
+ "modified": "2020-04-05 21:02:25.310955",
  "modified_by": "Administrator",
  "module": "Namlifa PA",
  "name": "Namlifa PA",
