@@ -226,23 +226,30 @@ def member_registration():
     file_attrs = ['terms_signature', 'payment_signature', 'photo', 'receipt']
     files = []
     payment_attrs = ["credit_card_no", "cheque_no", "bank_name"]
+    payment = {}
     data = json.loads(frappe.local.form_dict.data)
+
+    # exit if email exists
+    #if frappe.db.get_value("Namlifa Member", {"email": data.get('email')}):
+    #    return
 
     import datetime
     #print('dataaaaaaaaaaa', data)
     print('timeeeeeee', datetime.datetime.now())
+
 
     for e in date_attrs:
         if data[e]:
             data[e] = formatdate(data[e], "yyyy-mm-dd")
     for e in file_attrs:
         if e in data:
-            if data[e]:
+            if data[e] != "":
                 files.append((e, data[e]))
             del data[e]
-
-    payment = { i: data[i] for i in payment_attrs if i in data }
-
+    for e in payment_attrs:
+        if e in data:
+            if data[e] != '':
+                payment[e] = data[e]
     doc = frappe.get_doc({"doctype": "Namlifa Member", **data})
     doc.insert(ignore_permissions=True, ignore_mandatory=True)
     if files:
@@ -268,15 +275,27 @@ def member_registration():
                 "file_url": "/files/" + filename
             })
             _file.save(ignore_permissions=True)
+            # update values
             if fieldname == 'receipt':
                 payment[fieldname] = _file.file_url
-            else:
-                doc.set(fieldname, _file.file_url)
+            doc.set(fieldname, _file.file_url)
+            print('hi')
+            doc.save()
 
-    # only save payment after saving files
-    if payment:
-        doc.append('payment_details', payment)
-    doc.save()
+    if len(payment) != 0:
+        doc_name = frappe.db.get_value("Namlifa Member", {"email": data.get('email')}, "name")
+        payment['parent'] = doc_name
+        payment['parenttype'] = "Namlifa Member"
+        payment['parentfield'] = 'payment_details'
+
+        parent = frappe.get_doc("Namlifa Member", doc_name)
+        parent.insert(ignore_permissions=True, ignore_mandatory=True)
+        child = frappe.new_doc("Namlifa Member Payment")
+        child.insert(ignore_permissions=True, ignore_mandatory=True)
+        child.update(payment)
+        parent.payment_details.append(child)
+        print('heelo')
+    	parent.save()
 
     frappe.db.commit()
     return data
